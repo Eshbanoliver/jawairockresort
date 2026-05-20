@@ -4,7 +4,7 @@ import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { 
   Compass, Tent, TreePine, Waves, Sparkles, 
   Award, Shield, Smile, Star, ArrowRight, Phone, ChevronDown,
-  Users, Hotel, Utensils, Activity
+  Users, Hotel, Utensils, Activity, Cake, Briefcase
 } from 'lucide-react';
 import { SectionDivider } from '../components/SectionDivider';
 import { LeafAnimation } from '../components/LeafAnimation';
@@ -119,7 +119,8 @@ export const Home: React.FC = () => {
     { id: 'all', name: 'All Services' },
     { id: 'stays', name: 'Luxury Stays' },
     { id: 'dining', name: 'Dining & Wellness' },
-    { id: 'activities', name: 'Wilderness & Sports' }
+    { id: 'activities', name: 'Wilderness & Sports' },
+    { id: 'events', name: 'Events & Parties' }
   ];
 
   // Services list mapping with categories and stock images
@@ -172,6 +173,20 @@ export const Home: React.FC = () => {
       icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=800",
       category: 'stays' 
+    },
+    { 
+      title: "Birthday Party & Celebrations", 
+      desc: "Celebrate birthdays and milestones under twinkling stars with bespoke setups, catering, and live music.", 
+      icon: <Cake className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800",
+      category: 'events' 
+    },
+    { 
+      title: "Corporate Events & Meetings", 
+      desc: "Conduct private conferences, retreats, and team-building camps against scenic, monolith vistas.", 
+      icon: <Briefcase className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800",
+      category: 'events' 
     }
   ];
 
