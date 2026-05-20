@@ -726,3 +726,46 @@ ul {
   resize: vertical;
   min-height: 8rem;
 }
+
+/* Tailwind Arbitrary Value Compatibility Mappings for light theme */
+.text-\[\#e07a5f\] { color: #e07a5f !important; }
+.text-\[\#7b9e54\] { color: #7b9e54 !important; }
+.text-\[\#25d366\] { color: #25d366 !important; }
+.text-\[\#112d15\] { color: #112d15 !important; }
+.text-orange { color: #e07a5f !important; }
+
+.bg-\[\#e07a5f\] { background-color: #e07a5f !important; }
+.bg-\[\#120e0a\] { background-color: var(--card-bg) !important; }
+.bg-\[\#120e0adc\]\/80 { background-color: rgba(250, 245, 240, 0.8) !important; }
+.bg-\[\#120e0ad9\] { background-color: rgba(250, 245, 240, 0.85) !important; }
+.bg-\[\#120e0a\]\/50 { background-color: rgba(250, 245, 240, 0.5) !important; }
+.bg-\[\#112d15\] { background-color: #112d15 !important; }
+.bg-\[\#17251a\] { background-color: #17251a !important; }
+.bg-\[\#1b3d20\]\/30 { background-color: rgba(27, 61, 32, 0.3) !important; }
+.bg-\[\#2c5932\]\/20 { background-color: rgba(44, 89, 50, 0.2) !important; }
+
+.border-\[\#7b9e54\]\/30 { border-color: rgba(123, 158, 84, 0.3) !important; }
+.border-\[\#7b9e54\]\/20 { border-color: rgba(123, 158, 84, 0.2) !important; }
+.border-\[\#e07a5f\]\/20 { border-color: rgba(224, 122, 95, 0.2) !important; }
+
+.hover\:text-\[\#e07a5f\]:hover { color: #e07a5f !important; }
+.hover\:text-\[\#25d366\]:hover { color: #25d366 !important; }
+.hover\:text-\[\#28a745\]:hover { color: #28a745 !important; }
+.hover\:border-\[\#e07a5f\]\/40:hover { border-color: rgba(224, 122, 95, 0.4) !important; }
+.hover\:border-\[\#28a745\]\/40:hover { border-color: rgba(40, 167, 69, 0.4) !important; }
+
+.after\:bg-\[\#e07a5f\]::after {
+  background-color: #e07a5f !important;
+}
+
+.text-\[10px\] { font-size: 10px !important; }
+.tracking-\[0.3em\] { letter-spacing: 0.3em !important; }
+.tracking-\[0.25em\] { letter-spacing: 0.25em !important; }
+.tracking-\[-0.02em\] { letter-spacing: -0.02em !important; }
+.top-\[73px\] { top: 73px !important; }
+.h-\[calc\(100vh-73px\)\] { height: calc(100vh - 73px) !important; }
+.h-\[450px\] { height: 450px !important; }
+.w-\[44\%\] { width: 44% !important; }
+.h-\[180px\] { height: 180px !important; }
+.opacity-\[0\.03\] { opacity: 0.03 !important; }
+.min-h-\[220px\] { min-height: 220px !important; }
