@@ -149,6 +149,8 @@ ul {
 .z-50 { z-index: 50; }
 
 /* Display & Flex */
+.block { display: block; }
+.hidden { display: none; }
 .flex { display: flex; }
 .inline-flex { display: inline-flex; }
 .flex-col { flex-direction: column; }
@@ -300,8 +302,21 @@ ul {
 .bg-transparent { background-color: transparent; }
 .overflow-hidden { overflow: hidden; }
 .pointer-events-none { pointer-events: none; }
-.block { display: block; }
-.hidden { display: none; }
+
+/* Custom Nav Backgrounds */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.mobile-menu-glass {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
 
 /* Custom Component Styles */
 

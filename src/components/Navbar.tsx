@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
       <motion.nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled 
-            ? 'py-4 bg-[#120e0adc]/80 border-b border-white/5 shadow-2xl backdrop-blur-md' 
+            ? 'py-4 nav-glass' 
             : 'py-6 bg-transparent'
         }`}
         initial={{ y: -100 }}
@@ -114,7 +114,7 @@ export const Navbar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 top-[73px] w-full h-[calc(100vh-73px)] bg-[#120e0ae6]/95 backdrop-blur-xl z-40 md:hidden flex flex-col justify-between py-12 px-6"
+            className="fixed inset-0 top-[73px] w-full h-[calc(100vh-73px)] mobile-menu-glass z-40 md:hidden flex flex-col justify-between py-12 px-6"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
