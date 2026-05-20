@@ -44,10 +44,9 @@ export const Home: React.FC = () => {
   // Hero Image Slider State
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
   const heroImages = [
-    "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1920", // Original leopard
-    "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1920", // Luxury tent
-    "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1920", // Landscape sunset
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920", // Resort rocks
+    "https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=1920", // Leopard and jungle safari walk
+    "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1920", // Luxury villa retreat
+    "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1920", // Premium infinity pool
   ];
 
   useEffect(() => {
