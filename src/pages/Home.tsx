@@ -184,12 +184,12 @@ export const Home: React.FC = () => {
       </section>
 
       {/* 2. ABOUT US SECTION */}
-      <section className="section-padding bg-[#120e0a] relative overflow-hidden">
+      <section className="section-padding relative overflow-hidden">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             {/* Text details */}
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0, x: -35 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -198,10 +198,10 @@ export const Home: React.FC = () => {
                 <span>About Jawai Rock Resort</span>
                 <h2 className="text-white">Where Granite Hills Whisper The Stories Of The Wild</h2>
               </div>
-              <p className="mb-6 leading-relaxed">
-                Nestled on the scenic Jawai Bandh Road in Rajasthan, **Jawai Rock Resort** is an eco-luxury haven designed for adventurers and peace-seekers alike. We are surrounded by ancient granite monoliths formed millions of years ago, which serve as the natural habitat for the famous, peaceful leopards of Jawai.
+              <p className="mb-6 leading-relaxed text-gray-300">
+                Nestled on the scenic Jawai Bandh Road in Rajasthan, <strong className="text-[#112d15] font-bold">Jawai Rock Resort</strong> is an eco-luxury haven designed for adventurers and peace-seekers alike. We are surrounded by ancient granite monoliths formed millions of years ago, which serve as the natural habitat for the famous, peaceful leopards of Jawai.
               </p>
-              <p className="mb-8 leading-relaxed">
+              <p className="mb-8 leading-relaxed text-gray-300">
                 Here, luxury is redefined through our commitment to nature connection. Whether you choose our premium villas or farm-style cottages, you will discover a tranquil refuge that provides the perfect balance of rustic jungle atmosphere and state-of-the-art modern comforts.
               </p>
               <Link to="/about" className="btn btn-outline-green">
@@ -210,48 +210,93 @@ export const Home: React.FC = () => {
               </Link>
             </motion.div>
 
-            {/* Visual cards */}
+            {/* Creative Offset Overlapping Collage */}
             <motion.div
-              className="grid grid-cols-2 gap-4 relative"
+              className="relative w-full h-[520px] md:h-[580px] flex items-center justify-center mt-8 md:mt-0"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="absolute inset-0 bg-[#e07a5f]/5 rounded-full filter blur-3xl -z-10 w-72 h-72 top-10 left-10" />
-              
-              <div className="flex flex-col gap-4 mt-6">
-                <div className="rounded-xl overflow-hidden shadow-2xl border border-white/5 h-64">
-                  <img 
-                    src="https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=600" 
-                    alt="Wild Leopard in Jawai" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+              {/* Background Glow Ornament */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#e07a5f]/10 to-[#7b9e54]/10 rounded-full filter blur-3xl -z-10 w-72 h-72 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
+              {/* Card 1: Wild Leopard (Main vertical card, top-left) */}
+              <motion.div 
+                className="absolute top-2 left-2 w-[48%] h-[290px] rounded-2xl overflow-hidden shadow-2xl border border-black/5 bg-white"
+                style={{ rotate: -3 }}
+                whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=800" 
+                  alt="Wild Leopard in Jawai" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-10">
+                  <span className="text-[9px] text-[#e07a5f] uppercase font-bold tracking-widest block mb-0.5">Jawai Sanctuary</span>
+                  <p className="text-xs font-bold text-white">Leopard Trackings</p>
                 </div>
-                <div className="rounded-xl overflow-hidden shadow-2xl border border-white/5 h-48">
-                  <img 
-                    src="https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=600" 
-                    alt="Luxury Safari Tent Cabin" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
+              </motion.div>
+
+              {/* Card 2: Luxury Resort Pool (Top-Right, offset) */}
+              <motion.div 
+                className="absolute top-12 right-2 w-[45%] h-[200px] rounded-2xl overflow-hidden shadow-xl border border-black/5 bg-white"
+                style={{ rotate: 4 }}
+                whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800" 
+                  alt="Resort Pool & Premium Stays" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              {/* Card 3: Luxury Safari Glamping Tent (Bottom-Left, horizontal) */}
+              <motion.div 
+                className="absolute bottom-10 left-6 w-[44%] h-[180px] rounded-2xl overflow-hidden shadow-lg border border-black/5 bg-white"
+                style={{ rotate: 2 }}
+                whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1533753659765-a83d78bfb025?q=80&w=800" 
+                  alt="Luxury Safari Glamping Tent" 
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              {/* Card 4: Jawai Sunset Granite Hills (Bottom-Right, tall overlay) */}
+              <motion.div 
+                className="absolute bottom-2 right-4 w-[48%] h-[260px] rounded-2xl overflow-hidden shadow-2xl border border-black/5 bg-white"
+                style={{ rotate: -2 }}
+                whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <img 
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
+                  alt="Jawai Sunset Granite Hills" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-10">
+                  <span className="text-[9px] text-[#7b9e54] uppercase font-bold tracking-widest block mb-0.5">Granite Monoliths</span>
+                  <p className="text-xs font-bold text-white">Jawai Wilderness</p>
                 </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="rounded-xl overflow-hidden shadow-2xl border border-white/5 h-48">
-                  <img 
-                    src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=600" 
-                    alt="Jawai Sunset Wilderness" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden shadow-2xl border border-white/5 h-64">
-                  <img 
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600" 
-                    alt="Resort Swimming Pool & Rocks" 
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
+              </motion.div>
+
+              {/* Circular Seal Badge Overlap */}
+              <motion.div
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[#112d15] text-[#faf5f0] border-4 border-[#faf5f0] shadow-2xl flex flex-col items-center justify-center z-30 text-center p-2"
+                initial={{ rotate: -10 }}
+                animate={{ rotate: [ -10, 10, -10 ] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <span className="text-[8px] uppercase tracking-wider font-semibold opacity-70">Jawai Rock</span>
+                <span className="text-[10px] font-extrabold leading-tight my-0.5 text-[#e07a5f]">ECO LUXURY</span>
+                <span className="text-[8px] uppercase tracking-widest font-bold opacity-80">EST. 2018</span>
+              </motion.div>
             </motion.div>
           </div>
         </div>
