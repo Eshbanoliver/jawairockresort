@@ -606,38 +606,44 @@ export const Home: React.FC = () => {
 
       {/* 5. MISSION & VISION SECTION */}
       <section className="section-padding bg-[#112d15] relative overflow-hidden">
-        <div className="container">
+        {/* Background glow effects */}
+        <div className="green-glow-blob-1" />
+        <div className="green-glow-blob-2" />
+
+        <div className="container relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* Mission */}
             <motion.div
-              className="glass-panel p-8 md:p-10 flex flex-col gap-4 text-left border border-white/10"
+              className="mv-card mv-card-mission p-8 md:p-10 flex flex-col gap-4 text-left relative overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="p-3 rounded-xl bg-[#e07a5f]/10 border border-[#e07a5f]/20 w-fit">
+              <Compass className="mv-watermark absolute" />
+              <div className="mv-icon-box p-3 rounded-xl bg-[#e07a5f]/10 border border-[#e07a5f]/20 w-fit relative z-10">
                 <Compass className="w-8 h-8 text-[#e07a5f]" />
               </div>
-              <h3 className="text-2xl font-heading font-bold text-white mt-2">Our Mission</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-heading font-bold text-white mt-2 relative z-10">Our Mission</h3>
+              <p className="text-gray-300 leading-relaxed relative z-10">
                 To connect travellers with the raw, untamed beauty of Jawai's wildlife and granite terrain while preserving the local ecology. We strive to provide a luxurious sanctuary that respects the delicate balance of leopards, shepherds, and visitors, creating sustainable, lifelong memories.
               </p>
             </motion.div>
 
             {/* Vision */}
             <motion.div
-              className="glass-panel p-8 md:p-10 flex flex-col gap-4 text-left border border-white/10"
+              className="mv-card mv-card-vision p-8 md:p-10 flex flex-col gap-4 text-left relative overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="p-3 rounded-xl bg-[#7b9e54]/10 border border-[#7b9e54]/20 w-fit">
+              <TreePine className="mv-watermark absolute" />
+              <div className="mv-icon-box p-3 rounded-xl bg-[#7b9e54]/10 border border-[#7b9e54]/20 w-fit relative z-10">
                 <TreePine className="w-8 h-8 text-[#7b9e54]" />
               </div>
-              <h3 className="text-2xl font-heading font-bold text-white mt-2">Our Vision</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-heading font-bold text-white mt-2 relative z-10">Our Vision</h3>
+              <p className="text-gray-300 leading-relaxed relative z-10">
                 To become Jawai's premier eco-resort destination where luxury hospitality and conservation coexist harmoniously. We envision a community-oriented retreat that showcases Jawai's natural wonders globally while serving as a benchmark for peaceful wilderness tourism.
               </p>
             </motion.div>
