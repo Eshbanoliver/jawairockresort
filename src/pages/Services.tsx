@@ -236,7 +236,7 @@ export const Services: React.FC = () => {
                 <Phone className="w-4 h-4 fill-white" />
                 Call Now
               </a>
-              <a href="https://wa.me/918058571919" target="_blank" rel="noopener noreferrer" className="btn btn-secondary px-5 py-2.5 text-sm border-white/10">
+              <a href="https://wa.me/918058571919" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp px-5 py-2.5 text-sm">
                 <MessageSquare className="w-4 h-4" />
                 WhatsApp
               </a>

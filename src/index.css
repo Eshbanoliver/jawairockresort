@@ -457,6 +457,21 @@ ul {
   color: white;
 }
 
+.btn-whatsapp {
+  background: #25d366;
+  color: #ffffff !important;
+  border: 1px solid #20ba5a;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  border-color: #1ebd54;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  color: #ffffff !important;
+}
+
 /* Animations */
 @keyframes pulse-glow {
   0%, 100% {
@@ -758,14 +773,9 @@ ul {
   background-color: #e07a5f !important;
 }
 
-.text-\[10px\] { font-size: 10px !important; }
-.tracking-\[0.3em\] { letter-spacing: 0.3em !important; }
-.tracking-\[0.25em\] { letter-spacing: 0.25em !important; }
-.tracking-\[-0.02em\] { letter-spacing: -0.02em !important; }
-.top-\[73px\] { top: 73px !important; }
-.h-\[calc\(100vh-73px\)\] { height: calc(100vh - 73px) !important; }
-.h-\[450px\] { height: 450px !important; }
-.w-\[44\%\] { width: 44% !important; }
-.h-\[180px\] { height: 180px !important; }
-.opacity-\[0\.03\] { opacity: 0.03 !important; }
-.min-h-\[220px\] { min-height: 220px !important; }
+/* Custom Standard Utility Fallbacks (Replaces Tailwind bracket values) */
+.text-tiny { font-size: 10px !important; }
+.tracking-super-wide { letter-spacing: 0.3em !important; }
+.tracking-extra-wide { letter-spacing: 0.25em !important; }
+.tracking-tight { letter-spacing: -0.02em !important; }
+.opacity-soft { opacity: 0.03 !important; }

@@ -157,7 +157,7 @@ export const Home: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="text-orange font-bold uppercase tracking-[0.3em] text-sm block mb-4">
+            <span className="text-orange font-bold uppercase tracking-super-wide text-sm block mb-4">
               Welcome to Wilderness Luxury
             </span>
             <h1 className="hero-title">
@@ -244,7 +244,8 @@ export const Home: React.FC = () => {
 
             {/* Desktop View: Creative Offset Overlapping Collage */}
             <motion.div
-              className="hidden md:flex relative w-full h-[580px] items-center justify-center mt-0"
+              className="hidden md:flex relative w-full items-center justify-center mt-0"
+              style={{ height: '580px' }}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -255,8 +256,8 @@ export const Home: React.FC = () => {
 
               {/* Card 1: Wild Leopard (Main vertical card, top-left) */}
               <motion.div 
-                className="absolute top-2 left-2 w-[48%] h-[290px] rounded-2xl overflow-hidden shadow-2xl border border-black/5 bg-white"
-                style={{ rotate: -3 }}
+                className="absolute top-2 left-2 rounded-2xl overflow-hidden shadow-2xl border border-black/5 bg-white"
+                style={{ width: '48%', height: '290px', rotate: -3 }}
                 whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
@@ -266,15 +267,15 @@ export const Home: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-10">
-                  <span className="text-[9px] text-[#e07a5f] uppercase font-bold tracking-widest block mb-0.5">Jawai Sanctuary</span>
+                  <span className="text-tiny text-[#e07a5f] uppercase font-bold tracking-widest block mb-0.5" style={{ fontSize: '9px' }}>Jawai Sanctuary</span>
                   <p className="text-xs font-bold text-white">Leopard Trackings</p>
                 </div>
               </motion.div>
 
               {/* Card 2: Luxury Resort Pool (Top-Right, offset) */}
               <motion.div 
-                className="absolute top-12 right-2 w-[45%] h-[200px] rounded-2xl overflow-hidden shadow-xl border border-black/5 bg-white"
-                style={{ rotate: 4 }}
+                className="absolute top-12 right-2 rounded-2xl overflow-hidden shadow-xl border border-black/5 bg-white"
+                style={{ width: '45%', height: '200px', rotate: 4 }}
                 whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
@@ -287,8 +288,8 @@ export const Home: React.FC = () => {
 
               {/* Card 3: Luxury Safari Glamping Tent (Bottom-Left, horizontal) */}
               <motion.div 
-                className="absolute bottom-10 left-6 w-[44%] h-[180px] rounded-2xl overflow-hidden shadow-lg border border-black/5 bg-white"
-                style={{ rotate: 2 }}
+                className="absolute bottom-10 left-6 rounded-2xl overflow-hidden shadow-lg border border-black/5 bg-white"
+                style={{ width: '44%', height: '180px', rotate: 2 }}
                 whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
@@ -301,8 +302,8 @@ export const Home: React.FC = () => {
 
               {/* Card 4: Jawai Sunset Granite Hills (Bottom-Right, tall overlay) */}
               <motion.div 
-                className="absolute bottom-2 right-4 w-[48%] h-[260px] rounded-2xl overflow-hidden shadow-2xl border border-black/5 bg-white"
-                style={{ rotate: -2 }}
+                className="absolute bottom-2 right-4 rounded-2xl overflow-hidden shadow-2xl border border-black/5 bg-white"
+                style={{ width: '48%', height: '260px', rotate: -2 }}
                 whileHover={{ scale: 1.05, rotate: 0, zIndex: 40 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
@@ -312,7 +313,7 @@ export const Home: React.FC = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-10">
-                  <span className="text-[9px] text-[#7b9e54] uppercase font-bold tracking-widest block mb-0.5">Granite Monoliths</span>
+                  <span className="text-tiny text-[#7b9e54] uppercase font-bold tracking-widest block mb-0.5" style={{ fontSize: '9px' }}>Granite Monoliths</span>
                   <p className="text-xs font-bold text-white">Jawai Wilderness</p>
                 </div>
               </motion.div>
@@ -325,9 +326,9 @@ export const Home: React.FC = () => {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 whileHover={{ scale: 1.1 }}
               >
-                <span className="text-[8px] uppercase tracking-wider font-semibold opacity-70">Jawai Rock</span>
-                <span className="text-[10px] font-extrabold leading-tight my-0.5 text-[#e07a5f]">ECO LUXURY</span>
-                <span className="text-[8px] uppercase tracking-widest font-bold opacity-80">EST. 2018</span>
+                <span className="uppercase tracking-wider font-semibold opacity-70" style={{ fontSize: '8px' }}>Jawai Rock</span>
+                <span className="text-tiny font-extrabold leading-tight my-0.5 text-[#e07a5f]">ECO LUXURY</span>
+                <span className="uppercase tracking-widest font-bold opacity-80" style={{ fontSize: '8px' }}>EST. 2018</span>
               </motion.div>
             </motion.div>
           </div>
@@ -544,7 +545,7 @@ export const Home: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="max-w-2xl"
           >
-            <span className="text-orange font-bold uppercase tracking-[0.25em] text-sm block mb-2">
+            <span className="text-orange font-bold uppercase tracking-extra-wide text-sm block mb-2">
               Book Your Wilderness Escape
             </span>
             <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-white mb-6">

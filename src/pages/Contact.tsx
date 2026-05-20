@@ -53,7 +53,7 @@ export const Contact: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-orange font-bold uppercase tracking-[0.25em] text-sm block mb-2">Get In Touch</span>
+            <span className="text-orange font-bold uppercase tracking-extra-wide text-sm block mb-2">Get In Touch</span>
             <h1 className="text-4xl md:text-6xl font-heading font-extrabold text-white">Contact Us</h1>
             <p className="text-gray-300 max-w-xl mx-auto mt-4 text-base">
               Connect with our reservation desk to customize your stay packages, check safari availability, and schedule pick-ups.
@@ -107,7 +107,7 @@ export const Contact: React.FC = () => {
                     <a href="tel:08058571919" className="text-sm text-gray-400 hover:text-white transition-colors block">
                       080585 71919
                     </a>
-                    <span className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 block">Direct Mobile Call</span>
+                    <span className="text-tiny text-gray-500 uppercase tracking-widest mt-1 block">Direct Mobile Call</span>
                   </div>
                 </div>
 
@@ -125,7 +125,7 @@ export const Contact: React.FC = () => {
                     >
                       Chat on WhatsApp
                     </a>
-                    <span className="text-[10px] text-gray-500 uppercase tracking-widest mt-1 block">Instant Response</span>
+                    <span className="text-tiny text-gray-500 uppercase tracking-widest mt-1 block">Instant Response</span>
                   </div>
                 </div>
               </div>
@@ -140,9 +140,9 @@ export const Contact: React.FC = () => {
                   href="https://wa.me/918058571919" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn btn-secondary px-6 py-3 uppercase text-sm border-white/10"
+                  className="btn btn-whatsapp px-6 py-3 uppercase text-sm"
                 >
-                  <MessageSquare className="w-4 h-4 text-[#25d366]" />
+                  <MessageSquare className="w-4 h-4 text-white" />
                   Chat on WhatsApp
                 </a>
               </div>
@@ -245,7 +245,7 @@ export const Contact: React.FC = () => {
 
       {/* Embedded Google Maps Section */}
       <section className="bg-[#120e0a] border-t border-white/5 overflow-hidden">
-        <div className="w-full relative h-[450px] overflow-hidden leading-none z-1">
+        <div className="w-full relative overflow-hidden leading-none z-1" style={{ height: '450px' }}>
           {/* We embed the map iframe responsively */}
           <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.538685530543!2d73.13475407537919!3d25.117472677762333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394295000d6ff47d%3A0x49a23393aa77867!2sJawai%20Rock%20Resort!5e0!3m2!1sen!2sin!4v1779250348232!5m2!1sen!2sin" 

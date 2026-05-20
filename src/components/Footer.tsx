@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
     <footer className="relative bg-[#120e0a] border-t border-white/5 pt-16 pb-8 overflow-hidden">
       {/* Subtle jungle background overlay */}
       <div 
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="absolute inset-0 opacity-soft pointer-events-none"
         style={{
           backgroundImage: `url('https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1920')`,
           backgroundSize: 'cover',
@@ -21,25 +21,25 @@ export const Footer: React.FC = () => {
           <path d="M0,0 C90,40 130,80 220,50 C300,20 340,70 420,45 C500,20 540,80 620,50 C700,20 740,80 820,55 C900,30 940,80 1020,50 C1100,20 1140,65 1200,40 L1200,120 L0,120 Z"></path>
         </svg>
       </div>
-
-      <div className="container relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-          {/* Brand Info */}
-          <div className="flex flex-col gap-5">
-            <Link to="/" className="flex items-center gap-2">
-              <div className="p-2 rounded-lg bg-white/5 border border-white/10">
-                <Compass className="w-6 h-6 text-[#e07a5f]" />
-              </div>
-              <div>
-                <span className="font-heading font-extrabold text-xl tracking-wider block text-white">
-                  JAWAI ROCK
-                </span>
-                <span className="text-[10px] uppercase tracking-[0.3em] font-medium text-[#7b9e54] block -mt-1">
-                  Luxury Safari Resort
-                </span>
-              </div>
-            </Link>
-            <p className="text-sm text-gray-400">
+ 
+       <div className="container relative z-10">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+           {/* Brand Info */}
+           <div className="flex flex-col gap-5">
+             <Link to="/" className="flex items-center gap-2">
+               <div className="p-2 rounded-lg bg-white/5 border border-white/10">
+                 <Compass className="w-6 h-6 text-[#e07a5f]" />
+               </div>
+               <div>
+                 <span className="font-heading font-extrabold text-xl tracking-wider block text-white">
+                   JAWAI ROCK
+                 </span>
+                 <span className="text-tiny uppercase tracking-super-wide font-medium text-[#7b9e54] block -mt-1">
+                   Luxury Safari Resort
+                 </span>
+               </div>
+             </Link>
+             <p className="text-sm text-gray-400">
               Immerse yourself in a luxurious wilderness sanctuary nestled among the ancient granite monoliths of Jawai. Experience premium safari lodge comfort, peaceful rocky landscapes, and thrilling wildlife tracking.
             </p>
             {/* Social Placeholder Icons */}

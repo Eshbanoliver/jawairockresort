@@ -30,7 +30,7 @@ export const About: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-orange font-bold uppercase tracking-[0.25em] text-sm block mb-2">Our Roots</span>
+            <span className="text-orange font-bold uppercase tracking-extra-wide text-sm block mb-2">Our Roots</span>
             <h1 className="text-4xl md:text-6xl font-heading font-extrabold text-white">About Us</h1>
             <p className="text-gray-300 max-w-xl mx-auto mt-4 text-base">
               Learn the story of Jawai Rock Resort, where eco-luxury meets the ancient granite wilderness.
@@ -39,50 +39,51 @@ export const About: React.FC = () => {
         </div>
         <SectionDivider type="rocks" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
       </section>
-
-      {/* Resort Story */}
-      <section className="section-padding bg-[#120e0a] relative overflow-hidden">
-        <LeafAnimation />
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <motion.div 
-              className="lg:col-span-7 flex flex-col gap-6 text-left"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="section-title text-left mb-6">
-                <span>The Story</span>
-                <h2>Coexisting In Harmony With The Ancient Wilds</h2>
-              </div>
-              
-              <p className="leading-relaxed">
-                The region of Jawai in Rajasthan is unlike any other wildlife sanctuary in the world. Here, leopards do not live inside dense forests; instead, they reside in the cavities of towering granite monoliths that date back millions of years. For centuries, the local Rabari herdsmen and these top-tier predators have shared a peaceful relationship based on respect and spiritual connection.
-              </p>
-              
-              <p className="leading-relaxed">
-                **Jawai Rock Resort** was founded to celebrate this beautiful connection. Located on Jawai Bandh Road, near Galthani Panchayat, our resort is built to offer tourists an immersive, luxury-infused wilderness escape. We pride ourselves on preserving the peacefulness of the surrounding village and farm lands while opening a gateway for wildlife enthusiasts, birdwatchers, and families to discover Jawai's stunning ecosystem.
-              </p>
-
-              <p className="leading-relaxed">
-                Our architecture pays homage to the local textures. We use earth finishes, natural rocks, and organic wood panelings, allowing the resort to blend seamlessly into the granite hill backdrop. When you step into our rooms, you step into a sanctuary of peace.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="lg:col-span-5 relative"
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
-                  alt="Rabari shepherd and landscape" 
-                  className="w-full h-[450px] object-cover"
-                />
+ 
+       {/* Resort Story */}
+       <section className="section-padding bg-[#120e0a] relative overflow-hidden">
+         <LeafAnimation />
+         <div className="container">
+           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+             <motion.div 
+               className="lg:col-span-7 flex flex-col gap-6 text-left"
+               initial={{ opacity: 0, x: -30 }}
+               whileInView={{ opacity: 1, x: 0 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.6 }}
+             >
+               <div className="section-title text-left mb-6">
+                 <span>The Story</span>
+                 <h2>Coexisting In Harmony With The Ancient Wilds</h2>
+               </div>
+               
+               <p className="leading-relaxed">
+                 The region of Jawai in Rajasthan is unlike any other wildlife sanctuary in the world. Here, leopards do not live inside dense forests; instead, they reside in the cavities of towering granite monoliths that date back millions of years. For centuries, the local Rabari herdsmen and these top-tier predators have shared a peaceful relationship based on respect and spiritual connection.
+               </p>
+               
+               <p className="leading-relaxed">
+                 **Jawai Rock Resort** was founded to celebrate this beautiful connection. Located on Jawai Bandh Road, near Galthani Panchayat, our resort is built to offer tourists an immersive, luxury-infused wilderness escape. We pride ourselves on preserving the peacefulness of the surrounding village and farm lands while opening a gateway for wildlife enthusiasts, birdwatchers, and families to discover Jawai's stunning ecosystem.
+               </p>
+ 
+               <p className="leading-relaxed">
+                 Our architecture pays homage to the local textures. We use earth finishes, natural rocks, and organic wood panelings, allowing the resort to blend seamlessly into the granite hill backdrop. When you step into our rooms, you step into a sanctuary of peace.
+               </p>
+             </motion.div>
+ 
+             <motion.div 
+               className="lg:col-span-5 relative"
+               initial={{ opacity: 0, scale: 0.95 }}
+               whileInView={{ opacity: 1, scale: 1 }}
+               viewport={{ once: true }}
+               transition={{ duration: 0.6, delay: 0.2 }}
+             >
+               <div className="rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative">
+                 <img 
+                   src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
+                   alt="Rabari shepherd and landscape" 
+                   className="w-full object-cover"
+                   style={{ height: '450px' }}
+                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a]/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 p-6 glass-panel border border-white/10">
                   <span className="text-orange font-bold uppercase tracking-wider text-xs block mb-1">Local Vibe</span>
