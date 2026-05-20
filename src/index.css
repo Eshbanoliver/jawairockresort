@@ -628,6 +628,120 @@ ul {
   color: var(--sand-beige-dark);
 }
 
+/* Fancy Metric Card styles */
+.metric-card-fancy {
+  position: relative;
+  overflow: hidden;
+  padding: 2.5rem 1.5rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric-card-fancy:hover {
+  border-color: rgba(224, 122, 95, 0.3);
+  box-shadow: 0 15px 40px rgba(224, 122, 95, 0.1);
+}
+
+/* Watermark backdrop icon styling */
+.metric-watermark {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  opacity: 0.03;
+  color: white;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.metric-card-fancy:hover .metric-watermark {
+  transform: scale(1.15) rotate(-5deg);
+  opacity: 0.08;
+}
+
+/* Icon wrapper in card */
+.metric-icon-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 1.25rem;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.metric-card-fancy:hover .metric-icon-wrapper {
+  transform: translateY(-2px) scale(1.05);
+}
+
+.metric-icon-wrapper.text-orange {
+  color: var(--sunset-orange);
+  background: rgba(224, 122, 95, 0.08);
+  border-color: rgba(224, 122, 95, 0.15);
+}
+
+.metric-icon-wrapper.text-green {
+  color: var(--olive-green-light);
+  background: rgba(123, 158, 84, 0.08);
+  border-color: rgba(123, 158, 84, 0.15);
+}
+
+/* Metric count values */
+.metric-number-wrapper {
+  position: relative;
+  z-index: 1;
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 850;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(to right, #ffffff, #f0e6df);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.metric-card-fancy:hover .metric-number-wrapper {
+  transform: scale(1.03);
+}
+
+/* Metric description and label */
+.metric-label-fancy {
+  position: relative;
+  z-index: 1;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--sand-beige);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.metric-desc {
+  position: relative;
+  z-index: 1;
+  font-size: 0.75rem;
+  color: rgba(245, 234, 224, 0.6);
+  margin: 0;
+  line-height: 1.4;
+}
+
 /* Testimonial Slider styling */
 .testimonial-container {
   max-width: 44rem;

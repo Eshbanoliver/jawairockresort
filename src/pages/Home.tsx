@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { 
   Compass, Tent, TreePine, Waves, Map, Sparkles, Coffee, Train, 
-  Heart, Award, Shield, Smile, Star, ArrowRight, Phone, ChevronDown 
+  Heart, Award, Shield, Smile, Star, ArrowRight, Phone, ChevronDown,
+  Users, Hotel
 } from 'lucide-react';
 import { SectionDivider } from '../components/SectionDivider';
 import { LeafAnimation } from '../components/LeafAnimation';
@@ -336,37 +337,118 @@ export const Home: React.FC = () => {
       </section>
 
       {/* 3. KEY METRICS SECTION */}
-      <section className="py-16 bg-[#17251a] relative overflow-hidden border-y border-white/5">
+      <section 
+        className="py-20 relative overflow-hidden border-y border-white/5"
+        style={{
+          background: 'radial-gradient(circle at center, #1b3d20 0%, #112d15 100%)'
+        }}
+      >
         <div className="safari-pattern" />
+        
+        {/* Decorative background glows */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 rounded-full bg-[#e07a5f]/5 blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-72 h-72 rounded-full bg-[#7b9e54]/10 blur-3xl pointer-events-none" />
+
         <div className="container relative z-10">
-          <div className="metrics-grid">
-            <div className="metric-card glass-panel">
-              <div className="metric-number">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            {/* Metric 1 */}
+            <motion.div 
+              className="metric-card-fancy"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+            >
+              {/* Backdrop watermark icon */}
+              <div className="metric-watermark">
+                <Users className="w-24 h-24" />
+              </div>
+              
+              <div className="metric-icon-wrapper text-orange">
+                <Users className="w-5 h-5" />
+              </div>
+              
+              <div className="metric-number-wrapper">
                 <AnimatedCounter end={1500} suffix="+" />
               </div>
-              <div className="metric-label">Happy Guests</div>
-            </div>
-            
-            <div className="metric-card glass-panel">
-              <div className="metric-number">
+              <div className="metric-label-fancy">Happy Guests</div>
+              <p className="metric-desc">From all across the globe</p>
+            </motion.div>
+
+            {/* Metric 2 */}
+            <motion.div 
+              className="metric-card-fancy"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+            >
+              <div className="metric-watermark">
+                <Hotel className="w-24 h-24" />
+              </div>
+              
+              <div className="metric-icon-wrapper text-green">
+                <Hotel className="w-5 h-5" />
+              </div>
+              
+              <div className="metric-number-wrapper">
                 <AnimatedCounter end={24} suffix="+" />
               </div>
-              <div className="metric-label">Luxury Rooms</div>
-            </div>
+              <div className="metric-label-fancy">Luxury Rooms</div>
+              <p className="metric-desc">Elegant forest-side cottages</p>
+            </motion.div>
 
-            <div className="metric-card glass-panel">
-              <div className="metric-number">
+            {/* Metric 3 */}
+            <motion.div 
+              className="metric-card-fancy"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+            >
+              <div className="metric-watermark">
+                <Compass className="w-24 h-24" />
+              </div>
+              
+              <div className="metric-icon-wrapper text-orange">
+                <Compass className="w-5 h-5" />
+              </div>
+              
+              <div className="metric-number-wrapper">
                 <AnimatedCounter end={800} suffix="+" />
               </div>
-              <div className="metric-label">Safari Experiences</div>
-            </div>
+              <div className="metric-label-fancy">Safari experiences</div>
+              <p className="metric-desc">Guided leopard trackings</p>
+            </motion.div>
 
-            <div className="metric-card glass-panel">
-              <div className="metric-number">
+            {/* Metric 4 */}
+            <motion.div 
+              className="metric-card-fancy"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+            >
+              <div className="metric-watermark">
+                <Award className="w-24 h-24" />
+              </div>
+              
+              <div className="metric-icon-wrapper text-green">
+                <Award className="w-5 h-5" />
+              </div>
+              
+              <div className="metric-number-wrapper">
                 <AnimatedCounter end={8} suffix="+" />
               </div>
-              <div className="metric-label">Years of Hospitality</div>
-            </div>
+              <div className="metric-label-fancy">Years experience</div>
+              <p className="metric-desc">Uncompromising trust & service</p>
+            </motion.div>
+
           </div>
         </div>
       </section>
