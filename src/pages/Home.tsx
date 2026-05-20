@@ -529,11 +529,11 @@ export const Home: React.FC = () => {
                 {activeCategory === cat.id && (
                   <motion.div
                     layoutId="activeTabPill"
-                    className="absolute inset-0 bg-[#e07a5f] rounded-full -z-10"
+                    className="absolute inset-0 bg-[#e07a5f] rounded-full"
                     transition={{ type: 'spring', stiffness: 350, damping: 28 }}
                   />
                 )}
-                {cat.name}
+                <span className="relative z-10">{cat.name}</span>
               </button>
             ))}
           </div>
