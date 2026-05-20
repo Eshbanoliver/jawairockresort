@@ -60,7 +60,7 @@ export const Contact: React.FC = () => {
             </p>
           </motion.div>
         </div>
-        <SectionDivider type="rocks" color="#120e0a" className="absolute bottom-0 left-0 w-full" />
+        <SectionDivider type="rocks" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
       </section>
 
       {/* Main Form & Details */}

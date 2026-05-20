@@ -37,7 +37,7 @@ export const About: React.FC = () => {
             </p>
           </motion.div>
         </div>
-        <SectionDivider type="rocks" color="#120e0a" className="absolute bottom-0 left-0 w-full" />
+        <SectionDivider type="rocks" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
       </section>
 
       {/* Resort Story */}
@@ -143,7 +143,7 @@ export const About: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        <SectionDivider type="curve" color="#120e0a" className="absolute bottom-0 left-0 w-full" />
+        <SectionDivider type="curve" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
       </section>
 
       {/* Full-width nature image banner */}

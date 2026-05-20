@@ -157,7 +157,7 @@ export const Home: React.FC = () => {
         </div>
 
         {/* Rock divider at bottom of Hero */}
-        <SectionDivider type="rocks" color="#120e0a" className="absolute bottom-0 left-0 w-full" />
+        <SectionDivider type="rocks" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
       </section>
 
       {/* 2. ABOUT US SECTION */}
@@ -347,7 +347,7 @@ export const Home: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        <SectionDivider type="cliff" color="#120e0a" className="absolute bottom-0 left-0 w-full" />
+        <SectionDivider type="cliff" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
       </section>
 
       {/* 6. CORE VALUES SECTION */}
