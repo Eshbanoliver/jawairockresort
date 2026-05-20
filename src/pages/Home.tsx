@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { 
-  Compass, Tent, TreePine, Waves, Map, Sparkles, Coffee, Train, 
-  Heart, Award, Shield, Smile, Star, ArrowRight, Phone, ChevronDown,
-  Users, Hotel
+  Compass, Tent, TreePine, Waves, Sparkles, 
+  Award, Shield, Smile, Star, ArrowRight, Phone, ChevronDown,
+  Users, Hotel, Utensils, Activity
 } from 'lucide-react';
 import { SectionDivider } from '../components/SectionDivider';
 import { LeafAnimation } from '../components/LeafAnimation';
@@ -118,26 +118,61 @@ export const Home: React.FC = () => {
   const categories = [
     { id: 'all', name: 'All Services' },
     { id: 'stays', name: 'Luxury Stays' },
-    { id: 'safari', name: 'Safari & Adventure' },
-    { id: 'events', name: 'Weddings & Groups' }
+    { id: 'dining', name: 'Dining & Wellness' },
+    { id: 'activities', name: 'Wilderness & Sports' }
   ];
 
-  // Services list mapping with categories
+  // Services list mapping with categories and stock images
   const services = [
-    { title: "Luxury Resort in Jawai", desc: "Premium cottage suites featuring private sit-outs, modern luxury, and forest surroundings.", icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
-    { title: "Budget Friendly Hotel in Jawai", desc: "Experience premium safari hospitality without the luxury price tag. Clean, comfortable rooms.", icon: <Coffee className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
-    { title: "Luxury Villas & Farm Stay", desc: "Indulge in spacious, private villa retreats complete with scenic farm style settings.", icon: <TreePine className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
-    { title: "Jungle Safari Stay Packages", desc: "All-inclusive stays paired with open-top 4x4 Gypsy trackers to spot wild leopards.", icon: <Compass className="w-6 h-6 text-[#e07a5f]" />, category: 'safari' },
-    { title: "Marriage Garden & Party Plot", desc: "Host dream destination weddings against spectacular, towering granite rock monoliths.", icon: <Sparkles className="w-6 h-6 text-[#e07a5f]" />, category: 'events' },
-    { title: "Corporate Group Bookings", desc: "Custom retreats with conference setups, team-building safaris, and buffet dining.", icon: <Award className="w-6 h-6 text-[#e07a5f]" />, category: 'events' },
-    { title: "Resort Near Jawai Dam", desc: "Scenic location with quick access to the Jawai Dam for birdwatching and crocodile sightings.", icon: <Waves className="w-6 h-6 text-[#e07a5f]" />, category: 'safari' },
-    { title: "Hotel Near Jawai Railway Station", desc: "Conveniently situated for quick pick-ups and drops to the nearest transit hubs.", icon: <Train className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
-    { title: "Resort Near Jungle Safari", desc: "Stay minutes away from the main safari trails, ensuring you never miss a morning drive.", icon: <Map className="w-6 h-6 text-[#e07a5f]" />, category: 'safari' },
-    { title: "Hotel with Safari Packages", desc: "Seamless bookings combining top-tier lodging with daily guided wilderness tracking.", icon: <Compass className="w-6 h-6 text-[#e07a5f]" />, category: 'safari' },
-    { title: "Peaceful Farm Style Stay", desc: "Connect with nature in rustically elegant mud-finish cottages surrounded by green orchards.", icon: <TreePine className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
-    { title: "Group & Family Resort Stay", desc: "Interconnected rooms and ample play areas ideal for families and larger groups.", icon: <Heart className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
-    { title: "Luxury Budget Accommodation", desc: "Clean, well-appointed hotel rooms featuring luxury bedding at standard rates.", icon: <Award className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
-    { title: "Villa Stay in Jawai & Sumerpur", desc: "Exclusive private properties offering tranquility and top hospitality near Sumerpur.", icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+    { 
+      title: "Eco Luxury Resort", 
+      desc: "Boutique cottage suites combining rugged wild hills, premium modern amenities, and forest sit-outs.", 
+      icon: <Hotel className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800",
+      category: 'stays' 
+    },
+    { 
+      title: "Fine Dining Restaurant", 
+      desc: "Savor premium organic farm-to-table dining, local Rajasthani delicacies, and romantic campfire barbecues.", 
+      icon: <Utensils className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800",
+      category: 'dining' 
+    },
+    { 
+      title: "Jungle Leopard Safari", 
+      desc: "Explore wilderness safari trails in open-top 4x4 Gypsy trackers to spot local leopards and crocodiles.", 
+      icon: <Compass className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800",
+      category: 'activities' 
+    },
+    { 
+      title: "Private Luxury Villa", 
+      desc: "Indulge in spacious, private villa retreats complete with luxury bedding, terraces, and personal service.", 
+      icon: <TreePine className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800",
+      category: 'stays' 
+    },
+    { 
+      title: "Scenic Swimming Pool", 
+      desc: "Unwind at our outdoor infinity swimming pool surrounded by massive, spectacular granite boulders.", 
+      icon: <Waves className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800",
+      category: 'dining' 
+    },
+    { 
+      title: "Recreation & Sports", 
+      desc: "Engage in outdoor games, trekking activities, and team-building sports across the private reserve area.", 
+      icon: <Activity className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?q=80&w=800",
+      category: 'activities' 
+    },
+    { 
+      title: "Premium Tent House", 
+      desc: "Experience high-end glamping inside luxury safari tents equipped with air conditioning and private decks.", 
+      icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, 
+      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=800",
+      category: 'stays' 
+    }
   ];
 
   const filteredServices = activeCategory === 'all'
@@ -517,17 +552,27 @@ export const Home: React.FC = () => {
                   exit={{ opacity: 0, scale: 0.95, y: 15 }}
                   transition={{ duration: 0.35, ease: 'easeOut' }}
                   key={service.title}
-                  className="glass-card-fancy flex flex-col gap-4 text-left"
+                  className="service-card-premium text-left"
                 >
-                  <div className="card-icon-container">
-                    {service.icon}
+                  <div className="service-card-image-wrapper">
+                    <img 
+                      src={service.image} 
+                      alt={service.title} 
+                      className="service-card-image" 
+                      loading="lazy"
+                    />
                   </div>
-                  <h3 className="text-lg font-heading font-semibold text-white leading-snug">{service.title}</h3>
-                  <p className="text-xs text-gray-400 leading-relaxed">{service.desc}</p>
-                  <Link to="/services" className="text-orange text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 mt-auto hover:text-white transition-colors group">
-                    Learn More
-                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
+                  <div className="service-card-content">
+                    <div className="card-icon-container">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg font-heading font-semibold text-white leading-snug">{service.title}</h3>
+                    <p className="text-xs text-gray-400 leading-relaxed">{service.desc}</p>
+                    <Link to="/services" className="text-orange text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 mt-auto hover:text-white transition-colors group">
+                      Learn More
+                      <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                    </Link>
+                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>
