@@ -1506,21 +1506,164 @@ ul {
   color: #e91e63 !important;
 }
 
-/* Modern 3D Cards Styles */
-.wc-card-gold:hover .wc-card-border { border-color: rgba(224, 122, 95, 0.4) !important; box-shadow: inset 0 0 40px rgba(224, 122, 95, 0.1); }
-.wc-card-gold:hover .wc-card-icon-box { border-color: rgba(224, 122, 95, 0.3) !important; background: rgba(224, 122, 95, 0.1) !important; }
+/* Modern Card Grid Utilities */
+.mt-12 { margin-top: 3rem; }
+.mt-16 { margin-top: 4rem; }
 
-.wc-card-green:hover .wc-card-border { border-color: rgba(123, 158, 84, 0.4) !important; box-shadow: inset 0 0 40px rgba(123, 158, 84, 0.1); }
-.wc-card-green:hover .wc-card-icon-box { border-color: rgba(123, 158, 84, 0.3) !important; background: rgba(123, 158, 84, 0.1) !important; }
+/* Why Choose Us Modern Cards Layout */
+.wc-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(17, 45, 21, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(17, 45, 21, 0.03);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
 
-.wc-card-blue:hover .wc-card-border { border-color: rgba(90, 140, 160, 0.4) !important; box-shadow: inset 0 0 40px rgba(90, 140, 160, 0.1); }
-.wc-card-blue:hover .wc-card-icon-box { border-color: rgba(90, 140, 160, 0.3) !important; background: rgba(90, 140, 160, 0.1) !important; }
+.wc-card-img-wrapper {
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
-.wc-card-purple:hover .wc-card-border { border-color: rgba(155, 89, 182, 0.4) !important; box-shadow: inset 0 0 40px rgba(155, 89, 182, 0.1); }
-.wc-card-purple:hover .wc-card-icon-box { border-color: rgba(155, 89, 182, 0.3) !important; background: rgba(155, 89, 182, 0.1) !important; }
+.wc-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-.wc-card-pink:hover .wc-card-border { border-color: rgba(233, 30, 99, 0.4) !important; box-shadow: inset 0 0 40px rgba(233, 30, 99, 0.1); }
-.wc-card-pink:hover .wc-card-icon-box { border-color: rgba(233, 30, 99, 0.3) !important; background: rgba(233, 30, 99, 0.1) !important; }
+.wc-card:hover .wc-card-img {
+  transform: scale(1.08);
+}
 
-.wc-card-teal:hover .wc-card-border { border-color: rgba(26, 188, 156, 0.4) !important; box-shadow: inset 0 0 40px rgba(26, 188, 156, 0.1); }
-.wc-card-teal:hover .wc-card-icon-box { border-color: rgba(26, 188, 156, 0.3) !important; background: rgba(26, 188, 156, 0.1) !important; }
+.wc-card-info {
+  padding: 1.5rem 1.75rem 2rem 1.75rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.wc-card-icon-box {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-top: -42px; /* Overlap image */
+  margin-bottom: 1.25rem;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(17, 45, 21, 0.08);
+  border: 1px solid rgba(17, 45, 21, 0.05);
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wc-card:hover .wc-card-icon-box {
+  transform: translateY(-4px) scale(1.05);
+}
+
+.wc-card-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--forest-green);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.wc-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--rock-gray);
+}
+
+/* Hover & Themes */
+.wc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(17, 45, 21, 0.08);
+}
+
+/* Gold Theme */
+.wc-theme-gold {
+  border-top: 4px solid #e07a5f;
+}
+.wc-theme-gold .wc-card-icon-box {
+  color: #e07a5f;
+  background: rgba(224, 122, 95, 0.05);
+  border-color: rgba(224, 122, 95, 0.15);
+}
+.wc-theme-gold:hover {
+  border-color: rgba(224, 122, 95, 0.3);
+}
+
+/* Green Theme */
+.wc-theme-green {
+  border-top: 4px solid #7b9e54;
+}
+.wc-theme-green .wc-card-icon-box {
+  color: #7b9e54;
+  background: rgba(123, 158, 84, 0.05);
+  border-color: rgba(123, 158, 84, 0.15);
+}
+.wc-theme-green:hover {
+  border-color: rgba(123, 158, 84, 0.3);
+}
+
+/* Blue Theme */
+.wc-theme-blue {
+  border-top: 4px solid #5a8ca0;
+}
+.wc-theme-blue .wc-card-icon-box {
+  color: #5a8ca0;
+  background: rgba(90, 140, 160, 0.05);
+  border-color: rgba(90, 140, 160, 0.15);
+}
+.wc-theme-blue:hover {
+  border-color: rgba(90, 140, 160, 0.3);
+}
+
+/* Purple Theme */
+.wc-theme-purple {
+  border-top: 4px solid #9b59b6;
+}
+.wc-theme-purple .wc-card-icon-box {
+  color: #9b59b6;
+  background: rgba(155, 89, 182, 0.05);
+  border-color: rgba(155, 89, 182, 0.15);
+}
+.wc-theme-purple:hover {
+  border-color: rgba(155, 89, 182, 0.3);
+}
+
+/* Pink Theme */
+.wc-theme-pink {
+  border-top: 4px solid #e91e63;
+}
+.wc-theme-pink .wc-card-icon-box {
+  color: #e91e63;
+  background: rgba(233, 30, 99, 0.05);
+  border-color: rgba(233, 30, 99, 0.15);
+}
+.wc-theme-pink:hover {
+  border-color: rgba(233, 30, 99, 0.3);
+}
+
+/* Teal Theme */
+.wc-theme-teal {
+  border-top: 4px solid #1abc9c;
+}
+.wc-theme-teal .wc-card-icon-box {
+  color: #1abc9c;
+  background: rgba(26, 188, 156, 0.05);
+  border-color: rgba(26, 188, 156, 0.15);
+}
+.wc-theme-teal:hover {
+  border-color: rgba(26, 188, 156, 0.3);
+}
