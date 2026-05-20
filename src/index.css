@@ -1369,29 +1369,115 @@ ul {
   transform: scale(1.1) rotate(-5deg) !important;
 }
 
-/* Background glow blobs for dark brown values section */
+/* Background glow blobs with slow drift animations for values section */
 .values-glow-blob-1 {
   position: absolute;
   top: 10%;
   left: 5%;
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(155, 89, 182, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(155, 89, 182, 0.07) 0%, transparent 70%);
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+  animation: driftGlow1 15s ease-in-out infinite;
 }
 
 .values-glow-blob-2 {
   position: absolute;
   bottom: 10%;
   right: 5%;
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: 450px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(224, 122, 95, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(224, 122, 95, 0.07) 0%, transparent 70%);
   filter: blur(60px);
   pointer-events: none;
   z-index: 0;
+  animation: driftGlow2 18s ease-in-out infinite;
+}
+
+@keyframes driftGlow1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(30px, -20px) scale(1.15); }
+}
+
+@keyframes driftGlow2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-35px, 25px) scale(1.1); }
+}
+
+/* Core Values Bobbing/Floating Animations */
+.cv-card-bob-1 {
+  animation: cvBob1 7s ease-in-out infinite;
+}
+.cv-card-bob-2 {
+  animation: cvBob2 9s ease-in-out infinite;
+}
+.cv-card-bob-3 {
+  animation: cvBob3 8s ease-in-out infinite;
+}
+
+@keyframes cvBob1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes cvBob2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes cvBob3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Pause float bobbing on hover so scale transform operates smoothly */
+.cv-card:hover {
+  animation-play-state: paused !important;
+}
+
+/* Core Values Watermarks */
+.cv-card .cv-watermark {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 5.5rem;
+  height: 5.5rem;
+  opacity: 0.015;
+  pointer-events: none;
+  z-index: 0;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #ffffff;
+}
+
+.cv-theme-gold:hover .cv-watermark {
+  opacity: 0.07;
+  transform: scale(1.2) rotate(15deg);
+  color: #e07a5f !important;
+}
+.cv-theme-green:hover .cv-watermark {
+  opacity: 0.07;
+  transform: scale(1.2) rotate(-15deg);
+  color: #7b9e54 !important;
+}
+.cv-theme-blue:hover .cv-watermark {
+  opacity: 0.07;
+  transform: scale(1.2) rotate(10deg);
+  color: #5a8ca0 !important;
+}
+.cv-theme-purple:hover .cv-watermark {
+  opacity: 0.07;
+  transform: scale(1.2) rotate(-10deg);
+  color: #9b59b6 !important;
+}
+.cv-theme-teal:hover .cv-watermark {
+  opacity: 0.07;
+  transform: scale(1.2) rotate(15deg);
+  color: #1abc9c !important;
+}
+.cv-theme-pink:hover .cv-watermark {
+  opacity: 0.07;
+  transform: scale(1.2) rotate(-15deg);
+  color: #e91e63 !important;
 }

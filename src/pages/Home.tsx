@@ -666,21 +666,22 @@ export const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Premium Hospitality", desc: "Warm, tailored guest treatment that mirrors Rajasthan's historic royal standard.", icon: <Award className="w-6 h-6 text-[#e07a5f]" />, themeClass: 'cv-theme-gold' },
-              { title: "Nature Connection", desc: "Creating stays that encourage physical, mental, and visual alignment with wilderness.", icon: <TreePine className="w-6 h-6 text-[#7b9e54]" />, themeClass: 'cv-theme-green' },
-              { title: "Uncompromising Comfort", desc: "Equipping every cottage and farm chalet with high-end beddings and modern en-suites.", icon: <Shield className="w-6 h-6 text-[#5a8ca0]" />, themeClass: 'cv-theme-blue' },
-              { title: "Luxury Experience", desc: "Open 4x4 tracks, gourmet local and international dining, and candlelit campfire events.", icon: <Sparkles className="w-6 h-6 text-[#9b59b6]" />, themeClass: 'cv-theme-purple' },
-              { title: "Peaceful Environment", desc: "Located away from commercial traffic, nested under ancient granite rocks.", icon: <Compass className="w-6 h-6 text-[#1abc9c]" />, themeClass: 'cv-theme-teal' },
-              { title: "Guest Satisfaction", desc: "Going the extra mile to ensure your leopard tracking and leisure wishes are met.", icon: <Smile className="w-6 h-6 text-[#e91e63]" />, themeClass: 'cv-theme-pink' },
+              { title: "Premium Hospitality", desc: "Warm, tailored guest treatment that mirrors Rajasthan's historic royal standard.", icon: <Award className="w-6 h-6 text-[#e07a5f]" />, themeClass: 'cv-theme-gold', bobClass: 'cv-card-bob-1', watermark: <Award className="cv-watermark absolute" /> },
+              { title: "Nature Connection", desc: "Creating stays that encourage physical, mental, and visual alignment with wilderness.", icon: <TreePine className="w-6 h-6 text-[#7b9e54]" />, themeClass: 'cv-theme-green', bobClass: 'cv-card-bob-2', watermark: <TreePine className="cv-watermark absolute" /> },
+              { title: "Uncompromising Comfort", desc: "Equipping every cottage and farm chalet with high-end beddings and modern en-suites.", icon: <Shield className="w-6 h-6 text-[#5a8ca0]" />, themeClass: 'cv-theme-blue', bobClass: 'cv-card-bob-3', watermark: <Shield className="cv-watermark absolute" /> },
+              { title: "Luxury Experience", desc: "Open 4x4 tracks, gourmet local and international dining, and candlelit campfire events.", icon: <Sparkles className="w-6 h-6 text-[#9b59b6]" />, themeClass: 'cv-theme-purple', bobClass: 'cv-card-bob-2', watermark: <Sparkles className="cv-watermark absolute" /> },
+              { title: "Peaceful Environment", desc: "Located away from commercial traffic, nested under ancient granite rocks.", icon: <Compass className="w-6 h-6 text-[#1abc9c]" />, themeClass: 'cv-theme-teal', bobClass: 'cv-card-bob-1', watermark: <Compass className="cv-watermark absolute" /> },
+              { title: "Guest Satisfaction", desc: "Going the extra mile to ensure your leopard tracking and leisure wishes are met.", icon: <Smile className="w-6 h-6 text-[#e91e63]" />, themeClass: 'cv-theme-pink', bobClass: 'cv-card-bob-3', watermark: <Smile className="cv-watermark absolute" /> },
             ].map((value, idx) => (
               <motion.div
                 key={value.title}
-                className={`cv-card ${value.themeClass} p-6 rounded-xl flex gap-4 text-left relative overflow-hidden`}
+                className={`cv-card ${value.themeClass} ${value.bobClass} p-6 rounded-xl flex gap-4 text-left relative overflow-hidden`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
               >
+                {value.watermark}
                 <div className="cv-icon-box shrink-0 h-fit relative z-10">
                   {value.icon}
                 </div>
