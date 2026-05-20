@@ -210,9 +210,41 @@ export const Home: React.FC = () => {
               </Link>
             </motion.div>
 
-            {/* Creative Offset Overlapping Collage */}
+            {/* Mobile View: Clean 2x2 Grid of Safari Images */}
+            <div className="grid grid-cols-2 gap-4 md:hidden mt-8 w-full">
+              <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
+                <img 
+                  src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=800" 
+                  alt="Wild Leopard" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
+                <img 
+                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800" 
+                  alt="Resort Pool" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
+                <img 
+                  src="https://images.unsplash.com/photo-1533753659765-a83d78bfb025?q=80&w=800" 
+                  alt="Safari Tent" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
+                <img 
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
+                  alt="Jawai Hills" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Desktop View: Creative Offset Overlapping Collage */}
             <motion.div
-              className="relative w-full h-[520px] md:h-[580px] flex items-center justify-center mt-8 md:mt-0"
+              className="hidden md:flex relative w-full h-[580px] items-center justify-center mt-0"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
