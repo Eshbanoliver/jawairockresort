@@ -40,6 +40,22 @@ const AnimatedCounter: React.FC<{ end: number; duration?: number; suffix?: strin
 };
 
 export const Home: React.FC = () => {
+  // Hero Image Slider State
+  const [currentHeroImage, setCurrentHeroImage] = useState(0);
+  const heroImages = [
+    "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1920", // Original leopard
+    "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1920", // Luxury tent
+    "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1920", // Landscape sunset
+    "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1920", // Resort rocks
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentHeroImage((prev) => (prev + 1) % heroImages.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   // Testimonials Slider State
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const testimonials = [
@@ -117,13 +133,20 @@ export const Home: React.FC = () => {
   return (
     <div className="w-full">
       {/* 1. HERO SECTION */}
-      <section 
-        className="hero-section"
-        style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1920')`,
-        }}
-      >
-        <div className="overlay-dark" />
+      <section className="hero-section">
+        {heroImages.map((img, idx) => (
+          <div
+            key={idx}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ 
+              backgroundImage: `url('${img}')`,
+              opacity: idx === currentHeroImage ? 1 : 0,
+              transition: 'opacity 1.5s ease-in-out',
+              zIndex: 0
+            }}
+          />
+        ))}
+        <div className="overlay-dark" style={{ zIndex: 1 }} />
         
         {/* Animated leaves inside hero */}
         <LeafAnimation />
