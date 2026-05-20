@@ -1506,37 +1506,21 @@ ul {
   color: #e91e63 !important;
 }
 
-/* Interactive Timeline Styles */
-.timeline-track-glow {
-  box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
-}
+/* Modern 3D Cards Styles */
+.wc-card-gold:hover .wc-card-border { border-color: rgba(224, 122, 95, 0.4) !important; box-shadow: inset 0 0 40px rgba(224, 122, 95, 0.1); }
+.wc-card-gold:hover .wc-card-icon-box { border-color: rgba(224, 122, 95, 0.3) !important; background: rgba(224, 122, 95, 0.1) !important; }
 
-/* Gold Theme */
-.timeline-gold-icon-box { border-color: rgba(224, 122, 95, 0.2) !important; }
-.timeline-gold-node { border-color: #e07a5f !important; }
-.timeline-gold-node > div { background: #e07a5f !important; box-shadow: 0 0 10px #e07a5f; }
+.wc-card-green:hover .wc-card-border { border-color: rgba(123, 158, 84, 0.4) !important; box-shadow: inset 0 0 40px rgba(123, 158, 84, 0.1); }
+.wc-card-green:hover .wc-card-icon-box { border-color: rgba(123, 158, 84, 0.3) !important; background: rgba(123, 158, 84, 0.1) !important; }
 
-/* Green Theme */
-.timeline-green-icon-box { border-color: rgba(123, 158, 84, 0.2) !important; }
-.timeline-green-node { border-color: #7b9e54 !important; }
-.timeline-green-node > div { background: #7b9e54 !important; box-shadow: 0 0 10px #7b9e54; }
+.wc-card-blue:hover .wc-card-border { border-color: rgba(90, 140, 160, 0.4) !important; box-shadow: inset 0 0 40px rgba(90, 140, 160, 0.1); }
+.wc-card-blue:hover .wc-card-icon-box { border-color: rgba(90, 140, 160, 0.3) !important; background: rgba(90, 140, 160, 0.1) !important; }
 
-/* Blue Theme */
-.timeline-blue-icon-box { border-color: rgba(90, 140, 160, 0.2) !important; }
-.timeline-blue-node { border-color: #5a8ca0 !important; }
-.timeline-blue-node > div { background: #5a8ca0 !important; box-shadow: 0 0 10px #5a8ca0; }
+.wc-card-purple:hover .wc-card-border { border-color: rgba(155, 89, 182, 0.4) !important; box-shadow: inset 0 0 40px rgba(155, 89, 182, 0.1); }
+.wc-card-purple:hover .wc-card-icon-box { border-color: rgba(155, 89, 182, 0.3) !important; background: rgba(155, 89, 182, 0.1) !important; }
 
-/* Purple Theme */
-.timeline-purple-icon-box { border-color: rgba(155, 89, 182, 0.2) !important; }
-.timeline-purple-node { border-color: #9b59b6 !important; }
-.timeline-purple-node > div { background: #9b59b6 !important; box-shadow: 0 0 10px #9b59b6; }
+.wc-card-pink:hover .wc-card-border { border-color: rgba(233, 30, 99, 0.4) !important; box-shadow: inset 0 0 40px rgba(233, 30, 99, 0.1); }
+.wc-card-pink:hover .wc-card-icon-box { border-color: rgba(233, 30, 99, 0.3) !important; background: rgba(233, 30, 99, 0.1) !important; }
 
-/* Pink Theme */
-.timeline-pink-icon-box { border-color: rgba(233, 30, 99, 0.2) !important; }
-.timeline-pink-node { border-color: #e91e63 !important; }
-.timeline-pink-node > div { background: #e91e63 !important; box-shadow: 0 0 10px #e91e63; }
-
-/* Teal Theme */
-.timeline-teal-icon-box { border-color: rgba(26, 188, 156, 0.2) !important; }
-.timeline-teal-node { border-color: #1abc9c !important; }
-.timeline-teal-node > div { background: #1abc9c !important; box-shadow: 0 0 10px #1abc9c; }
+.wc-card-teal:hover .wc-card-border { border-color: rgba(26, 188, 156, 0.4) !important; box-shadow: inset 0 0 40px rgba(26, 188, 156, 0.1); }
+.wc-card-teal:hover .wc-card-icon-box { border-color: rgba(26, 188, 156, 0.3) !important; background: rgba(26, 188, 156, 0.1) !important; }
