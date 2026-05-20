@@ -654,7 +654,11 @@ export const Home: React.FC = () => {
 
       {/* 6. CORE VALUES SECTION */}
       <section className="section-padding bg-[#120e0a] relative overflow-hidden">
-        <div className="container">
+        {/* Background glow effects */}
+        <div className="values-glow-blob-1" />
+        <div className="values-glow-blob-2" />
+
+        <div className="container relative z-10">
           <div className="section-title">
             <span>Our Foundation</span>
             <h2>Our Core Values</h2>
@@ -662,27 +666,27 @@ export const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: "Premium Hospitality", desc: "Warm, tailored guest treatment that mirrors Rajasthan's historic royal standard.", icon: <Award className="w-6 h-6 text-[#7b9e54]" /> },
-              { title: "Nature Connection", desc: "Creating stays that encourage physical, mental, and visual alignment with wilderness.", icon: <TreePine className="w-6 h-6 text-[#7b9e54]" /> },
-              { title: "Uncompromising Comfort", desc: "Equipping every cottage and farm chalet with high-end beddings and modern en-suites.", icon: <Shield className="w-6 h-6 text-[#7b9e54]" /> },
-              { title: "Luxury Experience", desc: "Open 4x4 tracks, gourmet local and international dining, and candlelit campfire events.", icon: <Sparkles className="w-6 h-6 text-[#7b9e54]" /> },
-              { title: "Peaceful Environment", desc: "Located away from commercial traffic, nested under ancient granite rocks.", icon: <Compass className="w-6 h-6 text-[#7b9e54]" /> },
-              { title: "Guest Satisfaction", desc: "Going the extra mile to ensure your leopard tracking and leisure wishes are met.", icon: <Smile className="w-6 h-6 text-[#7b9e54]" /> },
+              { title: "Premium Hospitality", desc: "Warm, tailored guest treatment that mirrors Rajasthan's historic royal standard.", icon: <Award className="w-6 h-6 text-[#e07a5f]" />, themeClass: 'cv-theme-gold' },
+              { title: "Nature Connection", desc: "Creating stays that encourage physical, mental, and visual alignment with wilderness.", icon: <TreePine className="w-6 h-6 text-[#7b9e54]" />, themeClass: 'cv-theme-green' },
+              { title: "Uncompromising Comfort", desc: "Equipping every cottage and farm chalet with high-end beddings and modern en-suites.", icon: <Shield className="w-6 h-6 text-[#5a8ca0]" />, themeClass: 'cv-theme-blue' },
+              { title: "Luxury Experience", desc: "Open 4x4 tracks, gourmet local and international dining, and candlelit campfire events.", icon: <Sparkles className="w-6 h-6 text-[#9b59b6]" />, themeClass: 'cv-theme-purple' },
+              { title: "Peaceful Environment", desc: "Located away from commercial traffic, nested under ancient granite rocks.", icon: <Compass className="w-6 h-6 text-[#1abc9c]" />, themeClass: 'cv-theme-teal' },
+              { title: "Guest Satisfaction", desc: "Going the extra mile to ensure your leopard tracking and leisure wishes are met.", icon: <Smile className="w-6 h-6 text-[#e91e63]" />, themeClass: 'cv-theme-pink' },
             ].map((value, idx) => (
               <motion.div
                 key={value.title}
-                className="p-6 rounded-xl bg-white/[0.02] border border-white/5 flex gap-4 text-left"
-                initial={{ opacity: 0, x: idx % 2 === 0 ? -15 : 15 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                className={`cv-card ${value.themeClass} p-6 rounded-xl flex gap-4 text-left relative overflow-hidden`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.05 }}
               >
-                <div className="shrink-0 p-3 rounded-lg bg-white/5 border border-white/5 h-fit">
+                <div className="cv-icon-box shrink-0 h-fit relative z-10">
                   {value.icon}
                 </div>
-                <div>
+                <div className="relative z-10">
                   <h3 className="text-lg font-heading font-semibold text-white mb-2">{value.title}</h3>
-                  <p className="text-sm text-gray-400">{value.desc}</p>
+                  <p className="text-sm text-gray-300">{value.desc}</p>
                 </div>
               </motion.div>
             ))}
