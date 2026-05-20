@@ -27,8 +27,11 @@ export const FloatingActions: React.FC = () => {
 
   return (
     <>
-      {/* Left side actions: WhatsApp and Phone Call (horizontal layout for mobile elegance) */}
-      <div className="fixed bottom-6 left-6 flex items-center gap-3 z-40">
+      {/* Left side actions: WhatsApp and Phone Call (fixed bottom-left via inline style) */}
+      <div 
+        className="fixed flex items-center gap-3 z-40"
+        style={{ bottom: '24px', left: '24px' }}
+      >
         {/* WhatsApp Link */}
         <motion.a
           href="https://wa.me/918058571919"
@@ -66,13 +69,18 @@ export const FloatingActions: React.FC = () => {
         </motion.a>
       </div>
 
-      {/* Right side action: Scroll to Top */}
+      {/* Right side action: Scroll to Top (fixed bottom-right via inline style) */}
       <AnimatePresence>
         {isVisible && (
           <motion.button
             onClick={scrollToTop}
-            className="fixed bottom-6 right-6 w-12 h-12 rounded-full text-white flex items-center justify-center shadow-lg hover:brightness-110 transition-all z-40"
+            className="fixed text-white flex items-center justify-center shadow-lg hover:brightness-110 transition-all z-40"
             style={{ 
+              bottom: '24px',
+              right: '24px',
+              width: '48px',
+              height: '48px',
+              borderRadius: '50%',
               backgroundColor: '#112d15',
               border: '1px solid rgba(255, 255, 255, 0.1)',
               boxShadow: '0 4px 14px rgba(17, 45, 21, 0.3)'
