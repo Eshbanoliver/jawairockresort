@@ -4,7 +4,7 @@ import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { 
   Compass, Tent, TreePine, Waves, Sparkles, 
   Award, Shield, Smile, Star, ArrowRight, Phone, ChevronDown,
-  Users, Hotel, Utensils, Activity, Cake, Briefcase
+  Users, Hotel, Utensils, Activity, Cake, Briefcase, MapPin
 } from 'lucide-react';
 import { SectionDivider } from '../components/SectionDivider';
 import { LeafAnimation } from '../components/LeafAnimation';
@@ -114,6 +114,7 @@ export const Home: React.FC = () => {
 
   // Services Categories & State
   const [activeCategory, setActiveCategory] = useState('all');
+  const [activeChooseIndex, setActiveChooseIndex] = useState(0);
   const categories = [
     { id: 'all', name: 'All Services' },
     { id: 'stays', name: 'Luxury Stays' },
@@ -696,41 +697,133 @@ export const Home: React.FC = () => {
       </section>
 
       {/* 7. WHY CHOOSE US SECTION */}
-      <section className="section-padding bg-[#1b3d20]/30 relative overflow-hidden border-y border-white/5">
+      <section className="section-padding bg-[#1b3d20]/15 relative overflow-hidden border-y border-white/5">
         <div className="safari-pattern" />
+        {/* Glow blobs for visual depth */}
+        <div className="wc-glow-blob-1" />
+        <div className="wc-glow-blob-2" />
+
         <div className="container relative z-10">
           <div className="section-title">
             <span>The Jawai Advantage</span>
             <h2>Why Choose Jawai Rock Resort</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { title: "Scenic Jawai Location", desc: "Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.", img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400" },
-              { title: "Peaceful Jungle Atmosphere", desc: "A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.", img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=400" },
-              { title: "Budget Friendly Luxury", desc: "Unmatched value combining premium resort amenities, swimming pool, and organic dining without heavy, overpriced bills.", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=400" },
-              { title: "Resort Near Safari Area", desc: "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.", img: "https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=400" },
-              { title: "Family Friendly Stay", desc: "Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events that cater to families of all sizes.", img: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=400" },
-              { title: "Premium Hospitality", desc: "Experienced local guides, culinary chefs who customize spices, and resort staff trained to satisfy every bespoke boarding request.", img: "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=400" },
-            ].map((card, idx) => (
-              <motion.div
-                key={card.title}
-                className="glass-card flex flex-col text-left h-full"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.08 }}
-              >
-                <div className="h-48 overflow-hidden relative">
-                  <img src={card.img} alt={card.title} className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a] to-transparent opacity-60" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch mt-10">
+            {/* Left: Active Spotlight Visual Gallery */}
+            <div className="col-span-1 lg:col-span-5 flex flex-col justify-between">
+              <div className="wc-visual-panel relative w-full h-[350px] lg:h-full min-h-[350px] lg:min-h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl flex flex-col justify-end p-8">
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeChooseIndex}
+                    initial={{ opacity: 0, scale: 1.02 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.98 }}
+                    transition={{ duration: 0.4 }}
+                    className="absolute inset-0 w-full h-full"
+                  >
+                    <img 
+                      src={[
+                        "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800",
+                        "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800",
+                        "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
+                        "https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=800",
+                        "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=800",
+                        "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=800"
+                      ][activeChooseIndex]} 
+                      alt="Selected Jawai Advantage" 
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a] via-[#120e0a]/40 to-transparent" />
+                  </motion.div>
+                </AnimatePresence>
+
+                {/* Content Overlay */}
+                <div className="relative z-10 text-left">
+                  <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-white/10 text-white/90 backdrop-blur-md border border-white/10 mb-3 tracking-wider uppercase">
+                    Advantage Spotlight
+                  </span>
+                  <h3 className="text-2xl font-heading font-extrabold text-white mb-2 leading-tight">
+                    {[
+                      "Scenic Jawai Location",
+                      "Peaceful Jungle Atmosphere",
+                      "Budget Friendly Luxury",
+                      "Resort Near Safari Area",
+                      "Family Friendly Stay",
+                      "Premium Hospitality"
+                    ][activeChooseIndex]}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {[
+                      "Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.",
+                      "A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.",
+                      "Unmatched value combining premium resort amenities, swimming pool, and organic dining without heavy, overpriced bills.",
+                      "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.",
+                      "Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events that cater to families of all sizes.",
+                      "Experienced local guides, culinary chefs who customize spices, and resort staff trained to satisfy every bespoke boarding request."
+                    ][activeChooseIndex]}
+                  </p>
                 </div>
-                <div className="p-6 flex flex-col gap-2">
-                  <h3 className="text-lg font-heading font-semibold text-white">{card.title}</h3>
-                  <p className="text-sm text-gray-400">{card.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+              </div>
+            </div>
+
+            {/* Right: Interactive Accent Row Selectors */}
+            <div className="col-span-1 lg:col-span-7 flex flex-col gap-4">
+              {[
+                { title: "Scenic Jawai Location", desc: "Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.", icon: <MapPin className="w-5 h-5" />, themeClass: "wc-gold", num: "01" },
+                { title: "Peaceful Jungle Atmosphere", desc: "A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.", icon: <TreePine className="w-5 h-5" />, themeClass: "wc-green", num: "02" },
+                { title: "Budget Friendly Luxury", desc: "Unmatched value combining premium resort amenities, swimming pool, and organic dining without heavy, overpriced bills.", icon: <Shield className="w-5 h-5" />, themeClass: "wc-blue", num: "03" },
+                { title: "Resort Near Safari Area", desc: "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.", icon: <Compass className="w-5 h-5" />, themeClass: "wc-purple", num: "04" },
+                { title: "Family Friendly Stay", desc: "Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events that cater to families of all sizes.", icon: <Users className="w-5 h-5" />, themeClass: "wc-pink", num: "05" },
+                { title: "Premium Hospitality", desc: "Experienced local guides, culinary chefs who customize spices, and resort staff trained to satisfy every bespoke boarding request.", icon: <Sparkles className="w-5 h-5" />, themeClass: "wc-teal", num: "06" },
+              ].map((card, idx) => {
+                const isActive = idx === activeChooseIndex;
+                return (
+                  <div
+                    key={card.title}
+                    onClick={() => setActiveChooseIndex(idx)}
+                    onMouseEnter={() => setActiveChooseIndex(idx)}
+                    className={`wc-row-card ${card.themeClass} ${isActive ? 'wc-row-active' : ''} p-5 rounded-2xl flex items-center gap-5 text-left cursor-pointer transition-all duration-300 relative overflow-hidden`}
+                  >
+                    {/* Background glow in active mode */}
+                    {isActive && <div className="wc-row-glow absolute inset-0 pointer-events-none" />}
+
+                    {/* Numeric Accent */}
+                    <div className="wc-row-num text-xl font-heading font-extrabold tracking-tight shrink-0 select-none">
+                      {card.num}
+                    </div>
+
+                    {/* Circular Icon Container */}
+                    <div className="wc-row-icon shrink-0 w-10 h-10 rounded-xl flex items-center justify-center border transition-all duration-300">
+                      {card.icon}
+                    </div>
+
+                    {/* Text block */}
+                    <div className="flex-grow">
+                      <h3 className="text-base md:text-lg font-heading font-bold text-white transition-colors duration-300">
+                        {card.title}
+                      </h3>
+                      {/* Description expands smoothly */}
+                      <motion.div
+                        initial={false}
+                        animate={{ height: isActive ? 'auto' : 0, opacity: isActive ? 1 : 0, marginTop: isActive ? 6 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <p className="text-sm text-gray-300 leading-relaxed max-w-xl">
+                          {card.desc}
+                        </p>
+                      </motion.div>
+                    </div>
+
+                    {/* Arrow indicator */}
+                    <div className={`wc-row-arrow shrink-0 text-white/30 transition-transform duration-300 ${isActive ? 'translate-x-1 text-white opacity-100 scale-110' : ''}`}>
+                      <ArrowRight className="w-5 h-5" />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
