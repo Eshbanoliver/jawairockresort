@@ -130,63 +130,72 @@ export const Home: React.FC = () => {
       desc: "Boutique cottage suites combining rugged wild hills, premium modern amenities, and forest sit-outs.", 
       icon: <Hotel className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800",
-      category: 'stays' 
+      category: 'stays',
+      themeClass: 'card-theme-gold'
     },
     { 
       title: "Fine Dining Restaurant", 
       desc: "Savor premium organic farm-to-table dining, local Rajasthani delicacies, and romantic campfire barbecues.", 
       icon: <Utensils className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800",
-      category: 'dining' 
+      category: 'dining',
+      themeClass: 'card-theme-peach'
     },
     { 
       title: "Jungle Leopard Safari", 
       desc: "Explore wilderness safari trails in open-top 4x4 Gypsy trackers to spot local leopards and crocodiles.", 
       icon: <Compass className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800",
-      category: 'activities' 
+      category: 'activities',
+      themeClass: 'card-theme-sage'
     },
     { 
       title: "Private Luxury Villa", 
       desc: "Indulge in spacious, private villa retreats complete with luxury bedding, terraces, and personal service.", 
       icon: <TreePine className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800",
-      category: 'stays' 
+      category: 'stays',
+      themeClass: 'card-theme-gold'
     },
     { 
       title: "Scenic Swimming Pool", 
       desc: "Unwind at our outdoor infinity swimming pool surrounded by massive, spectacular granite boulders.", 
       icon: <Waves className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800",
-      category: 'dining' 
+      category: 'dining',
+      themeClass: 'card-theme-blue'
     },
     { 
       title: "Recreation & Sports", 
       desc: "Engage in outdoor games, trekking activities, and team-building sports across the private reserve area.", 
       icon: <Activity className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?q=80&w=800",
-      category: 'activities' 
+      category: 'activities',
+      themeClass: 'card-theme-green'
     },
     { 
       title: "Premium Tent House", 
       desc: "Experience high-end glamping inside luxury safari tents equipped with air conditioning and private decks.", 
       icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=800",
-      category: 'stays' 
+      category: 'stays',
+      themeClass: 'card-theme-peach'
     },
     { 
       title: "Birthday Party & Celebrations", 
       desc: "Celebrate birthdays and milestones under twinkling stars with bespoke setups, catering, and live music.", 
       icon: <Cake className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800",
-      category: 'events' 
+      category: 'events',
+      themeClass: 'card-theme-pink'
     },
     { 
       title: "Corporate Events & Meetings", 
       desc: "Conduct private conferences, retreats, and team-building camps against scenic, monolith vistas.", 
       icon: <Briefcase className="w-6 h-6 text-[#e07a5f]" />, 
       image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800",
-      category: 'events' 
+      category: 'events',
+      themeClass: 'card-theme-teal'
     }
   ];
 
@@ -567,7 +576,7 @@ export const Home: React.FC = () => {
                   exit={{ opacity: 0, scale: 0.95, y: 15 }}
                   transition={{ duration: 0.35, ease: 'easeOut' }}
                   key={service.title}
-                  className="service-card-premium text-left"
+                  className={`service-card-premium text-left ${service.themeClass}`}
                 >
                   <div className="service-card-image-wrapper">
                     <img 
