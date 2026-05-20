@@ -228,7 +228,7 @@ export const Home: React.FC = () => {
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
                 <img 
-                  src="https://images.unsplash.com/photo-1533753659765-a83d78bfb025?q=80&w=800" 
+                  src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?q=80&w=800" 
                   alt="Safari Tent" 
                   className="w-full h-full object-cover"
                 />
@@ -293,7 +293,7 @@ export const Home: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1533753659765-a83d78bfb025?q=80&w=800" 
+                  src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?q=80&w=800" 
                   alt="Luxury Safari Glamping Tent" 
                   className="w-full h-full object-cover"
                 />
