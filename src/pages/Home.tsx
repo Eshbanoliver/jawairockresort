@@ -113,23 +113,36 @@ export const Home: React.FC = () => {
     }
   ];
 
-  // Services list mapping
-  const services = [
-    { title: "Luxury Resort in Jawai", desc: "Premium cottage suites featuring private sit-outs, modern luxury, and forest surroundings.", icon: <Tent className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Budget Friendly Hotel in Jawai", desc: "Experience premium safari hospitality without the luxury price tag. Clean, comfortable rooms.", icon: <Coffee className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Luxury Villas & Farm Stay", desc: "Indulge in spacious, private villa retreats complete with scenic farm style settings.", icon: <TreePine className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Jungle Safari Stay Packages", desc: "All-inclusive stays paired with open-top 4x4 Gypsy trackers to spot wild leopards.", icon: <Compass className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Marriage Garden & Party Plot", desc: "Host dream destination weddings against spectacular, towering granite rock monoliths.", icon: <Sparkles className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Corporate Group Bookings", desc: "Custom retreats with conference setups, team-building safaris, and buffet dining.", icon: <Award className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Resort Near Jawai Dam", desc: "Scenic location with quick access to the Jawai Dam for birdwatching and crocodile sightings.", icon: <Waves className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Hotel Near Jawai Railway Station", desc: "Conveniently situated for quick pick-ups and drops to the nearest transit hubs.", icon: <Train className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Resort Near Jungle Safari", desc: "Stay minutes away from the main safari trails, ensuring you never miss a morning drive.", icon: <Map className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Hotel with Safari Packages", desc: "Seamless bookings combining top-tier lodging with daily guided wilderness tracking.", icon: <Compass className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Peaceful Farm Style Stay", desc: "Connect with nature in rustically elegant mud-finish cottages surrounded by green orchards.", icon: <TreePine className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Group & Family Resort Stay", desc: "Interconnected rooms and ample play areas ideal for families and larger groups.", icon: <Heart className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Luxury Budget Accommodation", desc: "Clean, well-appointed hotel rooms featuring luxury bedding at standard rates.", icon: <Award className="w-6 h-6 text-[#e07a5f]" /> },
-    { title: "Villa Stay in Jawai & Sumerpur", desc: "Exclusive private properties offering tranquility and top hospitality near Sumerpur.", icon: <Tent className="w-6 h-6 text-[#e07a5f]" /> },
+  // Services Categories & State
+  const [activeCategory, setActiveCategory] = useState('all');
+  const categories = [
+    { id: 'all', name: 'All Services' },
+    { id: 'stays', name: 'Luxury Stays' },
+    { id: 'safari', name: 'Safari & Adventure' },
+    { id: 'events', name: 'Weddings & Groups' }
   ];
+
+  // Services list mapping with categories
+  const services = [
+    { title: "Luxury Resort in Jawai", desc: "Premium cottage suites featuring private sit-outs, modern luxury, and forest surroundings.", icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+    { title: "Budget Friendly Hotel in Jawai", desc: "Experience premium safari hospitality without the luxury price tag. Clean, comfortable rooms.", icon: <Coffee className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+    { title: "Luxury Villas & Farm Stay", desc: "Indulge in spacious, private villa retreats complete with scenic farm style settings.", icon: <TreePine className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+    { title: "Jungle Safari Stay Packages", desc: "All-inclusive stays paired with open-top 4x4 Gypsy trackers to spot wild leopards.", icon: <Compass className="w-6 h-6 text-[#e07a5f]" />, category: 'safari' },
+    { title: "Marriage Garden & Party Plot", desc: "Host dream destination weddings against spectacular, towering granite rock monoliths.", icon: <Sparkles className="w-6 h-6 text-[#e07a5f]" />, category: 'events' },
+    { title: "Corporate Group Bookings", desc: "Custom retreats with conference setups, team-building safaris, and buffet dining.", icon: <Award className="w-6 h-6 text-[#e07a5f]" />, category: 'events' },
+    { title: "Resort Near Jawai Dam", desc: "Scenic location with quick access to the Jawai Dam for birdwatching and crocodile sightings.", icon: <Waves className="w-6 h-6 text-[#e07a5f]" />, category: 'safari' },
+    { title: "Hotel Near Jawai Railway Station", desc: "Conveniently situated for quick pick-ups and drops to the nearest transit hubs.", icon: <Train className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+    { title: "Resort Near Jungle Safari", desc: "Stay minutes away from the main safari trails, ensuring you never miss a morning drive.", icon: <Map className="w-6 h-6 text-[#e07a5f]" />, category: 'safari' },
+    { title: "Hotel with Safari Packages", desc: "Seamless bookings combining top-tier lodging with daily guided wilderness tracking.", icon: <Compass className="w-6 h-6 text-[#e07a5f]" />, category: 'safari' },
+    { title: "Peaceful Farm Style Stay", desc: "Connect with nature in rustically elegant mud-finish cottages surrounded by green orchards.", icon: <TreePine className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+    { title: "Group & Family Resort Stay", desc: "Interconnected rooms and ample play areas ideal for families and larger groups.", icon: <Heart className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+    { title: "Luxury Budget Accommodation", desc: "Clean, well-appointed hotel rooms featuring luxury bedding at standard rates.", icon: <Award className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+    { title: "Villa Stay in Jawai & Sumerpur", desc: "Exclusive private properties offering tranquility and top hospitality near Sumerpur.", icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, category: 'stays' },
+  ];
+
+  const filteredServices = activeCategory === 'all'
+    ? services
+    : services.filter(s => s.category === activeCategory);
 
   return (
     <div className="w-full">
@@ -465,28 +478,60 @@ export const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, idx) => (
-              <motion.div
-                key={service.title}
-                className="glass-card p-6 flex flex-col gap-4 text-left"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: Math.min(idx * 0.05, 0.4) }}
+          {/* Interactive Tab Filters */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`relative px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
+                  activeCategory === cat.id
+                    ? 'text-white'
+                    : 'text-gray-400 hover:text-white bg-white/5 border border-white/5 hover:bg-white/10'
+                }`}
+                style={{ cursor: 'pointer' }}
               >
-                <div className="p-3 rounded-lg bg-white/5 border border-white/5 w-fit">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-heading font-semibold text-white">{service.title}</h3>
-                <p className="text-sm text-gray-400">{service.desc}</p>
-                <Link to="/services" className="text-orange text-sm font-semibold flex items-center gap-1 mt-auto hover:text-white transition-colors">
-                  Learn More
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </motion.div>
+                {activeCategory === cat.id && (
+                  <motion.div
+                    layoutId="activeTabPill"
+                    className="absolute inset-0 bg-[#e07a5f] rounded-full -z-10"
+                    transition={{ type: 'spring', stiffness: 350, damping: 28 }}
+                  />
+                )}
+                {cat.name}
+              </button>
             ))}
           </div>
+
+          {/* Dynamic Services Grid */}
+          <motion.div 
+            layout
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            <AnimatePresence mode="popLayout">
+              {filteredServices.map((service) => (
+                <motion.div
+                  layout
+                  initial={{ opacity: 0, scale: 0.95, y: 15 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.95, y: 15 }}
+                  transition={{ duration: 0.35, ease: 'easeOut' }}
+                  key={service.title}
+                  className="glass-card-fancy flex flex-col gap-4 text-left"
+                >
+                  <div className="card-icon-container">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-lg font-heading font-semibold text-white leading-snug">{service.title}</h3>
+                  <p className="text-xs text-gray-400 leading-relaxed">{service.desc}</p>
+                  <Link to="/services" className="text-orange text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 mt-auto hover:text-white transition-colors group">
+                    Learn More
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </motion.div>
         </div>
         <SectionDivider type="canopy" color="#112d15" className="absolute bottom-0 left-0 w-full" />
       </section>
