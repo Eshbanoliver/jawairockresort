@@ -307,8 +307,12 @@ ul {
 .text-gray-500 { color: #6b7280; }
 .text-orange { color: var(--sunset-orange); }
 
-/* Backgrounds & Overflows */
+/* Backgrounds & Overflows & Object Fits */
 .bg-transparent { background-color: transparent; }
+.bg-cover { background-size: cover !important; }
+.bg-center { background-position: center !important; }
+.object-cover { object-fit: cover !important; }
+.object-contain { object-fit: contain !important; }
 .overflow-hidden { overflow: hidden; }
 .pointer-events-none { pointer-events: none; }
 
