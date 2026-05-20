@@ -709,136 +709,58 @@ export const Home: React.FC = () => {
             <h2>Why Choose Jawai Rock Resort</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-12 auto-rows-[220px]">
-            {/* 1. Large Feature (2x2) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="md:col-span-2 md:row-span-2 relative rounded-[32px] overflow-hidden group cursor-pointer border border-white/10"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
-                alt="Scenic Jawai Location" 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-500" />
-              <div className="absolute inset-0 border-[2px] border-white/0 group-hover:border-white/20 rounded-[32px] transition-colors duration-500 z-20 pointer-events-none" />
-              
-              <div className="absolute bottom-0 left-0 p-8 z-10 w-full">
-                <div className="w-14 h-14 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center mb-6 group-hover:-translate-y-2 transition-transform duration-500">
-                  <MapPin className="w-7 h-7 text-amber-400" />
-                </div>
-                <h3 className="text-3xl font-heading font-extrabold text-white mb-3 tracking-tight">Scenic Jawai Location</h3>
-                <p className="text-gray-300 text-base leading-relaxed max-w-md opacity-90 group-hover:opacity-100 transition-opacity">
-                  Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.
-                </p>
-              </div>
-            </motion.div>
+          {/* Interactive Timeline Layout */}
+          <div className="relative mt-16 max-w-5xl mx-auto">
+            {/* The Central Glowing Track */}
+            <div className="absolute left-4 md:left-1/2 top-4 bottom-4 w-1 bg-gradient-to-b from-transparent via-emerald-500/30 to-transparent -translate-x-1/2 rounded-full" />
 
-            {/* 2. Wide Feature (2x1) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="md:col-span-2 lg:col-span-2 row-span-1 relative rounded-[32px] overflow-hidden group cursor-pointer bg-white/5 border border-white/10 backdrop-blur-md flex flex-row items-center"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="p-8 flex-1 z-10">
-                <div className="flex items-center gap-4 mb-3">
-                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center border border-emerald-500/30 group-hover:rotate-12 transition-transform">
-                    <TreePine className="w-5 h-5 text-emerald-400" />
-                  </div>
-                  <h3 className="text-xl font-heading font-bold text-white">Peaceful Jungle Atmosphere</h3>
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.
-                </p>
-              </div>
-              <div className="w-[40%] h-full relative overflow-hidden hidden sm:block">
-                <img 
-                  src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=400" 
-                  alt="Jungle" 
-                  className="absolute inset-0 w-full h-full object-cover rounded-l-[32px] group-hover:scale-105 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#120e0a] to-transparent" />
-              </div>
-            </motion.div>
+            {/* Timeline Items */}
+            <div className="flex flex-col gap-16 md:gap-24 relative z-10">
+              {[
+                { title: "Scenic Jawai Location", desc: "Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.", img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600", icon: <MapPin className="w-5 h-5 text-amber-400" />, theme: "timeline-gold" },
+                { title: "Peaceful Jungle Atmosphere", desc: "A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.", img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=600", icon: <TreePine className="w-5 h-5 text-emerald-400" />, theme: "timeline-green" },
+                { title: "Budget Friendly Luxury", desc: "Unmatched value combining premium resort amenities, swimming pool, and organic dining without heavy, overpriced bills.", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600", icon: <Shield className="w-5 h-5 text-blue-400" />, theme: "timeline-blue" },
+                { title: "Resort Near Safari Area", desc: "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.", img: "https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=600", icon: <Compass className="w-5 h-5 text-purple-400" />, theme: "timeline-purple" },
+                { title: "Family Friendly Stay", desc: "Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events that cater to families of all sizes.", img: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=600", icon: <Users className="w-5 h-5 text-pink-400" />, theme: "timeline-pink" },
+                { title: "Premium Hospitality", desc: "Experienced local guides, culinary chefs who customize spices, and resort staff trained to satisfy every bespoke boarding request.", img: "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=600", icon: <Sparkles className="w-5 h-5 text-teal-400" />, theme: "timeline-teal" },
+              ].map((card, idx) => {
+                const isLeft = idx % 2 === 0;
+                return (
+                  <motion.div
+                    key={card.title}
+                    initial={{ opacity: 0, x: isLeft ? -40 : 40, y: 20 }}
+                    whileInView={{ opacity: 1, x: 0, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6, type: "spring", bounce: 0.2 }}
+                    className={`flex flex-col md:flex-row items-center gap-8 ${isLeft ? 'md:flex-row' : 'md:flex-row-reverse'} relative pl-12 md:pl-0 group`}
+                  >
+                    {/* Glowing Node on the Track */}
+                    <div className={`absolute left-4 md:left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-white/20 bg-[#120e0a] flex items-center justify-center z-20 transition-all duration-500 shadow-[0_0_15px_rgba(255,255,255,0.05)] group-hover:scale-125 group-hover:border-white/50 ${card.theme}-node`}>
+                      <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-white/50 group-hover:bg-white transition-colors duration-300" />
+                    </div>
 
-            {/* 3. Small Feature (1x1) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="col-span-1 row-span-1 relative rounded-[32px] p-8 group cursor-pointer bg-gradient-to-br from-blue-900/20 to-transparent border border-white/10 backdrop-blur-md overflow-hidden"
-            >
-              <div className="absolute -right-8 -top-8 w-32 h-32 bg-blue-500/20 rounded-full blur-[30px] group-hover:bg-blue-500/40 transition-colors duration-500" />
-              <Shield className="w-10 h-10 text-blue-400 mb-6 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-lg font-heading font-bold text-white mb-2 leading-tight">Budget Friendly Luxury</h3>
-              <p className="text-gray-400 text-sm">Unmatched value combining premium resort amenities without heavy bills.</p>
-            </motion.div>
+                    {/* Image Side */}
+                    <div className={`w-full md:w-1/2 ${isLeft ? 'md:pr-10' : 'md:pl-10'}`}>
+                      <div className={`relative h-64 md:h-72 rounded-[24px] overflow-hidden border border-white/5 shadow-2xl group-hover:border-white/20 transition-colors duration-500 ${card.theme}-img`}>
+                        <img src={card.img} alt={card.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a]/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+                      </div>
+                    </div>
 
-            {/* 4. Small Feature (1x1) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="col-span-1 row-span-1 relative rounded-[32px] p-8 group cursor-pointer bg-gradient-to-br from-purple-900/20 to-transparent border border-white/10 backdrop-blur-md overflow-hidden"
-            >
-              <div className="absolute -right-8 -bottom-8 w-32 h-32 bg-purple-500/20 rounded-full blur-[30px] group-hover:bg-purple-500/40 transition-colors duration-500" />
-              <Compass className="w-10 h-10 text-purple-400 mb-6 group-hover:rotate-45 transition-transform duration-500" />
-              <h3 className="text-lg font-heading font-bold text-white mb-2 leading-tight">Near Safari Area</h3>
-              <p className="text-gray-400 text-sm">Short drive from leopard-sighting rocks, giving you priority access.</p>
-            </motion.div>
-
-            {/* 5. Wide Feature (2x1) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="md:col-span-2 lg:col-span-2 row-span-1 relative rounded-[32px] p-8 group cursor-pointer border border-white/10 overflow-hidden"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=800" 
-                alt="Family Stay" 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-500" />
-              <div className="relative z-10 flex flex-col justify-center h-full">
-                <div className="flex items-center gap-3 mb-3">
-                  <Users className="w-6 h-6 text-pink-400" />
-                  <h3 className="text-xl font-heading font-bold text-white">Family Friendly Stay</h3>
-                </div>
-                <p className="text-gray-200 text-sm max-w-sm leading-relaxed">
-                  Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events catering to families.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* 6. Wide Feature (2x1) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-              className="md:col-span-2 lg:col-span-2 row-span-1 relative rounded-[32px] overflow-hidden group cursor-pointer bg-gradient-to-br from-teal-900/30 to-black/20 border border-white/10 backdrop-blur-md flex items-center justify-center p-8 text-center"
-            >
-              <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=800')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity duration-700 mix-blend-overlay" />
-              <div className="relative z-10 flex flex-col items-center">
-                <div className="w-12 h-12 rounded-full bg-teal-500/20 flex items-center justify-center mb-4 group-hover:-translate-y-1 transition-transform duration-300">
-                  <Sparkles className="w-6 h-6 text-teal-400" />
-                </div>
-                <h3 className="text-2xl font-heading font-bold text-white mb-2">Premium Hospitality</h3>
-                <p className="text-gray-300 text-sm max-w-md">
-                  Experienced local guides, culinary chefs who customize spices, and staff trained to satisfy bespoke boarding requests.
-                </p>
-              </div>
-            </motion.div>
+                    {/* Content Side */}
+                    <div className={`w-full md:w-1/2 ${isLeft ? 'md:pl-10 md:text-left' : 'md:pr-10 md:text-right'} text-left`}>
+                      <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 mb-5 backdrop-blur-md group-hover:-translate-y-2 transition-all duration-300 shadow-lg ${card.theme}-icon-box`}>
+                        {card.icon}
+                      </div>
+                      <h3 className="text-2xl font-heading font-extrabold text-white mb-3 tracking-tight group-hover:text-white transition-colors">{card.title}</h3>
+                      <p className="text-gray-400 leading-relaxed text-sm md:text-base group-hover:text-gray-300 transition-colors">
+                        {card.desc}
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
