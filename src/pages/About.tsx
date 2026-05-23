@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { SectionDivider } from '../components/SectionDivider';
+import { Compass, Waves, Flame } from 'lucide-react';
 
 export const About: React.FC = () => {
   const galleryImages = [
@@ -70,29 +71,37 @@ export const About: React.FC = () => {
                </p>
              </motion.div>
  
-             <motion.div 
-               className="lg:col-span-5 relative"
-               initial={{ opacity: 0, scale: 0.95 }}
-               whileInView={{ opacity: 1, scale: 1 }}
-               viewport={{ once: true }}
-               transition={{ duration: 0.6, delay: 0.2 }}
-             >
-               <div className="rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative">
-                  <img 
-                    src="/images/sunset_view.jpg" 
-                    alt="Rabari shepherd and landscape" 
-                    className="w-full object-cover"
-                    style={{ height: '450px' }}
-                  />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a]/80 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 p-6 glass-panel border border-white/10">
-                  <span className="text-orange font-bold uppercase tracking-wider text-xs block mb-1">Local Vibe</span>
-                  <p className="text-white text-sm font-medium">
-                    "Every rock in Jawai holds a thousand stories of leopards and shepherds living together."
-                  </p>
-                </div>
-              </div>
-            </motion.div>
+              <motion.div 
+                className="lg:col-span-5 relative flex items-center justify-center mt-8 lg:mt-0"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                {/* Background Glow Ornament */}
+                <div className="absolute w-72 h-72 rounded-full bg-gradient-to-tr from-[#e07a5f]/15 to-[#7b9e54]/15 filter blur-3xl pointer-events-none" style={{ zIndex: 0 }} />
+
+                <motion.div 
+                  className="rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative w-full"
+                  whileHover={{ scale: 1.03, rotate: 1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  style={{ zIndex: 1 }}
+                >
+                   <img 
+                     src="/images/sunset_view.jpg" 
+                     alt="Rabari shepherd and landscape" 
+                     className="w-full object-cover"
+                     style={{ height: '450px' }}
+                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a]/80 to-transparent" />
+                  <div className="absolute bottom-6 left-6 right-6 p-6 glass-panel border border-white/10">
+                    <span className="text-orange font-bold uppercase tracking-wider text-xs block mb-1">Local Vibe</span>
+                    <p className="text-white text-sm font-medium">
+                      "Every rock in Jawai holds a thousand stories of leopards and shepherds living together."
+                    </p>
+                  </div>
+                </motion.div>
+              </motion.div>
           </div>
         </div>
       </section>
@@ -107,41 +116,54 @@ export const About: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
-              className="glass-panel p-6 border border-white/10 text-left flex flex-col gap-3"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.2 }}
-            >
-              <span className="text-4xl text-orange font-extrabold font-heading">01</span>
-              <h3 className="text-xl font-heading font-semibold text-white">Morning Tracking</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                Awake to local herbal tea before climbing into open 4x4 Gypsies. Our local trackers read footprints left on sandy trails to guide you straight to the rocky leopard caves as the morning sun paints the monoliths red.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="glass-panel p-6 border border-white/10 text-left flex flex-col gap-3"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.2 }}
-            >
-              <span className="text-4xl text-orange font-extrabold font-heading">02</span>
-              <h3 className="text-xl font-heading font-semibold text-white">Dam sunset walks</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                Spend afternoons visiting Jawai Dam to watch crocodiles sunbathing along the shores and spot migratory birds like flamingoes and cranes nesting against the golden waters.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="glass-panel p-6 border border-white/10 text-left flex flex-col gap-3"
-              whileHover={{ y: -5 }}
-              transition={{ duration: 0.2 }}
-            >
-              <span className="text-4xl text-orange font-extrabold font-heading">03</span>
-              <h3 className="text-xl font-heading font-semibold text-white">Campfire Stories</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
-                As night falls, gather around an open pit bonfire at the resort. Enjoy Rajasthani folk performances, listen to tracking tales, and dine on authentic local cuisine cooked on wood fires.
-              </p>
-            </motion.div>
+            {[
+              {
+                num: "01",
+                title: "Morning Tracking",
+                desc: "Awake to local herbal tea before climbing into open 4x4 Gypsies. Our local trackers read footprints left on sandy trails to guide you straight to the rocky leopard caves as the morning sun paints the monoliths red.",
+                icon: <Compass className="w-6 h-6 text-[#e07a5f]" />,
+                themeClass: "cv-theme-gold",
+                watermark: <Compass className="cv-watermark absolute" />
+              },
+              {
+                num: "02",
+                title: "Dam Sunset Walks",
+                desc: "Spend afternoons visiting Jawai Dam to watch crocodiles sunbathing along the shores and spot migratory birds like flamingoes and cranes nesting against the golden waters.",
+                icon: <Waves className="w-6 h-6 text-[#7b9e54]" />,
+                themeClass: "cv-theme-green",
+                watermark: <Waves className="cv-watermark absolute" />
+              },
+              {
+                num: "03",
+                title: "Campfire Stories",
+                desc: "As night falls, gather around an open pit bonfire at the resort. Enjoy Rajasthani folk performances, listen to tracking tales, and dine on authentic local cuisine cooked on wood fires.",
+                icon: <Flame className="w-6 h-6 text-[#5a8ca0]" />,
+                themeClass: "cv-theme-blue",
+                watermark: <Flame className="cv-watermark absolute" />
+              }
+            ].map((item, idx) => (
+              <motion.div
+                key={item.num}
+                className={`cv-card ${item.themeClass} p-8 rounded-xl flex flex-col gap-4 text-left relative overflow-hidden`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              >
+                {item.watermark}
+                <div className="flex items-center justify-between relative z-10">
+                  <div className="cv-icon-box shrink-0 h-fit">
+                    {item.icon}
+                  </div>
+                  <span className="text-4xl text-white/20 font-extrabold font-heading tracking-tight">{item.num}</span>
+                </div>
+                <div className="relative z-10 mt-2">
+                  <h3 className="text-xl font-heading font-bold text-white mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-300 leading-relaxed">{item.desc}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
         <SectionDivider type="curve" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
