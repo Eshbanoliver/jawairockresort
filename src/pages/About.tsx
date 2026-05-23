@@ -169,16 +169,6 @@ export const About: React.FC = () => {
         <SectionDivider type="curve" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
       </section>
 
-      {/* Full-width nature image banner */}
-      <section 
-        className="h-96 relative bg-cover bg-center overflow-hidden"
-        style={{
-          backgroundImage: `url('/images/nature_banner.jpg')`,
-          backgroundAttachment: 'fixed'
-        }}
-      >
-        <div className="absolute inset-0 bg-[#120e0a]/50" />
-      </section>
 
       {/* Gallery Layout */}
       <section className="section-padding bg-[#120e0a] relative overflow-hidden">
