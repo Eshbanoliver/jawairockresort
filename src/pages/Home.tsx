@@ -44,9 +44,9 @@ export const Home: React.FC = () => {
   // Hero Image Slider State
   const [currentHeroImage, setCurrentHeroImage] = useState(0);
   const heroImages = [
-    "https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=1920", // Leopard and jungle safari walk
-    "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=1920", // Luxury villa retreat
-    "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=1920", // Premium infinity pool
+    "/images/leopard_safari.jpg", // Leopard and jungle safari walk
+    "/images/luxury_villa.jpg", // Luxury villa retreat
+    "/images/swimming_pool.jpg", // Premium infinity pool
   ];
 
   useEffect(() => {
@@ -128,7 +128,7 @@ export const Home: React.FC = () => {
       title: "Eco Luxury Resort", 
       desc: "Boutique cottage suites combining rugged wild hills, premium modern amenities, and forest sit-outs.", 
       icon: <Hotel className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800",
+      image: "/images/eco_resort.jpg",
       category: 'stays',
       themeClass: 'card-theme-gold'
     },
@@ -136,7 +136,7 @@ export const Home: React.FC = () => {
       title: "Fine Dining Restaurant", 
       desc: "Savor premium organic farm-to-table dining, local Rajasthani delicacies, and romantic campfire barbecues.", 
       icon: <Utensils className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800",
+      image: "/images/fine_dining.jpg",
       category: 'dining',
       themeClass: 'card-theme-peach'
     },
@@ -144,7 +144,7 @@ export const Home: React.FC = () => {
       title: "Jungle Leopard Safari", 
       desc: "Explore wilderness safari trails in open-top 4x4 Gypsy trackers to spot local leopards and crocodiles.", 
       icon: <Compass className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800",
+      image: "/images/jungle_safari.jpg",
       category: 'activities',
       themeClass: 'card-theme-sage'
     },
@@ -152,7 +152,7 @@ export const Home: React.FC = () => {
       title: "Private Luxury Villa", 
       desc: "Indulge in spacious, private villa retreats complete with luxury bedding, terraces, and personal service.", 
       icon: <TreePine className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800",
+      image: "/images/private_villa.jpg",
       category: 'stays',
       themeClass: 'card-theme-gold'
     },
@@ -160,7 +160,7 @@ export const Home: React.FC = () => {
       title: "Scenic Swimming Pool", 
       desc: "Unwind at our outdoor infinity swimming pool surrounded by massive, spectacular granite boulders.", 
       icon: <Waves className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?q=80&w=800",
+      image: "/images/swimming_pool.jpg",
       category: 'dining',
       themeClass: 'card-theme-blue'
     },
@@ -168,7 +168,7 @@ export const Home: React.FC = () => {
       title: "Recreation & Sports", 
       desc: "Engage in outdoor games, trekking activities, and team-building sports across the private reserve area.", 
       icon: <Activity className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?q=80&w=800",
+      image: "/images/recreation.jpg",
       category: 'activities',
       themeClass: 'card-theme-green'
     },
@@ -176,7 +176,7 @@ export const Home: React.FC = () => {
       title: "Premium Tent House", 
       desc: "Experience high-end glamping inside luxury safari tents equipped with air conditioning and private decks.", 
       icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=800",
+      image: "/images/jawai_dam.jpg",
       category: 'stays',
       themeClass: 'card-theme-peach'
     },
@@ -184,7 +184,7 @@ export const Home: React.FC = () => {
       title: "Birthday Party & Celebrations", 
       desc: "Celebrate birthdays and milestones under twinkling stars with bespoke setups, catering, and live music.", 
       icon: <Cake className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=800",
+      image: "/images/birthday_party.jpg",
       category: 'events',
       themeClass: 'card-theme-pink'
     },
@@ -192,7 +192,7 @@ export const Home: React.FC = () => {
       title: "Corporate Events & Meetings", 
       desc: "Conduct private conferences, retreats, and team-building camps against scenic, monolith vistas.", 
       icon: <Briefcase className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800",
+      image: "/images/corporate_events.jpg",
       category: 'events',
       themeClass: 'card-theme-teal'
     }
@@ -286,28 +286,28 @@ export const Home: React.FC = () => {
             <div className="grid grid-cols-2 gap-4 md:hidden mt-8 w-full">
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
                 <img 
-                  src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=800" 
+                  src="/images/leopard_safari.jpg" 
                   alt="Wild Leopard" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
                 <img 
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800" 
+                  src="/images/resort_pool.jpg" 
                   alt="Resort Pool" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
                 <img 
-                  src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?q=80&w=800" 
+                  src="/images/safari_tent.jpg" 
                   alt="Safari Tent" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
                 <img 
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
+                  src="/images/sunset_view.jpg" 
                   alt="Jawai Hills" 
                   className="w-full h-full object-cover"
                 />
@@ -334,7 +334,7 @@ export const Home: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?q=80&w=800" 
+                  src="/images/leopard_safari.jpg" 
                   alt="Wild Leopard in Jawai" 
                   className="w-full h-full object-cover"
                 />
@@ -352,7 +352,7 @@ export const Home: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=800" 
+                  src="/images/resort_pool.jpg" 
                   alt="Resort Pool & Premium Stays" 
                   className="w-full h-full object-cover"
                 />
@@ -366,7 +366,7 @@ export const Home: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?q=80&w=800" 
+                  src="/images/safari_tent.jpg" 
                   alt="Luxury Safari Glamping Tent" 
                   className="w-full h-full object-cover"
                 />
@@ -380,7 +380,7 @@ export const Home: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
+                  src="/images/sunset_view.jpg" 
                   alt="Jawai Sunset Granite Hills" 
                   className="w-full h-full object-cover"
                 />
@@ -703,6 +703,59 @@ export const Home: React.FC = () => {
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[#7b9e54]/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-[#e07a5f]/5 rounded-full blur-[100px] pointer-events-none" />
 
+        {/* Decorative Jungle Safari Ambience Elements */}
+        {/* Left Side Decor */}
+        <div className="wc-safari-decor wc-leaf-left-top absolute top-[8%] left-[-40px] w-[200px] h-[200px] pointer-events-none opacity-25 md:opacity-40 select-none z-0">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#7b9e54]">
+            <path d="M 10 110 Q 55 70 100 20" stroke="#5a753c" strokeWidth="2" strokeLinecap="round" />
+            <path d="M 25 95 Q 10 88 5 78" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 38 83 Q 18 73 12 60" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 50 71 Q 28 58 20 44" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 63 58 Q 38 43 28 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 75 44 Q 48 28 38 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 88 30 Q 60 12 50 0" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            
+            <path d="M 25 95 Q 35 105 45 110" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 38 83 Q 50 92 60 97" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 50 71 Q 65 80 75 84" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 63 58 Q 80 65 90 68" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 75 44 Q 92 49 102 52" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <path d="M 88 30 Q 105 34 115 36" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+          </svg>
+        </div>
+
+        <div className="wc-safari-decor wc-leaf-left-bottom absolute bottom-[-30px] left-[-30px] w-[260px] h-[260px] pointer-events-none opacity-20 md:opacity-30 select-none z-0">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#4a544d]">
+            <path d="M -10 120 L 25 45 L 65 40 L 95 85 L 90 120 Z" fill="currentColor" />
+            <path d="M -10 120 L 25 45 L 45 120 Z" fill="#6a786f" opacity="0.6" className="wc-rock-facet-light" />
+            <path d="M 25 45 L 65 40 L 45 120 Z" fill="#353c37" opacity="0.4" />
+            
+            <path d="M 30 120 L 60 75 L 85 80 L 110 120 Z" fill="#33271e" />
+            <path d="M 30 120 L 60 75 L 75 120 Z" fill="#d2bfab" opacity="0.5" className="wc-rock-facet-light" />
+          </svg>
+        </div>
+
+        {/* Right Side Decor */}
+        <div className="wc-safari-decor wc-leaf-right-top absolute top-[22%] right-[-50px] w-[220px] h-[220px] pointer-events-none opacity-25 md:opacity-40 select-none z-0">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#5a753c]">
+            <path d="M 120 10 C 90 20, 60 45, 10 90 C 25 80, 55 60, 120 10" fill="currentColor" fillOpacity="0.8" />
+            <path d="M 120 10 C 95 35, 75 65, 30 110 C 42 95, 70 70, 120 10" fill="#1b3d20" fillOpacity="0.6" />
+            <path d="M 120 10 C 90 20, 60 45, 10 90" stroke="#7b9e54" strokeWidth="1.5" strokeOpacity="0.4" />
+            <path d="M 120 10 C 95 35, 75 65, 30 110" stroke="#7b9e54" strokeWidth="1.5" strokeOpacity="0.4" />
+          </svg>
+        </div>
+
+        <div className="wc-safari-decor wc-leaf-right-bottom absolute bottom-[-40px] right-[-30px] w-[280px] h-[280px] pointer-events-none opacity-20 md:opacity-35 select-none z-0">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <path d="M 100 120 Q 80 70 40 50 Q 60 85 100 120" fill="#2c5932" fillOpacity="0.4" />
+            <path d="M 100 120 Q 90 60 60 30 Q 75 80 100 120" fill="#7b9e54" fillOpacity="0.3" />
+            <path d="M 100 120 Q 110 50 95 20 Q 100 75 100 120" fill="#5a753c" fillOpacity="0.35" />
+            
+            <path d="M 35 120 L 65 65 L 90 55 L 125 100 L 120 120 Z" fill="#4a544d" />
+            <path d="M 35 120 L 65 65 L 80 120 Z" fill="#6a786f" opacity="0.6" className="wc-rock-facet-light" />
+          </svg>
+        </div>
+
         <div className="container relative z-10">
           <div className="section-title">
             <span>The Jawai Advantage</span>
@@ -712,12 +765,12 @@ export const Home: React.FC = () => {
           {/* Modern Cards Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-16 relative z-10">
             {[
-              { title: "Scenic Jawai Location", desc: "Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.", img: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=600", icon: <MapPin className="w-6 h-6" />, theme: "gold" },
-              { title: "Peaceful Jungle Atmosphere", desc: "A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.", img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=600", icon: <TreePine className="w-6 h-6" />, theme: "green" },
-              { title: "Budget Friendly Luxury", desc: "Unmatched value combining premium resort amenities, swimming pool, and organic dining without heavy, overpriced bills.", img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600", icon: <Shield className="w-6 h-6" />, theme: "blue" },
-              { title: "Resort Near Safari Area", desc: "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.", img: "https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=600", icon: <Compass className="w-6 h-6" />, theme: "purple" },
-              { title: "Family Friendly Stay", desc: "Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events that cater to families of all sizes.", img: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=600", icon: <Users className="w-6 h-6" />, theme: "pink" },
-              { title: "Premium Hospitality", desc: "Experienced local guides, culinary chefs who customize spices, and resort staff trained to satisfy every bespoke boarding request.", img: "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=600", icon: <Sparkles className="w-6 h-6" />, theme: "teal" },
+              { title: "Scenic Jawai Location", desc: "Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.", img: "/images/sunset_view.jpg", icon: <MapPin className="w-6 h-6" />, theme: "gold" },
+              { title: "Peaceful Jungle Atmosphere", desc: "A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.", img: "/images/campfires.jpg", icon: <TreePine className="w-6 h-6" />, theme: "green" },
+              { title: "Budget Friendly Luxury", desc: "Unmatched value combining premium resort amenities, swimming pool, and organic dining without heavy, overpriced bills.", img: "/images/luxury_cottage.jpg", icon: <Shield className="w-6 h-6" />, theme: "blue" },
+              { title: "Resort Near Safari Area", desc: "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.", img: "/images/jungle_safari.jpg", icon: <Compass className="w-6 h-6" />, theme: "purple" },
+              { title: "Family Friendly Stay", desc: "Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events that cater to families of all sizes.", img: "/images/jawai_dam.jpg", icon: <Users className="w-6 h-6" />, theme: "pink" },
+              { title: "Premium Hospitality", desc: "Experienced local guides, culinary chefs who customize spices, and resort staff trained to satisfy every bespoke boarding request.", img: "/images/leopard_wild.jpg", icon: <Sparkles className="w-6 h-6" />, theme: "teal" },
             ].map((card, idx) => (
               <motion.div
                 key={card.title}
@@ -757,7 +810,7 @@ export const Home: React.FC = () => {
       <section 
         className="py-24 relative overflow-hidden bg-cover bg-center text-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=1920')`,
+          backgroundImage: `url('/images/nature_banner.jpg')`,
         }}
       >
         <div className="absolute inset-0 bg-[#120e0ade]/90 z-1" />

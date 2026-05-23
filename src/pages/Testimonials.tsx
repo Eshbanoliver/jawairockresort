@@ -68,7 +68,7 @@ export const Testimonials: React.FC = () => {
       <section 
         className="relative py-32 flex items-center justify-center bg-cover bg-center text-center overflow-hidden"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1920')`,
+          backgroundImage: `url('/images/campfires.jpg')`,
           minHeight: '400px'
         }}
       >

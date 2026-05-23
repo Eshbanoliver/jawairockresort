@@ -42,7 +42,7 @@ export const Contact: React.FC = () => {
       <section 
         className="relative py-32 flex items-center justify-center bg-cover bg-center text-center overflow-hidden"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1920')`,
+          backgroundImage: `url('/images/contact_banner.jpg')`,
           minHeight: '400px'
         }}
       >

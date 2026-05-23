@@ -1667,3 +1667,51 @@ ul {
 .wc-theme-teal:hover {
   border-color: rgba(26, 188, 156, 0.3);
 }
+
+/* Jungle Safari Decorative Ambience Styles */
+.wc-safari-decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  transition: opacity 0.5s ease;
+}
+
+@keyframes leafSwayLeft {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(6deg) scale(1.03) translateY(-2px); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes leafSwayRight {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(-6deg) scale(1.03) translateY(-2px); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.wc-leaf-left-top {
+  animation: leafSwayLeft 8s ease-in-out infinite;
+  transform-origin: left top;
+}
+
+.wc-leaf-left-bottom {
+  animation: leafSwayLeft 10s ease-in-out infinite;
+  transform-origin: left bottom;
+}
+
+.wc-leaf-right-top {
+  animation: leafSwayRight 9s ease-in-out infinite;
+  transform-origin: right top;
+}
+
+.wc-leaf-right-bottom {
+  animation: leafSwayRight 11s ease-in-out infinite;
+  transform-origin: right bottom;
+}
+
+/* Subtle rock texture shading style */
+.wc-rock-facet-light {
+  transition: fill 0.3s ease;
+}
+.wc-card-wrapper:hover ~ .wc-safari-decor {
+  opacity: 0.6;
+}

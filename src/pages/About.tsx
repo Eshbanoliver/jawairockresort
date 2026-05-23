@@ -5,12 +5,12 @@ import { SectionDivider } from '../components/SectionDivider';
 
 export const About: React.FC = () => {
   const galleryImages = [
-    { url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600", caption: "Luxury Cottage & Pool View" },
-    { url: "https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=600", caption: "Open Gypsy Jungle Safari" },
-    { url: "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?q=80&w=600", caption: "Jawai Wild Leopards" },
-    { url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=600", caption: "Night Campfires & Bonfires" },
-    { url: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=600", caption: "Jawai Dam Bird Watching" },
-    { url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600", caption: "Granite Monolith Hills" },
+    { url: "/images/luxury_cottage.jpg", caption: "Luxury Cottage & Pool View" },
+    { url: "/images/jungle_safari.jpg", caption: "Open Gypsy Jungle Safari" },
+    { url: "/images/leopard_wild.jpg", caption: "Jawai Wild Leopards" },
+    { url: "/images/campfires.jpg", caption: "Night Campfires & Bonfires" },
+    { url: "/images/jawai_dam.jpg", caption: "Jawai Dam Bird Watching" },
+    { url: "/images/granite_hills.jpg", caption: "Granite Monolith Hills" },
   ];
 
   return (
@@ -19,7 +19,7 @@ export const About: React.FC = () => {
       <section 
         className="relative py-32 flex items-center justify-center bg-cover bg-center text-center overflow-hidden"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1920')`,
+          backgroundImage: `url('/images/jawai_dam.jpg')`,
           minHeight: '400px'
         }}
       >
@@ -78,12 +78,12 @@ export const About: React.FC = () => {
                transition={{ duration: 0.6, delay: 0.2 }}
              >
                <div className="rounded-2xl overflow-hidden border border-white/5 shadow-2xl relative">
-                 <img 
-                   src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=800" 
-                   alt="Rabari shepherd and landscape" 
-                   className="w-full object-cover"
-                   style={{ height: '450px' }}
-                 />
+                  <img 
+                    src="/images/sunset_view.jpg" 
+                    alt="Rabari shepherd and landscape" 
+                    className="w-full object-cover"
+                    style={{ height: '450px' }}
+                  />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a]/80 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6 p-6 glass-panel border border-white/10">
                   <span className="text-orange font-bold uppercase tracking-wider text-xs block mb-1">Local Vibe</span>
@@ -151,7 +151,7 @@ export const About: React.FC = () => {
       <section 
         className="h-96 relative bg-cover bg-center overflow-hidden"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?q=80&w=1920')`,
+          backgroundImage: `url('/images/nature_banner.jpg')`,
           backgroundAttachment: 'fixed'
         }}
       >

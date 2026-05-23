@@ -9,7 +9,7 @@ export const Footer: React.FC = () => {
       <div 
         className="absolute inset-0 opacity-soft pointer-events-none"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=1920')`,
+          backgroundImage: `url('/images/jawai_dam.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

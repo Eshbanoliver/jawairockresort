@@ -16,7 +16,7 @@ export const Services: React.FC = () => {
       title: "Luxury Stays & Villa Accommodations",
       tagline: "Unwind in pristine comfort amid the rocky wilderness",
       desc: "Our premium lodging options combine local aesthetic finishes with high-end modern amenities, offering a tranquil sanctuary after long safari drives.",
-      img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800",
+      img: "/images/luxury_cottage.jpg",
       features: [
         "Luxury Resort Cottages in Jawai",
         "Luxury Private Villas & Farm Stays",
@@ -32,7 +32,7 @@ export const Services: React.FC = () => {
       title: "Safari & Adventure Packages",
       tagline: "Track the resident leopards and explore Jawai's biodiversity",
       desc: "Guided by our expert trackers who know every rock and trail, embark on open 4x4 Gypsy safaris to spot wildlife and enjoy birdwatching near Jawai Dam.",
-      img: "https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=800",
+      img: "/images/jungle_safari.jpg",
       features: [
         "Jungle Safari Stay Packages (All-Inclusive)",
         "Resort location very close to main Safari area",
@@ -48,7 +48,7 @@ export const Services: React.FC = () => {
       title: "Budget & Family Friendly Lodging",
       tagline: "Premium comfort accessible to every traveler",
       desc: "We believe that connecting with nature shouldn't be expensive. Explore clean, spacious, budget-friendly accommodations ideal for groups and families.",
-      img: "https://images.unsplash.com/photo-1549366021-9f761d450615?q=80&w=800",
+      img: "/images/jawai_dam.jpg",
       features: [
         "Budget-Friendly Hotels in Jawai",
         "Luxury Budget Accommodations & Suites",
@@ -64,7 +64,7 @@ export const Services: React.FC = () => {
       title: "Marriage Garden & Corporate Events",
       tagline: "Celebrate grand moments against towering granite cliffs",
       desc: "Host breathtaking destination weddings and focused corporate conferences utilizing our extensive outdoor party plots and custom catering systems.",
-      img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800",
+      img: "/images/campfires.jpg",
       features: [
         "Expansive Marriage Garden & green Party Plots",
         "Granite monoliths providing natural stage backdrops",
@@ -87,7 +87,7 @@ export const Services: React.FC = () => {
       <section 
         className="relative py-32 flex items-center justify-center bg-cover bg-center text-center overflow-hidden"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1581888227599-779811939961?q=80&w=1920')`,
+          backgroundImage: `url('/images/jungle_safari.jpg')`,
           minHeight: '400px'
         }}
       >
