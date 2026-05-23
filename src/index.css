@@ -1715,3 +1715,34 @@ ul {
 .wc-card-wrapper:hover ~ .wc-safari-decor {
   opacity: 0.6;
 }
+
+/* CTA Section Custom Contrast Styling */
+.cta-overlay-dark {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 45, 21, 0.85) !important; /* Premium semi-transparent forest green */
+  z-index: 1;
+}
+
+.cta-title {
+  color: #faf5f0 !important; /* Pure white/sand beige */
+}
+
+.cta-desc {
+  color: rgba(250, 245, 240, 0.8) !important; /* Soft white/sand */
+}
+
+.btn-secondary-light {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #faf5f0 !important;
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(5px) !important;
+  transition: var(--transition-smooth) !important;
+}
+
+.btn-secondary-light:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+}

@@ -813,7 +813,7 @@ export const Home: React.FC = () => {
           backgroundImage: `url('/images/nature_banner.jpg')`,
         }}
       >
-        <div className="absolute inset-0 bg-[#120e0ade]/90 z-1" />
+        <div className="cta-overlay-dark" />
         <div className="container relative z-10 flex flex-col items-center justify-center gap-6">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -825,18 +825,18 @@ export const Home: React.FC = () => {
             <span className="text-orange font-bold uppercase tracking-extra-wide text-sm block mb-2">
               Book Your Wilderness Escape
             </span>
-            <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-white mb-6">
+            <h2 className="text-3xl md:text-5xl font-heading font-extrabold cta-title mb-6">
               Ready To Track The Leopards Of Jawai?
             </h2>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+            <p className="cta-desc text-lg mb-8 leading-relaxed">
               Reserve your luxury cottage suite or farm stay today. Join us for guided morning safaris, stargazing dinners, and pure peace among Rajasthan's ancient monoliths.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a href="tel:08058571919" className="btn btn-primary">
-                <Phone className="w-5 h-5 fill-white text-[#e07a5f]" />
+                <Phone className="w-5 h-5" style={{ color: '#ffffff', fill: '#ffffff' }} />
                 Call Now
               </a>
-              <Link to="/contact" className="btn btn-secondary">
+              <Link to="/contact" className="btn btn-secondary-light">
                 Book Your Stay
               </Link>
             </div>
