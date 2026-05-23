@@ -293,15 +293,15 @@ export const Home: React.FC = () => {
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
                 <img 
-                  src="/images/resort_pool.jpg" 
-                  alt="Resort Pool" 
+                  src="/images/2026-02-24 (1).jpg" 
+                  alt="Premium Villa Suite Living Space" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
                 <img 
-                  src="/images/safari_tent.jpg" 
-                  alt="Safari Tent" 
+                  src="/images/2026-02-24.jpg" 
+                  alt="Eco-Luxury Cottage Bedroom" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -344,7 +344,7 @@ export const Home: React.FC = () => {
                 </div>
               </motion.div>
 
-              {/* Card 2: Luxury Resort Pool (Top-Right, offset) */}
+              {/* Card 2: Premium Villa Suite Living Space (Top-Right, offset) */}
               <motion.div 
                 className="absolute top-12 right-2 rounded-2xl overflow-hidden shadow-xl border border-black/5 bg-white"
                 style={{ width: '45%', height: '200px', rotate: 4 }}
@@ -352,13 +352,13 @@ export const Home: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <img 
-                  src="/images/resort_pool.jpg" 
-                  alt="Resort Pool & Premium Stays" 
+                  src="/images/2026-02-24 (1).jpg" 
+                  alt="Premium Villa Suite Living Space" 
                   className="w-full h-full object-cover"
                 />
               </motion.div>
 
-              {/* Card 3: Luxury Safari Glamping Tent (Bottom-Left, horizontal) */}
+              {/* Card 3: Eco-Luxury Cottage Bedroom (Bottom-Left, horizontal) */}
               <motion.div 
                 className="absolute bottom-10 left-6 rounded-2xl overflow-hidden shadow-lg border border-black/5 bg-white"
                 style={{ width: '44%', height: '180px', rotate: 2 }}
@@ -366,8 +366,8 @@ export const Home: React.FC = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 <img 
-                  src="/images/safari_tent.jpg" 
-                  alt="Luxury Safari Glamping Tent" 
+                  src="/images/2026-02-24.jpg" 
+                  alt="Eco-Luxury Cottage Bedroom" 
                   className="w-full h-full object-cover"
                 />
               </motion.div>
