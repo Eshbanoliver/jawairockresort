@@ -811,6 +811,7 @@ export const Home: React.FC = () => {
         className="py-24 relative overflow-hidden bg-cover bg-center text-center"
         style={{
           backgroundImage: `url('/images/nature_banner.jpg')`,
+          backgroundColor: '#112d15',
         }}
       >
         <div className="cta-overlay-dark" />
@@ -838,6 +839,7 @@ export const Home: React.FC = () => {
               </a>
               <Link to="/contact" className="btn btn-secondary-light">
                 Book Your Stay
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </motion.div>
