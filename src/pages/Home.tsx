@@ -128,7 +128,7 @@ export const Home: React.FC = () => {
       title: "Eco Luxury Resort", 
       desc: "Boutique cottage suites combining rugged wild hills, premium modern amenities, and forest sit-outs.", 
       icon: <Hotel className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "/images/eco_resort.jpg",
+      image: "/images/2025-11-06 (1).jpg",
       category: 'stays',
       themeClass: 'card-theme-gold'
     },
@@ -136,7 +136,7 @@ export const Home: React.FC = () => {
       title: "Fine Dining Restaurant", 
       desc: "Savor premium organic farm-to-table dining, local Rajasthani delicacies, and romantic campfire barbecues.", 
       icon: <Utensils className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "/images/fine_dining.jpg",
+      image: "/images/unnamed.jpg",
       category: 'dining',
       themeClass: 'card-theme-peach'
     },
@@ -144,7 +144,7 @@ export const Home: React.FC = () => {
       title: "Jungle Leopard Safari", 
       desc: "Explore wilderness safari trails in open-top 4x4 Gypsy trackers to spot local leopards and crocodiles.", 
       icon: <Compass className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "/images/jungle_safari.jpg",
+      image: "/images/unnamed (2).jpg",
       category: 'activities',
       themeClass: 'card-theme-sage'
     },
@@ -152,7 +152,7 @@ export const Home: React.FC = () => {
       title: "Private Luxury Villa", 
       desc: "Indulge in spacious, private villa retreats complete with luxury bedding, terraces, and personal service.", 
       icon: <TreePine className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "/images/private_villa.jpg",
+      image: "/images/2025-11-06 (2).jpg",
       category: 'stays',
       themeClass: 'card-theme-gold'
     },

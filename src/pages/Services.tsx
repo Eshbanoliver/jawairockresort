@@ -17,7 +17,7 @@ export const Services: React.FC = () => {
       title: "Eco Luxury Resort",
       tagline: "Unwind in boutique cottages",
       desc: "Boutique cottage suites combining rugged wild hills, premium modern amenities, and forest sit-outs.",
-      img: "/images/eco_resort.jpg",
+      img: "/images/2025-11-06 (1).jpg",
       badge: "Eco Resort",
       features: [
         "Luxury Resort Cottages in Jawai",
@@ -36,7 +36,7 @@ export const Services: React.FC = () => {
       title: "Fine Dining Restaurant",
       tagline: "Savor local & organic cuisines",
       desc: "Savor premium organic farm-to-table dining, local Rajasthani delicacies, and romantic campfire barbecues.",
-      img: "/images/fine_dining.jpg",
+      img: "/images/unnamed.jpg",
       badge: "Dining",
       features: [
         "Organic farm-to-table dining",
@@ -55,7 +55,7 @@ export const Services: React.FC = () => {
       title: "Jungle Leopard Safari",
       tagline: "Track leopards in the wild",
       desc: "Explore wilderness safari trails in open-top 4x4 Gypsy trackers to spot local leopards and crocodiles.",
-      img: "/images/jungle_safari.jpg",
+      img: "/images/unnamed (2).jpg",
       badge: "Wildlife Safari",
       features: [
         "Guided leopard tracking tours",
@@ -74,7 +74,7 @@ export const Services: React.FC = () => {
       title: "Private Luxury Villa",
       tagline: "Indulge in absolute privacy",
       desc: "Indulge in spacious, private villa retreats complete with luxury bedding, terraces, and personal service.",
-      img: "/images/private_villa.jpg",
+      img: "/images/2025-11-06 (2).jpg",
       badge: "Private Villa",
       features: [
         "Spacious multi-room villas",

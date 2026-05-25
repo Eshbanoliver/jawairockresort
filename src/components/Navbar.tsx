@@ -38,7 +38,7 @@ export const Navbar: React.FC = () => {
     <>
       <motion.nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled 
+          isScrolled || isOpen 
             ? 'py-4 nav-glass' 
             : 'py-6 bg-transparent'
         }`}
@@ -52,7 +52,7 @@ export const Navbar: React.FC = () => {
             <img 
               src="/images/JAWWAI LOGO.png" 
               alt="Jawai Rock Resort Logo" 
-              className={`h-16 w-auto object-contain transition-all duration-500 group-hover:brightness-110 ${isScrolled ? 'invert' : ''}`}
+              className={`h-16 w-auto object-contain transition-all duration-500 group-hover:brightness-110 ${(isScrolled || isOpen) ? 'invert' : ''}`}
               style={{ transform: 'scale(1.7)', transformOrigin: 'left center' }}
             />
           </Link>
@@ -93,7 +93,11 @@ export const Navbar: React.FC = () => {
            <div className="md:hidden flex items-center gap-4">
              <button
                onClick={() => setIsOpen(!isOpen)}
-               className="p-2-5 rounded-lg bg-white/5 border border-white/10 text-white"
+               className={`p-2-5 rounded-lg border transition-colors duration-300 ${
+                 (isScrolled || isOpen)
+                   ? 'bg-[#112d15]/5 border-[#112d15]/20 text-[#112d15]' 
+                   : 'bg-white/5 border-white/10 text-white'
+               }`}
                aria-label="Toggle navigation menu"
              >
                {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
