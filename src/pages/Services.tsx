@@ -277,7 +277,7 @@ export const Services: React.FC = () => {
 
       {/* ── How To Book ── */}
       <section 
-        className="section-padding relative overflow-hidden"
+        className="section-padding bg-[#112d15] relative overflow-hidden"
         style={{
           background: 'radial-gradient(circle at center, #1b3d20 0%, #112d15 100%)'
         }}
