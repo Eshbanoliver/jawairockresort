@@ -342,7 +342,13 @@ export const Services: React.FC = () => {
 
           {/* CTA Banner */}
           <motion.div
-            className="rounded-2xl p-8 border border-[#e07a5f]/20 bg-gradient-to-r from-[#e07a5f]/10 via-[#e07a5f]/5 to-transparent flex flex-col md:flex-row items-center justify-between gap-6 max-w-3xl mx-auto"
+            className="rounded-2xl p-8 border border-[#e07a5f]/20 flex flex-col md:flex-row items-center justify-between gap-6 max-w-3xl mx-auto"
+            style={{
+              background: 'linear-gradient(135deg, rgba(224, 122, 95, 0.15) 0%, rgba(224, 122, 95, 0.03) 100%)',
+              backdropFilter: 'blur(12px)',
+              WebkitBackdropFilter: 'blur(12px)',
+              boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.2)'
+            }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
