@@ -93,7 +93,7 @@ export const FloatingActions: React.FC = () => {
             title="Scroll to Top"
             aria-label="Scroll to top of page"
           >
-            <ArrowUp className="w-5 h-5" />
+            <ArrowUp className="w-5 h-5 text-white" color="white" />
           </motion.button>
         )}
       </AnimatePresence>
