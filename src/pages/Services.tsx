@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { SectionDivider } from '../components/SectionDivider';
 import {
-  Tent, Sparkles, Compass, Users, Heart,
-  Check, Phone, MessageSquare, BookOpen, Clock, ArrowRight,
+  Tent, Sparkles, Compass, Users,
+  Phone, MessageSquare, BookOpen, Clock, ArrowRight,
   Hotel, Utensils, TreePine, Waves, Activity, Cake, Briefcase
 } from 'lucide-react';
 

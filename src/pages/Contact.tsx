@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SectionDivider } from '../components/SectionDivider';
 import { LeafAnimation } from '../components/LeafAnimation';
-import { MapPin, Phone, MessageSquare, Send, CheckCircle, Map, ArrowRight, Hotel, Compass, Users } from 'lucide-react';
+import { MapPin, Phone, MessageSquare, Send, CheckCircle, Hotel, Compass, Users } from 'lucide-react';
 
 const glowColors: Record<string, string> = {
   stay:    '#e07a5f',
