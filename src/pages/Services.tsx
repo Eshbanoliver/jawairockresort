@@ -168,7 +168,8 @@ export const Services: React.FC = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="grid grid-cols-1 md:grid-cols-2 gap-7"
+              className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
+              style={{ maxWidth: '1000px', margin: '0 auto' }}
             >
               {filteredCategories.map((cat, idx) => (
                 <motion.div
@@ -177,6 +178,7 @@ export const Services: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   className={`service-card-premium text-left group ${cat.themeClass}`}
+                  style={{ maxWidth: '460px', width: '100%', margin: '0 auto' }}
                 >
 
                   {/* ── Card Image ── */}
