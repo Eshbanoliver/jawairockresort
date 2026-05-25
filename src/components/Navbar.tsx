@@ -52,8 +52,12 @@ export const Navbar: React.FC = () => {
             <img 
               src="/images/JAWWAI LOGO.png" 
               alt="Jawai Rock Resort Logo" 
-              className={`h-16 w-auto object-contain transition-all duration-500 group-hover:brightness-110 ${(isScrolled || isOpen) ? 'invert' : ''}`}
-              style={{ transform: 'scale(1.7)', transformOrigin: 'left center' }}
+              className="h-16 w-auto object-contain transition-all duration-500 group-hover:opacity-80"
+              style={{ 
+                transform: 'scale(1.7)', 
+                transformOrigin: 'left center',
+                filter: (isScrolled || isOpen) ? 'brightness(0)' : 'none'
+              }}
             />
           </Link>
  
