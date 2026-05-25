@@ -26,18 +26,13 @@ export const Footer: React.FC = () => {
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
            {/* Brand Info */}
            <div className="flex flex-col gap-5">
-             <Link to="/" className="flex items-center gap-2">
-               <div className="p-2 rounded-lg bg-white/5 border border-white/10">
-                 <Compass className="w-6 h-6 text-[#e07a5f]" />
-               </div>
-               <div>
-                 <span className="font-heading font-extrabold text-xl tracking-wider block text-white">
-                   JAWAI ROCK
-                 </span>
-                 <span className="text-tiny uppercase tracking-super-wide font-medium text-[#7b9e54] block -mt-1">
-                   Luxury Safari Resort
-                 </span>
-               </div>
+             <Link to="/" className="flex items-center" style={{ width: '120px', display: 'flex', justifyContent: 'flex-start' }}>
+               <img 
+                 src="/images/JAWWAI LOGO.png" 
+                 alt="Jawai Rock Resort Logo" 
+                 className="h-16 w-auto object-contain"
+                 style={{ transform: 'scale(1.7)', transformOrigin: 'left center' }}
+               />
              </Link>
              <p className="text-sm text-gray-400">
               Immerse yourself in a luxurious wilderness sanctuary nestled among the ancient granite monoliths of Jawai. Experience premium safari lodge comfort, peaceful rocky landscapes, and thrilling wildlife tracking.

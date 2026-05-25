@@ -48,18 +48,13 @@ export const Navbar: React.FC = () => {
       >
         <div className="container flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="p-2 rounded-lg bg-white/5 border border-white/10 group-hover:border-[#e07a5f]/40 transition-colors">
-              <Compass className="w-6 h-6 text-[#e07a5f] group-hover:rotate-45 transition-transform duration-500" />
-            </div>
-            <div>
-              <span className="font-heading font-extrabold text-xl tracking-wider block text-white group-hover:text-[#e07a5f] transition-colors">
-                JAWAI ROCK
-              </span>
-              <span className="text-tiny uppercase tracking-super-wide font-medium text-gray-400 block -mt-1">
-                Luxury Safari Resort
-              </span>
-            </div>
+          <Link to="/" className="flex items-center group" style={{ width: '120px', display: 'flex', justifyContent: 'flex-start' }}>
+            <img 
+              src="/images/JAWWAI LOGO.png" 
+              alt="Jawai Rock Resort Logo" 
+              className={`h-16 w-auto object-contain transition-all duration-500 group-hover:brightness-110 ${isScrolled ? 'invert' : ''}`}
+              style={{ transform: 'scale(1.7)', transformOrigin: 'left center' }}
+            />
           </Link>
  
            {/* Desktop Navigation */}
