@@ -4,47 +4,65 @@ import { LeafAnimation } from '../components/LeafAnimation';
 import { SectionDivider } from '../components/SectionDivider';
 import {
   Tent, Sparkles, Compass, Users, Heart,
-  Check, Phone, MessageSquare, BookOpen, Clock, ArrowRight
+  Check, Phone, MessageSquare, BookOpen, Clock, ArrowRight,
+  Hotel, Utensils, TreePine, Waves, Activity, Cake, Briefcase
 } from 'lucide-react';
 
 export const Services: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'all' | 'stays' | 'safaris' | 'events'>('all');
+  const [activeTab, setActiveTab] = useState<'all' | 'stays' | 'safaris' | 'events' | 'leisure'>('all');
 
   const serviceCategories = [
     {
       id: 'stays',
-      title: "Luxury Stays & Villa Accommodations",
-      tagline: "Unwind in pristine comfort",
-      desc: "Premium lodging options that combine local aesthetic finishes with high-end modern amenities — a tranquil sanctuary after long safari drives.",
-      img: "/images/luxury_cottage.jpg",
-      badge: "Stays & Villas",
+      title: "Eco Luxury Resort",
+      tagline: "Unwind in boutique cottages",
+      desc: "Boutique cottage suites combining rugged wild hills, premium modern amenities, and forest sit-outs.",
+      img: "/images/eco_resort.jpg",
+      badge: "Eco Resort",
       features: [
         "Luxury Resort Cottages in Jawai",
-        "Luxury Private Villas & Farm Stays",
-        "Peaceful Farm-Style Mud-Cottages",
-        "Exclusive Villas near Sumerpur & Jawai",
-        "Air-conditioned rooms with private decks",
-        "Swimming pool & organic orchard access"
+        "Private sit-out forest decks",
+        "Air-conditioned cottage suites",
+        "Modern en-suite bathrooms",
+        "Scenic granite hill views"
       ],
-      icon: <Tent className="w-4 h-4" />,
+      icon: <Hotel className="w-4 h-4" />,
       color: "#e07a5f",
       accentClass: "from-[#e07a5f]",
       themeClass: "card-theme-gold"
     },
     {
-      id: 'safaris',
-      title: "Safari & Adventure Packages",
-      tagline: "Track leopards in the wild",
-      desc: "Expert trackers guide you through open 4x4 Gypsy safaris to spot Jawai's iconic leopards, crocodiles, and diverse birdlife near the dam.",
-      img: "/images/leopard_safari.jpg",
-      badge: "Safari & Wildlife",
+      id: 'leisure',
+      title: "Fine Dining Restaurant",
+      tagline: "Savor local & organic cuisines",
+      desc: "Savor premium organic farm-to-table dining, local Rajasthani delicacies, and romantic campfire barbecues.",
+      img: "/images/fine_dining.jpg",
+      badge: "Dining",
       features: [
-        "Jungle Safari Stay Packages (All-Inclusive)",
-        "Resort close to main Safari area",
-        "Guided tours & birdwatching walks",
-        "Jawai Dam crocodile spotting trips",
-        "4x4 open-top Gypsy safaris twice daily",
-        "Forest high-tea & sunset viewpoint picnics"
+        "Organic farm-to-table dining",
+        "Local Rajasthani delicacies",
+        "Campfire barbecue setups",
+        "Custom culinary spice levels",
+        "In-room dining service"
+      ],
+      icon: <Utensils className="w-4 h-4" />,
+      color: "#e07a5f",
+      accentClass: "from-[#e07a5f]",
+      themeClass: "card-theme-peach"
+    },
+    {
+      id: 'safaris',
+      title: "Jungle Leopard Safari",
+      tagline: "Track leopards in the wild",
+      desc: "Explore wilderness safari trails in open-top 4x4 Gypsy trackers to spot local leopards and crocodiles.",
+      img: "/images/jungle_safari.jpg",
+      badge: "Wildlife Safari",
+      features: [
+        "Guided leopard tracking tours",
+        "Open 4x4 Gypsy rides",
+        "Experienced local trackers",
+        "Morning & afternoon slots",
+        "Forest high-tea & viewpoints"
       ],
       icon: <Compass className="w-4 h-4" />,
       color: "#7b9e54",
@@ -53,40 +71,114 @@ export const Services: React.FC = () => {
     },
     {
       id: 'stays',
-      title: "Budget & Family Friendly Lodging",
-      tagline: "Comfort for every traveler",
-      desc: "Clean, spacious, budget-friendly accommodations ideal for groups and families who want to experience the magic of Jawai without compromise.",
-      img: "/images/safari_tent.jpg",
-      badge: "Family Packages",
+      title: "Private Luxury Villa",
+      tagline: "Indulge in absolute privacy",
+      desc: "Indulge in spacious, private villa retreats complete with luxury bedding, terraces, and personal service.",
+      img: "/images/private_villa.jpg",
+      badge: "Private Villa",
       features: [
-        "Budget-Friendly Hotels in Jawai",
-        "Luxury Budget Accommodations & Suites",
-        "Spacious Group & Family Resort Stays",
-        "10 mins from Jawai Railway Station",
-        "Customized family dining options",
-        "Safe outdoor play fields for children"
+        "Spacious multi-room villas",
+        "Private terraces & pools",
+        "Personal butler service",
+        "Premium bedding & linens",
+        "Scenic landscape backdrops"
       ],
-      icon: <Heart className="w-4 h-4" />,
+      icon: <TreePine className="w-4 h-4" />,
+      color: "#e07a5f",
+      accentClass: "from-[#e07a5f]",
+      themeClass: "card-theme-gold"
+    },
+    {
+      id: 'leisure',
+      title: "Scenic Swimming Pool",
+      tagline: "Relax among giant boulders",
+      desc: "Unwind at our outdoor infinity swimming pool surrounded by massive, spectacular granite boulders.",
+      img: "/images/swimming_pool.jpg",
+      badge: "Pool & Relax",
+      features: [
+        "Infinity pool design",
+        "Surrounded by granite boulders",
+        "Poolside sun loungers",
+        "Towels & drinks provided",
+        "Child-safe shallow area"
+      ],
+      icon: <Waves className="w-4 h-4" />,
+      color: "#5a8ca0",
+      accentClass: "from-[#5a8ca0]",
+      themeClass: "card-theme-blue"
+    },
+    {
+      id: 'leisure',
+      title: "Recreation & Sports",
+      tagline: "Active leisure in nature",
+      desc: "Engage in outdoor games, trekking activities, and team-building sports across the private reserve area.",
+      img: "/images/recreation.jpg",
+      badge: "Sports & Trek",
+      features: [
+        "Outdoor trekking routes",
+        "Volleyball & badminton courts",
+        "Team building activities",
+        "Night stargazing walks",
+        "Scenic birdwatching spots"
+      ],
+      icon: <Activity className="w-4 h-4" />,
+      color: "#7b9e54",
+      accentClass: "from-[#7b9e54]",
+      themeClass: "card-theme-green"
+    },
+    {
+      id: 'stays',
+      title: "Premium Tent House",
+      tagline: "Glamping under starry skies",
+      desc: "Experience high-end glamping inside luxury safari tents equipped with air conditioning and private decks.",
+      img: "/images/jawai_dam.jpg",
+      badge: "Glamping Tent",
+      features: [
+        "Air-conditioned safari tents",
+        "Private wooden decks",
+        "Eco-friendly materials",
+        "Rustic wilderness aesthetic",
+        "Luxury en-suite setups"
+      ],
+      icon: <Tent className="w-4 h-4" />,
       color: "#e07a5f",
       accentClass: "from-[#e07a5f]",
       themeClass: "card-theme-peach"
     },
     {
       id: 'events',
-      title: "Marriage Garden & Corporate Events",
-      tagline: "Celebrate among granite giants",
-      desc: "Host breathtaking destination weddings and corporate conferences with extensive outdoor party plots and custom catering against majestic granite cliffs.",
-      img: "/images/corporate_events.jpg",
-      badge: "Events & Weddings",
+      title: "Birthday Party & Celebrations",
+      tagline: "Mark milestones under the stars",
+      desc: "Celebrate birthdays and milestones under twinkling stars with bespoke setups, catering, and live music.",
+      img: "/images/birthday_party.jpg",
+      badge: "Celebrations",
       features: [
-        "Expansive Marriage Garden & Party Plots",
-        "Granite monoliths as natural backdrops",
-        "Corporate Group Bookings & setups",
-        "Buffet dining & high-teas included",
-        "Team-building safaris & outdoor treks",
-        "Sound, stage & cultural performance setups"
+        "Bespoke party layouts",
+        "Catering & food customization",
+        "Live music & speaker setups",
+        "Twinkling star ceiling setups",
+        "Event coordination staff"
       ],
-      icon: <Users className="w-4 h-4" />,
+      icon: <Cake className="w-4 h-4" />,
+      color: "#e07a5f",
+      accentClass: "from-[#e07a5f]",
+      themeClass: "card-theme-pink"
+    },
+    {
+      id: 'events',
+      title: "Corporate Events & Meetings",
+      tagline: "Align teams in the wilderness",
+      desc: "Conduct private conferences, retreats, and team-building camps against scenic, monolith vistas.",
+      img: "/images/corporate_events.jpg",
+      badge: "Corporate Retreat",
+      features: [
+        "Private conference halls",
+        "Team-building safaris",
+        "Projector & presentation tools",
+        "Group dining & high-teas",
+        "Customized corporate schedules"
+      ],
+      icon: <Briefcase className="w-4 h-4" />,
       color: "#7b9e54",
       accentClass: "from-[#7b9e54]",
       themeClass: "card-theme-teal"
@@ -138,7 +230,8 @@ export const Services: React.FC = () => {
               { id: 'all',     label: 'All Packages',      icon: <Sparkles className="w-3.5 h-3.5" /> },
               { id: 'stays',   label: 'Stays & Villas',    icon: <Tent     className="w-3.5 h-3.5" /> },
               { id: 'safaris', label: 'Safari & Wildlife', icon: <Compass  className="w-3.5 h-3.5" /> },
-              { id: 'events',  label: 'Weddings & Events', icon: <Users    className="w-3.5 h-3.5" /> }
+              { id: 'events',  label: 'Weddings & Events', icon: <Users    className="w-3.5 h-3.5" /> },
+              { id: 'leisure', label: 'Dining & Leisure',  icon: <Utensils className="w-3.5 h-3.5" /> }
             ].map(tab => (
               <button
                 key={tab.id}
