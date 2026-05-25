@@ -1,73 +1,77 @@
-# React + TypeScript + Vite
+# Jawai Rock Resort
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A luxury jungle safari and resort stay website built with modern web technologies, offering a premium, immersive digital experience. The platform showcases luxury accommodations, wild leopard safaris, destination weddings, and custom travel packages with a focus on high-end design and smooth interactions.
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Premium UI/UX:** Built with a sophisticated dark forest green (`#112d15`) and sand beige color palette.
+- **Glassmorphism Design:** Extensive use of frosted glass panels, glowing accents, and dynamic backdrop filters to create a modern, luxurious aesthetic.
+- **Micro-interactions:** Powered by Framer Motion for scroll reveals, hover spring animations, and smooth page transitions.
+- **Fully Responsive:** Beautifully adapts from mobile devices up to large desktop screens using custom CSS Grid and Flexbox layouts.
+- **Interactive Map:** Integrated Google Maps with a custom floating directions card.
+- **Modern Contact & Inquiry Flows:** Dynamic form handling with status beacons and interactive inquiry category chips.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework:** React 18
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **Routing:** React Router DOM
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Styling:** Custom Vanilla CSS architecture (`index.css`) with CSS variables and utility classes. (No Tailwind CSS library dependency - custom mapping used).
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+├── components/         # Reusable UI components (Navbar, Footer, LeafAnimation, FloatingActions)
+├── pages/              # Main route views (Home, About, Services, Testimonials, Contact)
+├── App.tsx             # Root component and Router configuration
+├── main.tsx            # Application entry point
+└── index.css           # Core design system, variables, and custom utility classes
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🎨 Design System
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The project relies on a strictly defined set of custom CSS utilities inside `index.css`:
+- Custom variables for colors: `--forest-green`, `--sand-beige`, `--sunset-orange`, etc.
+- `glass-panel` and `glass-card` classes for frosted transparency effects.
+- Specific gap, padding, margin, and typography scale mapped to custom classes.
+- Responsive breakpoints natively handled within custom classes and media queries.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
+
+### Prerequisites
+Make sure you have Node.js (version 16 or higher) installed on your machine.
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running Locally
+
+Start the development server:
+```bash
+npm run dev
 ```
+
+### Building for Production
+
+Compile TypeScript and build the project:
+```bash
+npm run build
+```
+
+To preview the production build locally:
+```bash
+npm run preview
+```
+
+## 📝 License
+
+This project is proprietary and confidential. All rights reserved.
