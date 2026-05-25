@@ -276,15 +276,25 @@ export const Services: React.FC = () => {
       </section>
 
       {/* ── How To Book ── */}
-      <section className="section-padding bg-[#112d15] relative overflow-hidden">
+      <section 
+        className="section-padding relative overflow-hidden"
+        style={{
+          background: 'radial-gradient(circle at center, #1b3d20 0%, #112d15 100%)'
+        }}
+      >
         <div className="safari-pattern" />
+        
+        {/* Backdrop glowing orbs */}
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-80 h-80 rounded-full bg-[#e07a5f]/5 blur-3xl pointer-events-none" />
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-80 h-80 rounded-full bg-[#7b9e54]/10 blur-3xl pointer-events-none" />
+
         <div className="container relative z-10">
           <div className="section-title">
             <span>Seamless Booking</span>
             <h2>How To Book Your Stay</h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {[
               { step: "01", title: "Select Package",   desc: "Browse stays and guided safari options and select your travel dates.", icon: <BookOpen className="w-6 h-6 text-[#e07a5f]" /> },
               { step: "02", title: "Contact Us",       desc: "Call or WhatsApp us at 080585 71919 with your requirements.", icon: <Phone    className="w-6 h-6 text-[#e07a5f]" /> },
@@ -293,21 +303,39 @@ export const Services: React.FC = () => {
             ].map((step, idx) => (
               <motion.div
                 key={step.step}
-                className="relative rounded-2xl p-6 border border-white/10 bg-white/5 flex flex-col gap-4 group hover:border-[#e07a5f]/30 hover:bg-white/8 transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
+                className="glass-panel relative p-6 flex flex-col gap-4 border border-white/10 bg-white/5 group overflow-hidden"
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                transition={{ type: "spring", stiffness: 100, damping: 15, delay: idx * 0.1 }}
+                whileHover={{ 
+                  y: -10, 
+                  scale: 1.03,
+                  borderColor: 'rgba(224, 122, 95, 0.45)',
+                  boxShadow: '0 20px 40px rgba(224, 122, 95, 0.15)',
+                }}
               >
-                <span className="absolute top-4 right-5 font-heading font-extrabold text-5xl text-white/5 group-hover:text-[#e07a5f]/10 transition-colors duration-300 leading-none select-none">
+                {/* Dynamic background glow */}
+                <div className="absolute -bottom-16 -right-16 w-32 h-32 rounded-full bg-[#e07a5f]/5 blur-2xl group-hover:scale-150 transition-transform duration-500 pointer-events-none" />
+
+                {/* Pulsing pipeline connector */}
+                {idx < 3 && (
+                  <div className="hidden md:flex items-center absolute top-1/2 -right-5 translate-x-1/2 -translate-y-1/2 z-20">
+                    <div className="w-8 h-[2px] bg-[#e07a5f]/30" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#e07a5f] animate-pulse" />
+                  </div>
+                )}
+
+                <span className="absolute top-4 right-5 font-heading font-extrabold text-5xl text-white/5 group-hover:text-[#e07a5f]/20 group-hover:scale-110 transition-all duration-300 leading-none select-none">
                   {step.step}
                 </span>
-                {idx < 3 && <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-px bg-white/10 z-20" />}
-                <div className="p-3 rounded-xl bg-white/5 w-fit border border-white/8 group-hover:border-[#e07a5f]/20 transition-all duration-300">
+
+                <div className="p-3.5 rounded-xl bg-white/5 w-fit border border-white/8 group-hover:border-[#e07a5f]/40 group-hover:bg-[#e07a5f]/10 group-hover:rotate-12 transition-all duration-300">
                   {step.icon}
                 </div>
-                <h3 className="text-base font-heading font-bold text-white">{step.title}</h3>
-                <p className="text-xs text-gray-400 leading-relaxed">{step.desc}</p>
+
+                <h3 className="text-base font-heading font-bold text-white group-hover:text-[#e07a5f] transition-colors duration-300">{step.title}</h3>
+                <p className="text-xs text-gray-400 leading-relaxed group-hover:text-white/90 transition-colors duration-300">{step.desc}</p>
               </motion.div>
             ))}
           </div>
