@@ -3,84 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SectionDivider } from '../components/SectionDivider';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { 
-  MapPin, Phone, MessageSquare, Send, CheckCircle, 
-  Plane, Train, Car, Map, ArrowRight, Hotel, Compass, Users 
+  MapPin, Phone, MessageSquare, Send, CheckCircle, Map, ArrowRight, Hotel, Compass, Users 
 } from 'lucide-react';
-
-const TRANSIT_DATA = {
-  air: {
-    color: '#5a8ca0', // Sky Blue for Air
-    glow: 'rgba(90, 140, 160, 0.12)',
-    steps: [
-      {
-        title: 'Udaipur Airport (Maharana Pratap Airport - UDR)',
-        distance: '130 km • ~2.5 hrs drive',
-        desc: 'The closest domestic airport, connected by daily flights from Delhi, Mumbai, Jaipur, and Bangalore. We recommend taking a private taxi directly from the airport.',
-        tag: 'Primary Airport'
-      },
-      {
-        title: 'Jodhpur Airport (JDH)',
-        distance: '150 km • ~3.0 hrs drive',
-        desc: 'Convenient option with extensive flight connections across major Indian cities. A direct scenic road trip through Rajasthani countryside leads to Jawai.',
-        tag: 'Alternative Airport'
-      },
-      {
-        title: 'Resort Transfer Service',
-        distance: 'Door-to-door comfort',
-        desc: 'We can arrange a private luxury AC sedan or SUV pick-up from Udaipur or Jodhpur airports straight to the resort. Reach out to our front desk in advance to book.',
-        tag: 'VIP Shuttle'
-      }
-    ]
-  },
-  train: {
-    color: '#7b9e54', // Olive Green for Train
-    glow: 'rgba(123, 158, 84, 0.12)',
-    steps: [
-      {
-        title: 'Jawai Bandh Railway Station (JWB)',
-        distance: '15 km • ~15 mins drive',
-        desc: 'The closest railway station. Serviced by regular trains connecting Ahmedabad, Jaipur, and Delhi. Taxis and auto-rickshaws are available, or you can request our resort shuttle.',
-        tag: 'Nearest Station'
-      },
-      {
-        title: 'Falna Railway Junction (FA)',
-        distance: '25 km • ~30 mins drive',
-        desc: 'A major railway hub with extensive connectivity. Superfast trains from Delhi, Mumbai, Ahmedabad, and Jaipur stop here. It is a smooth, direct drive to the resort.',
-        tag: 'Major Railway Hub'
-      },
-      {
-        title: 'Station Pickup & Drop',
-        distance: 'Resort Shuttle service',
-        desc: 'Complementary pickup and drop from Jawai Bandh railway station is included in all premium 3-night stay packages! Prior coordination with our desk is required.',
-        tag: 'Complimentary Option'
-      }
-    ]
-  },
-  road: {
-    color: '#e07a5f', // Sunset Orange for Road
-    glow: 'rgba(224, 122, 95, 0.12)',
-    steps: [
-      {
-        title: 'From Udaipur Route',
-        distance: '130 km • NH 27 & RJ SH 32',
-        desc: 'Drive via Udaipur -> Gogunda -> Ranakpur -> Jawai. The route is highly scenic, curving through the Aravali valleys. Stop at the historic Ranakpur Jain Temple on the way.',
-        tag: 'Scenic Pathway'
-      },
-      {
-        title: 'From Ahmedabad Route',
-        distance: '290 km • NH 48',
-        desc: 'A fast 5.5-hour drive on national highways. Route: Ahmedabad -> Palanpur -> Abu Road -> Sirohi -> Jawai. Excellent toll-roads and multiple highway dining stops.',
-        tag: 'Smooth Highway'
-      },
-      {
-        title: 'From Jaipur / Delhi Route',
-        distance: 'Jaipur (380 km) / Delhi (650 km)',
-        desc: 'Drive via NH 48 and NH 62 through Ajmer and Beawar. We suggest an overnight stop in Jodhpur or Pushkar to break up the journey if driving from Delhi.',
-        tag: 'Expedition Drive'
-      }
-    ]
-  }
-};
 
 const glowColors: Record<string, string> = {
   stay: '#e07a5f',      // Sunset gold
@@ -101,7 +25,6 @@ export const Contact: React.FC = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [selectedInquiry, setSelectedInquiry] = useState('general');
   const [focusedField, setFocusedField] = useState<string | null>(null);
-  const [activeTransitTab, setActiveTransitTab] = useState<'air' | 'train' | 'road'>('air');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -125,8 +48,6 @@ export const Contact: React.FC = () => {
       setTimeout(() => setSubmitSuccess(false), 5000);
     }, 1800);
   };
-
-  const activeTransit = TRANSIT_DATA[activeTransitTab];
 
   return (
     <div className="w-full">
@@ -502,116 +423,8 @@ export const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Flipped divider at bottom transition to the Transit Guidelines */}
+        {/* Flipped divider at bottom transition to the Map section */}
         <SectionDivider type="rocks" color="#faf5f0" className="absolute bottom-0 left-0 w-full" flipped={true} />
-      </section>
-
-      {/* Transit Coordinates Section */}
-      <section className="section-padding bg-[#faf5f0] relative overflow-hidden">
-        {/* Subtle decorative mesh gradients */}
-        <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-[#112d15]/5 to-transparent pointer-events-none" />
-        <div className="absolute top-1/2 left-[10%] w-72 h-72 rounded-full bg-[#e07a5f]/5 blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 right-[10%] w-96 h-96 rounded-full bg-[#7b9e54]/5 blur-3xl pointer-events-none" />
-        
-        <div className="container relative z-10 bg-[#faf5f0]">
-          <div className="section-title text-center mb-12">
-            <span className="text-[#e07a5f] font-bold uppercase tracking-extra-wide text-xs">Getting Here</span>
-            <h2 className="text-3xl md:text-5xl font-heading font-extrabold text-[#112d15] mt-1">Transit Coordinates</h2>
-            <p className="text-gray-600 max-w-xl mx-auto mt-4 text-sm md:text-base">
-              Jawai Rock Resort is hidden amidst the ancient granite hills of Rajasthan. Find the most convenient routes via air, rail, or road.
-            </p>
-          </div>
-          
-          {/* Tabs Container */}
-          <div className="flex justify-center gap-2 mb-12 max-w-lg mx-auto bg-white p-2 rounded-2xl border border-gray-100 shadow-sm">
-            {[
-              { id: 'air', label: 'By Air ✈️', icon: <Plane className="w-4 h-4" /> },
-              { id: 'train', label: 'By Train 🚊', icon: <Train className="w-4 h-4" /> },
-              { id: 'road', label: 'By Road 🚗', icon: <Car className="w-4 h-4" /> }
-            ].map(tab => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTransitTab(tab.id as any)}
-                className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-sm transition-all duration-300 ${
-                  activeTransitTab === tab.id
-                    ? 'bg-[#112d15] text-[#faf5f0] shadow-md scale-[1.02]'
-                    : 'text-gray-500 hover:text-[#112d15] hover:bg-gray-50'
-                }`}
-              >
-                {tab.icon}
-                {tab.label}
-              </button>
-            ))}
-          </div>
-
-          {/* Interactive Steps List */}
-          <div className="relative border-l-2 border-dashed border-[#112d15]/20 ml-4 md:ml-8 pl-8 md:pl-12 py-4 flex flex-col gap-10 max-w-3xl mx-auto text-left">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTransitTab}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.35 }}
-                className="flex flex-col gap-10 w-full"
-              >
-                {activeTransit.steps.map((step, idx) => (
-                  <div key={idx} className="relative group w-full">
-                    {/* Timeline bullet indicator */}
-                    <div 
-                      className="absolute -left-[50px] md:-left-[66px] top-1.5 w-10 h-10 rounded-full bg-white border-2 flex items-center justify-center font-bold text-sm transition-all duration-300 shadow-md group-hover:scale-110 group-hover:text-white"
-                      style={{ 
-                        borderColor: activeTransit.color,
-                        color: activeTransit.color,
-                        boxShadow: `0 4px 10px ${activeTransit.glow}`
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = activeTransit.color;
-                        e.currentTarget.style.color = '#ffffff';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = '#ffffff';
-                        e.currentTarget.style.color = activeTransit.color;
-                      }}
-                    >
-                      {idx + 1}
-                    </div>
-                    
-                    {/* Transit Step Card */}
-                    <motion.div 
-                      className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 relative overflow-hidden"
-                      whileHover={{ y: -4 }}
-                      style={{ borderLeft: `4px solid ${activeTransit.color}` }}
-                    >
-                      <div className="flex flex-wrap justify-between items-start gap-2 mb-3 pl-2">
-                        <span 
-                          className="text-[10px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider border"
-                          style={{
-                            backgroundColor: activeTransit.glow,
-                            borderColor: activeTransit.color + '33',
-                            color: activeTransit.color
-                          }}
-                        >
-                          {step.tag}
-                        </span>
-                        <span className="text-xs text-gray-500 font-semibold flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5 text-[#e07a5f]" />
-                          {step.distance}
-                        </span>
-                      </div>
-                      <h3 className="font-heading font-extrabold text-lg md:text-xl text-[#112d15] mb-2 pl-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-sm text-gray-600 leading-relaxed pl-2">
-                        {step.desc}
-                      </p>
-                    </motion.div>
-                  </div>
-                ))}
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
       </section>
 
       {/* Embedded Google Maps Section */}
