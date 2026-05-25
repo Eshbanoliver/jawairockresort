@@ -408,37 +408,7 @@ export const Contact: React.FC = () => {
               title="Google Map – Jawai Rock Resort"
             />
 
-            {/* Floating card */}
-            <div style={{
-              position: 'absolute', top: '1.5rem', left: '1.5rem',
-              background: 'rgba(255,255,255,0.97)',
-              backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)',
-              borderRadius: '16px', padding: '1.25rem 1.5rem',
-              boxShadow: '0 12px 40px rgba(0,0,0,0.2)',
-              border: '1px solid rgba(0,0,0,0.06)',
-              maxWidth: '260px', zIndex: 20,
-            }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
-                <div style={{ padding: '8px', background: 'rgba(17,45,21,0.1)', borderRadius: '10px', color: '#112d15' }}>
-                  <Map style={{ width: 18, height: 18 }} />
-                </div>
-                <h4 style={{ fontFamily: 'var(--font-heading)', fontWeight: 800, fontSize: '0.95rem', color: '#112d15' }}>
-                  Explore Our Monolith
-                </h4>
-              </div>
-              <p style={{ fontSize: '0.78rem', color: '#6b7280', lineHeight: 1.6, marginBottom: '1rem' }}>
-                Open navigation in Google Maps for turn-by-turn directions to the resort.
-              </p>
-              <a
-                href="https://maps.app.goo.gl/jawairockresort"
-                target="_blank" rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ color: '#ffffff', width: '100%', fontSize: '0.78rem', padding: '0.6rem 1rem' }}
-              >
-                Get Directions
-                <ArrowRight style={{ width: 14, height: 14 }} />
-              </a>
-            </div>
+
           </div>
         </div>
       </section>
