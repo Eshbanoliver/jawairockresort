@@ -73,6 +73,72 @@ export const Testimonials: React.FC = () => {
       icon: <Tent className="w-3.5 h-3.5" />,
       themeClass: "card-theme-gold",
       badgeColor: "#e07a5f"
+    },
+    {
+      quote: "The multi-bedroom villa was perfect for our extended family of 8. The kids loved the pool, while we enjoyed peaceful tea sessions looking at the granite hills. Excellent hospitality.",
+      author: "Rajesh & Sunita Sen",
+      role: "Family Vacationers",
+      category: 'stay',
+      rating: 5,
+      date: "May 2026",
+      icon: <Tent className="w-3.5 h-3.5" />,
+      themeClass: "card-theme-gold",
+      badgeColor: "#e07a5f"
+    },
+    {
+      quote: "As a wildlife photographer, I have been to many African safaris, but tracking leopards in Jawai is unique. The local guides at Jawai Rock Resort have an incredible eye. Saw three different leopards!",
+      author: "Emily Watson",
+      role: "Nature Photographer (AUS)",
+      category: 'safari',
+      rating: 5,
+      date: "March 2026",
+      icon: <Compass className="w-3.5 h-3.5" />,
+      themeClass: "card-theme-sage",
+      badgeColor: "#7b9e54"
+    },
+    {
+      quote: "Hosted our annual leadership summit here. The combination of modern conference setups and raw wilderness treks made it a memorable team-building experience. Food was absolutely delicious!",
+      author: "Karan Johar",
+      role: "HR Lead, TechCorp",
+      category: 'events',
+      rating: 5,
+      date: "April 2026",
+      icon: <Users className="w-3.5 h-3.5" />,
+      themeClass: "card-theme-teal",
+      badgeColor: "#5a8ca0"
+    },
+    {
+      quote: "A perfect place to unplug. The organic orchards, birdwatching at Jawai Dam (spotted cranes and flamingoes), and the clean air were rejuvenating. The staff took care of every small detail.",
+      author: "Dr. Ananya Rao",
+      role: "Solo Traveler",
+      category: 'stay',
+      rating: 5,
+      date: "December 2025",
+      icon: <Tent className="w-3.5 h-3.5" />,
+      themeClass: "card-theme-gold",
+      badgeColor: "#e07a5f"
+    },
+    {
+      quote: "An unforgettable safari. We tracked leopard paw prints onto the rocky ridges and watched a large male leopard resting on a cliff ledge. Our gypsy driver was very patient and knowledgeable.",
+      author: "Devendra Singh",
+      role: "Wildlife Enthusiast",
+      category: 'safari',
+      rating: 5,
+      date: "January 2026",
+      icon: <Compass className="w-3.5 h-3.5" />,
+      themeClass: "card-theme-sage",
+      badgeColor: "#7b9e54"
+    },
+    {
+      quote: "We couldn't have asked for a more romantic wedding venue. The lit-up granite monolith hills behind our mandap looked like a movie set. Our guests are still talking about the hospitality.",
+      author: "Arjun & Tanvi Kapoor",
+      role: "Bride & Groom",
+      category: 'events',
+      rating: 5,
+      date: "February 2026",
+      icon: <Users className="w-3.5 h-3.5" />,
+      themeClass: "card-theme-teal",
+      badgeColor: "#5a8ca0"
     }
   ];
 
