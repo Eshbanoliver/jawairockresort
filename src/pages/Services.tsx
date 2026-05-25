@@ -99,20 +99,23 @@ export const Services: React.FC = () => {
       {/* ── Hero ── */}
       <section
         className="relative flex items-center justify-center bg-cover bg-center text-center overflow-hidden"
-        style={{ backgroundImage: `url('/images/leopard_wild.jpg')`, minHeight: '520px' }}
+        style={{
+          backgroundImage: `url('/images/leopard_wild.jpg')`,
+          minHeight: '400px'
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-[#120e0a]/60 via-[#120e0a]/55 to-[#120e0a]/90 z-[1]" />
-        <div className="container relative z-[3] py-36">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <motion.span
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
-              className="inline-block text-[#e07a5f] font-bold uppercase tracking-[0.25em] text-xs mb-5 px-4 py-1.5 border border-[#e07a5f]/30 rounded-full bg-[#e07a5f]/10"
-            >
+        <div className="absolute inset-0 bg-[#120e0adc]/80 z-1" />
+        <div className="container relative z-10 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="text-orange font-bold uppercase tracking-extra-wide text-sm block mb-2">
               Our Services
-            </motion.span>
-            <h1 className="text-5xl md:text-7xl font-heading font-extrabold text-white leading-tight mb-5">
-              Stays, Safaris
-              <span className="block" style={{ color: '#e07a5f' }}>&amp; Events</span>
+            </span>
+            <h1 className="text-4xl md:text-6xl font-heading font-extrabold text-white mb-4">
+              Stays, Safaris <span className="block md:inline" style={{ color: '#e07a5f' }}>&amp; Events</span>
             </h1>
             <p className="text-gray-300 max-w-xl mx-auto text-base leading-relaxed">
               Tailored luxury cottages, leopard safaris, family packages, and destination weddings
@@ -120,7 +123,7 @@ export const Services: React.FC = () => {
             </p>
           </motion.div>
         </div>
-        <SectionDivider type="rocks" color="#120e0a" className="absolute bottom-0 left-0 w-full" />
+        <SectionDivider type="rocks" color="#faf5f0" className="absolute bottom-0 left-0 w-full" />
       </section>
 
       {/* ── Tab Filters ── */}
