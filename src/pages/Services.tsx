@@ -28,7 +28,8 @@ export const Services: React.FC = () => {
       ],
       icon: <Tent className="w-4 h-4" />,
       color: "#e07a5f",
-      accentClass: "from-[#e07a5f]"
+      accentClass: "from-[#e07a5f]",
+      themeClass: "card-theme-gold"
     },
     {
       id: 'safaris',
@@ -47,7 +48,8 @@ export const Services: React.FC = () => {
       ],
       icon: <Compass className="w-4 h-4" />,
       color: "#7b9e54",
-      accentClass: "from-[#7b9e54]"
+      accentClass: "from-[#7b9e54]",
+      themeClass: "card-theme-sage"
     },
     {
       id: 'stays',
@@ -66,7 +68,8 @@ export const Services: React.FC = () => {
       ],
       icon: <Heart className="w-4 h-4" />,
       color: "#e07a5f",
-      accentClass: "from-[#e07a5f]"
+      accentClass: "from-[#e07a5f]",
+      themeClass: "card-theme-peach"
     },
     {
       id: 'events',
@@ -85,7 +88,8 @@ export const Services: React.FC = () => {
       ],
       icon: <Users className="w-4 h-4" />,
       color: "#7b9e54",
-      accentClass: "from-[#7b9e54]"
+      accentClass: "from-[#7b9e54]",
+      themeClass: "card-theme-teal"
     }
   ];
 
@@ -172,40 +176,39 @@ export const Services: React.FC = () => {
                   initial={{ opacity: 0, y: 40 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="group flex flex-col rounded-2xl overflow-hidden border border-white/8 bg-[#1a1410] hover:border-white/15 transition-all duration-500"
-                  style={{ boxShadow: '0 8px 48px rgba(0,0,0,0.35)' }}
+                  className={`service-card-premium text-left group ${cat.themeClass}`}
                 >
 
                   {/* ── Card Image ── */}
-                  <div className="relative overflow-hidden" style={{ height: '240px' }}>
+                  <div className="service-card-image-wrapper">
                     <img
                       src={cat.img}
                       alt={cat.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
-                      style={{ transition: 'transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94)' }}
+                      className="service-card-image"
                     />
-                    {/* Gradient scrim */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1410]/80 via-transparent to-transparent" />
 
                     {/* Badge */}
-                    <div className="absolute top-4 left-4">
+                    <div className="absolute top-4 left-4 z-10">
                       <span
                         className="inline-flex items-center gap-1.5 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full"
-                        style={{ background: cat.color, boxShadow: `0 2px 12px ${cat.color}66` }}
+                        style={{
+                          background: cat.color,
+                          boxShadow: `0 2px 12px ${cat.color}66`,
+                          color: '#ffffff'
+                        }}
                       >
                         {cat.icon}
                         {cat.badge}
                       </span>
                     </div>
-
-                    {/* Bottom tagline overlay */}
-                    <div className="absolute bottom-4 left-5 right-5">
-                      <p className="text-white/70 text-xs font-medium italic">{cat.tagline}</p>
-                    </div>
                   </div>
 
                   {/* ── Card Body ── */}
-                  <div className="flex flex-col gap-4 p-6 flex-1">
+                  <div className="service-card-content">
+                    {/* Tagline */}
+                    <span className="text-xs font-semibold italic text-orange uppercase tracking-wider block mb-1">
+                      {cat.tagline}
+                    </span>
 
                     {/* Title */}
                     <h2 className="text-xl font-heading font-bold text-white leading-snug group-hover:text-[#e07a5f] transition-colors duration-300">
@@ -216,10 +219,10 @@ export const Services: React.FC = () => {
                     <p className="text-gray-400 text-sm leading-relaxed">{cat.desc}</p>
 
                     {/* Accent divider */}
-                    <div className="flex items-center gap-3">
-                      <div className="h-px flex-1 bg-white/5" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-white/30">Includes</span>
-                      <div className="h-px flex-1 bg-white/5" />
+                    <div className="flex items-center gap-3 my-2">
+                      <div className="h-px flex-1" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }} />
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Includes</span>
+                      <div className="h-px flex-1" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }} />
                     </div>
 
                     {/* Features */}
@@ -236,13 +239,13 @@ export const Services: React.FC = () => {
                     </ul>
 
                     {/* Spacer */}
-                    <div className="flex-1" />
+                    <div className="flex-grow" />
 
                     {/* CTA Footer */}
-                    <div className="flex items-center justify-between pt-4 border-t border-white/5 mt-2">
+                    <div className="flex items-center justify-between pt-4 mt-4" style={{ borderTop: '1px solid rgba(0, 0, 0, 0.08)' }}>
                       <a
                         href="tel:08058571919"
-                        className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-white transition-colors duration-200"
+                        className="flex items-center gap-1.5 text-xs text-gray-400 hover:text-orange transition-colors duration-200"
                       >
                         <Phone className="w-3.5 h-3.5" />
                         Call to book
@@ -251,11 +254,15 @@ export const Services: React.FC = () => {
                         href="https://wa.me/918058571919"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-semibold px-5 py-2 rounded-full text-white transition-all duration-300 group/btn"
-                        style={{ background: `linear-gradient(135deg, ${cat.color}, ${cat.color}cc)` }}
+                        className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full text-white transition-all duration-300 hover:scale-103 shadow-md"
+                        style={{
+                          background: `linear-gradient(135deg, ${cat.color} 0%, ${cat.color}cc 100%)`,
+                          boxShadow: `0 4px 12px ${cat.color}33`,
+                          color: '#ffffff'
+                        }}
                       >
                         Enquire Now
-                        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/btn:translate-x-0.5" />
+                        <ArrowRight className="w-3.5 h-3.5" />
                       </a>
                     </div>
                   </div>
