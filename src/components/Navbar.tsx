@@ -53,6 +53,8 @@ export const Navbar: React.FC = () => {
               src="/images/JAWWAI LOGO.png" 
               alt="Jawai Rock Resort Logo" 
               className="h-16 w-auto object-contain transition-all duration-500 group-hover:opacity-80"
+              width="150"
+              height="64"
               style={{ 
                 transform: 'scale(1.7)', 
                 transformOrigin: 'left center',

@@ -6,13 +6,13 @@ export const Footer: React.FC = () => {
   return (
     <footer className="relative bg-[#120e0a] border-t border-white/5 pt-16 pb-8 overflow-hidden">
       {/* Subtle jungle background overlay */}
-      <div 
-        className="absolute inset-0 opacity-soft pointer-events-none"
-        style={{
-          backgroundImage: `url('/images/jawai_dam.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+      <img 
+        src="/images/jawai_dam.jpg" 
+        alt="Jawai Dam background"
+        className="absolute inset-0 w-full h-full object-cover opacity-soft pointer-events-none"
+        loading="lazy"
+        width="1200"
+        height="400"
       />
       
       {/* Forest tree silhouette decorative svg at the top of the footer */}
@@ -31,6 +31,9 @@ export const Footer: React.FC = () => {
                  src="/images/JAWWAI LOGO.png" 
                  alt="Jawai Rock Resort Logo" 
                  className="h-16 w-auto object-contain"
+                 loading="lazy"
+                 width="120"
+                 height="64"
                  style={{ transform: 'scale(1.7)', transformOrigin: 'left center' }}
                />
              </Link>
