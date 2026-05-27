@@ -233,15 +233,18 @@ export const Home: React.FC = () => {
       {/* 1. HERO SECTION */}
       <section className="hero-section">
         {heroImages.map((img, idx) => (
-          <div
+          <img
             key={idx}
-            className="absolute inset-0 bg-cover bg-center"
+            src={img}
+            alt="Jawai Rock Resort Luxury Safari and Villa"
+            className="absolute inset-0 w-full h-full object-cover"
             style={{ 
-              backgroundImage: `url('${img}')`,
               opacity: idx === currentHeroImage ? 1 : 0,
               transition: 'opacity 1.5s ease-in-out',
               zIndex: 0
             }}
+            fetchPriority={idx === 0 ? "high" : "low"}
+            loading={idx === 0 ? "eager" : "lazy"}
           />
         ))}
         <div className="overlay-dark" style={{ zIndex: 1 }} />
@@ -315,6 +318,9 @@ export const Home: React.FC = () => {
                   src="/images/leopard_safari.jpg" 
                   alt="Wild Leopard" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="300"
+                  height="160"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
@@ -322,6 +328,9 @@ export const Home: React.FC = () => {
                   src="/images/2026-02-24 (1).jpg" 
                   alt="Premium Villa Suite Living Space" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="300"
+                  height="160"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
@@ -329,6 +338,9 @@ export const Home: React.FC = () => {
                   src="/images/2026-02-24.jpg" 
                   alt="Eco-Luxury Cottage Bedroom" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="300"
+                  height="160"
                 />
               </div>
               <div className="rounded-2xl overflow-hidden shadow-md border border-black/5 h-40">
@@ -336,6 +348,9 @@ export const Home: React.FC = () => {
                   src="/images/sunset_view.jpg" 
                   alt="Jawai Hills" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="300"
+                  height="160"
                 />
               </div>
             </div>
@@ -363,6 +378,9 @@ export const Home: React.FC = () => {
                   src="/images/leopard_safari.jpg" 
                   alt="Wild Leopard in Jawai" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="400"
+                  height="290"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-10">
                   <span className="text-tiny text-[#e07a5f] uppercase font-bold tracking-widest block mb-0.5" style={{ fontSize: '9px' }}>Jawai Sanctuary</span>
@@ -381,6 +399,9 @@ export const Home: React.FC = () => {
                   src="/images/2026-02-24 (1).jpg" 
                   alt="Premium Villa Suite Living Space" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="400"
+                  height="200"
                 />
               </motion.div>
 
@@ -395,6 +416,9 @@ export const Home: React.FC = () => {
                   src="/images/2026-02-24.jpg" 
                   alt="Eco-Luxury Cottage Bedroom" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="400"
+                  height="180"
                 />
               </motion.div>
 
@@ -409,6 +433,9 @@ export const Home: React.FC = () => {
                   src="/images/sunset_view.jpg" 
                   alt="Jawai Sunset Granite Hills" 
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  width="400"
+                  height="260"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4 pt-10">
                   <span className="text-tiny text-[#7b9e54] uppercase font-bold tracking-widest block mb-0.5" style={{ fontSize: '9px' }}>Granite Monoliths</span>
@@ -609,6 +636,8 @@ export const Home: React.FC = () => {
                       alt={service.title} 
                       className="service-card-image" 
                       loading="lazy"
+                      width="400"
+                      height="200"
                     />
                   </div>
                   <div className="service-card-content">
@@ -808,7 +837,7 @@ export const Home: React.FC = () => {
               >
                 {/* Image Wrapper */}
                 <div className="wc-card-img-wrapper">
-                  <img src={card.img} alt={card.title} className="wc-card-img" />
+                  <img src={card.img} alt={card.title} className="wc-card-img" loading="lazy" width="400" height="200" />
                 </div>
                 
                 {/* Content Info */}

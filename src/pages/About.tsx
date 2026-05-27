@@ -90,6 +90,9 @@ export const About: React.FC = () => {
                      alt="Rabari shepherd and landscape" 
                      className="w-full object-cover"
                      style={{ height: '450px' }}
+                     loading="lazy"
+                     width="500"
+                     height="450"
                    />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#120e0a]/80 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6 p-6 glass-panel border border-white/10">

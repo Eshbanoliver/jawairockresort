@@ -286,6 +286,9 @@ export const Services: React.FC = () => {
                       src={cat.img}
                       alt={cat.title}
                       className="service-card-image"
+                      loading="lazy"
+                      width="400"
+                      height="200"
                     />
 
                     {/* Badge */}
