@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { SectionDivider } from '../components/SectionDivider';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { MapPin, Phone, MessageSquare, Send, CheckCircle, Hotel, Compass, Users } from 'lucide-react';
@@ -63,6 +64,11 @@ export const Contact: React.FC = () => {
 
   return (
     <div className="w-full">
+      <SEO 
+        title="Contact Jawai Rock Resort | Book Leopard Safari"
+        description="Contact Jawai Rock Resort to book your luxury villa or farm style stay. Inquire about leopard safari tours, wildlife photography, and event bookings."
+        keywords="Contact Jawai Rock Resort, Book Jawai resort, Jawai booking, Resort near Jawai Dam"
+      />
 
       {/* ── Hero ── */}
       <section

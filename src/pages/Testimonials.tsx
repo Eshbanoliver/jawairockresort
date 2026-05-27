@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { SectionDivider } from '../components/SectionDivider';
 import { Star, Quote, Compass, Tent, Users, Sparkles } from 'lucide-react';
@@ -148,6 +149,11 @@ export const Testimonials: React.FC = () => {
 
   return (
     <div className="w-full">
+      <SEO 
+        title="Reviews & Testimonials | Jawai Rock Resort"
+        description="Read reviews and testimonials from our guests who experienced the best luxury leopard safaris, family stays, and destination weddings at Jawai Rock Resort."
+        keywords="Best resort reviews Jawai, Top rated stay Jawai, Jawai Rock Resort testimonials, Leopard safari reviews"
+      />
       {/* Hero Header */}
       <section 
         className="relative py-32 flex items-center justify-center bg-cover bg-center text-center overflow-hidden"

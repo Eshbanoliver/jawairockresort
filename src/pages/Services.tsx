@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { SectionDivider } from '../components/SectionDivider';
 import {
@@ -191,6 +192,11 @@ export const Services: React.FC = () => {
 
   return (
     <div className="w-full">
+      <SEO 
+        title="Safari, Stays & Event Packages | Jawai Rock Resort"
+        description="Explore our luxury villas, private glamping tents, adventurous leopard tracking safaris, and event venues at Jawai Rock Resort."
+        keywords="Luxury villa booking Jawai, Leopard safari tours Jawai, Fine dining Jawai resort, Jawai destination weddings, Bera safari packages"
+      />
 
       {/* ── Hero ── */}
       <section

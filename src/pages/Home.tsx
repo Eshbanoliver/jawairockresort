@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { 
   Compass, Tent, TreePine, Waves, Sparkles, 
@@ -202,8 +203,33 @@ export const Home: React.FC = () => {
     ? services
     : services.filter(s => s.category === activeCategory);
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Resort",
+    "name": "Jawai Rock Resort",
+    "image": "https://jawairockresort.com/images/JAWWAI%20LOGO.png",
+    "description": "Experience peaceful luxury stays, wilderness, and adventurous jungle safaris at Jawai Rock Resort, Rajasthan. Book your luxury villa or farm style stay.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jawai",
+      "addressRegion": "Rajasthan",
+      "addressCountry": "IN"
+    },
+    "telephone": "08058571919",
+    "priceRange": "$$$"
+  };
+
   return (
     <div className="w-full">
+      <SEO 
+        title="Luxury Jungle Safari & Resort Stay"
+        description="Experience peaceful luxury stays, wilderness, and adventurous jungle safaris at Jawai Rock Resort, Rajasthan. Book your luxury villa or farm style stay."
+        keywords="Affordable Resort in Jawai, Premium Resort Jawai, Best Stay for Leopard Safari Jawai, Jawai Resort Booking, Top Rated Resort in Jawai"
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </SEO>
       {/* 1. HERO SECTION */}
       <section className="hero-section">
         {heroImages.map((img, idx) => (
@@ -768,7 +794,7 @@ export const Home: React.FC = () => {
               { title: "Scenic Jawai Location", desc: "Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.", img: "/images/sunset_view.jpg", icon: <MapPin className="w-6 h-6" />, theme: "gold" },
               { title: "Peaceful Jungle Atmosphere", desc: "A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.", img: "/images/campfires.jpg", icon: <TreePine className="w-6 h-6" />, theme: "green" },
               { title: "Budget Friendly Luxury", desc: "Unmatched value combining premium resort amenities, swimming pool, and organic dining without heavy, overpriced bills.", img: "/images/luxury_cottage.jpg", icon: <Shield className="w-6 h-6" />, theme: "blue" },
-              { title: "Resort Near Safari Area", desc: "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.", img: "/images/jungle_safari.jpg", icon: <Compass className="w-6 h-6" />, theme: "purple" },
+              { title: "Resort Near Safari Area", desc: "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.", img: "/images/unnamed (2).jpg", icon: <Compass className="w-6 h-6" />, theme: "purple" },
               { title: "Family Friendly Stay", desc: "Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events that cater to families of all sizes.", img: "/images/jawai_dam.jpg", icon: <Users className="w-6 h-6" />, theme: "pink" },
               { title: "Premium Hospitality", desc: "Experienced local guides, culinary chefs who customize spices, and resort staff trained to satisfy every bespoke boarding request.", img: "/images/leopard_wild.jpg", icon: <Sparkles className="w-6 h-6" />, theme: "teal" },
             ].map((card, idx) => (

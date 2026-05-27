@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
 import { motion } from 'framer-motion';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { SectionDivider } from '../components/SectionDivider';
@@ -8,6 +9,11 @@ import { Compass, Waves, Flame, Phone, ArrowRight } from 'lucide-react';
 export const About: React.FC = () => {
   return (
     <div className="w-full">
+      <SEO 
+        title="About Jawai Rock Resort & Bera Leopard Conservation"
+        description="Learn the story of Jawai Rock Resort, where eco-luxury meets the ancient granite wilderness. Discover our commitment to wildlife conservation in Rajasthan."
+        keywords="History of Jawai, Bera leopard conservation, Wildlife resort heritage, Jawai Rock Resort about, Eco luxury Jawai"
+      />
       {/* Hero Header */}
       <section 
         className="relative py-32 flex items-center justify-center bg-cover bg-center text-center overflow-hidden"
