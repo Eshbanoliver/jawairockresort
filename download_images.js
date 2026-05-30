@@ -15,10 +15,10 @@ if (!fs.existsSync(imagesDir)) {
 }
 
 const imagesToDownload = [
-  { url: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=600&q=50", filename: "jawai_dam.jpg" },
+  { url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=50", filename: "jawai_dam.jpg" },
   { url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=50", filename: "luxury_cottage.jpg" },
   { url: "https://images.unsplash.com/photo-1581888227599-779811939961?auto=format&fit=crop&w=600&q=50", filename: "jungle_safari.jpg" },
-  { url: "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=600&q=50", filename: "leopard_wild.jpg" },
+  { url: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=600&q=50", filename: "leopard_wild.jpg" },
   { url: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=50", filename: "campfires.jpg" },
   { url: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=600&q=50", filename: "granite_hills.jpg" },
   { url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=50", filename: "sunset_view.jpg" },
