@@ -3,14 +3,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { SectionDivider } from '../components/SectionDivider';
-import { Star, Quote, Compass, Tent, Users, Sparkles } from 'lucide-react';
+import { Star, Quote, Compass, Hotel, Users, Sparkles } from 'lucide-react';
 
 export const Testimonials: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'safari' | 'stay' | 'events'>('all');
 
   const reviews = [
     {
-      quote: "Our stay at Jawai Rock Resort was magical. The luxury tents blend perfectly with the rugged wild hills. We spotted a leopard on our very first evening safari! The hospitality was exceptional.",
+      quote: "Our stay at Jawai Rock Resort was magical. The luxury cottages blend perfectly with the rugged wild hills. We spotted a leopard on our very first evening safari! The hospitality was exceptional.",
       author: "Aarav Sharma",
       role: "Wildlife Enthusiast",
       category: 'safari',
@@ -27,7 +27,7 @@ export const Testimonials: React.FC = () => {
       category: 'stay',
       rating: 5,
       date: "May 2026",
-      icon: <Tent className="w-3.5 h-3.5" />,
+      icon: <Hotel className="w-3.5 h-3.5" />,
       themeClass: "card-theme-gold",
       badgeColor: "#e07a5f"
     },
@@ -71,7 +71,7 @@ export const Testimonials: React.FC = () => {
       category: 'stay',
       rating: 5,
       date: "December 2025",
-      icon: <Tent className="w-3.5 h-3.5" />,
+      icon: <Hotel className="w-3.5 h-3.5" />,
       themeClass: "card-theme-gold",
       badgeColor: "#e07a5f"
     },
@@ -82,7 +82,7 @@ export const Testimonials: React.FC = () => {
       category: 'stay',
       rating: 5,
       date: "May 2026",
-      icon: <Tent className="w-3.5 h-3.5" />,
+      icon: <Hotel className="w-3.5 h-3.5" />,
       themeClass: "card-theme-gold",
       badgeColor: "#e07a5f"
     },
@@ -115,7 +115,7 @@ export const Testimonials: React.FC = () => {
       category: 'stay',
       rating: 5,
       date: "December 2025",
-      icon: <Tent className="w-3.5 h-3.5" />,
+      icon: <Hotel className="w-3.5 h-3.5" />,
       themeClass: "card-theme-gold",
       badgeColor: "#e07a5f"
     },
@@ -187,7 +187,7 @@ export const Testimonials: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {[
               { id: 'all',    label: 'All Reviews',      icon: <Sparkles className="w-3.5 h-3.5" /> },
-              { id: 'stay',   label: 'Stays & Villas',    icon: <Tent     className="w-3.5 h-3.5" /> },
+              { id: 'stay',   label: 'Stays & Villas',    icon: <Hotel    className="w-3.5 h-3.5" /> },
               { id: 'safari', label: 'Leopard Safaris',   icon: <Compass  className="w-3.5 h-3.5" /> },
               { id: 'events', label: 'Weddings & Events', icon: <Users    className="w-3.5 h-3.5" /> }
             ].map(btn => (

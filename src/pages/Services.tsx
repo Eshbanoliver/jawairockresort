@@ -4,7 +4,7 @@ import { SEO } from '../components/SEO';
 import { LeafAnimation } from '../components/LeafAnimation';
 import { SectionDivider } from '../components/SectionDivider';
 import {
-  Tent, Sparkles, Compass, Users,
+  Sparkles, Compass, Users,
   Phone, MessageSquare, BookOpen, Clock, ArrowRight,
   Hotel, Utensils, TreePine, Waves, Activity, Cake, Briefcase
 } from 'lucide-react';
@@ -128,25 +128,6 @@ export const Services: React.FC = () => {
       themeClass: "card-theme-green"
     },
     {
-      id: 'stays',
-      title: "Premium Tent House",
-      tagline: "Glamping under starry skies",
-      desc: "Experience high-end glamping inside luxury safari tents equipped with air conditioning and private decks.",
-      img: "/images/jawai_dam.jpg",
-      badge: "Glamping Tent",
-      features: [
-        "Air-conditioned safari tents",
-        "Private wooden decks",
-        "Eco-friendly materials",
-        "Rustic wilderness aesthetic",
-        "Luxury en-suite setups"
-      ],
-      icon: <Tent className="w-4 h-4" />,
-      color: "#e07a5f",
-      accentClass: "from-[#e07a5f]",
-      themeClass: "card-theme-peach"
-    },
-    {
       id: 'events',
       title: "Birthday Party & Celebrations",
       tagline: "Mark milestones under the stars",
@@ -234,7 +215,7 @@ export const Services: React.FC = () => {
           <div className="flex flex-wrap justify-center gap-3">
             {[
               { id: 'all',     label: 'All Packages',      icon: <Sparkles className="w-3.5 h-3.5" /> },
-              { id: 'stays',   label: 'Stays & Villas',    icon: <Tent     className="w-3.5 h-3.5" /> },
+              { id: 'stays',   label: 'Stays & Villas',    icon: <Hotel    className="w-3.5 h-3.5" /> },
               { id: 'safaris', label: 'Safari & Wildlife', icon: <Compass  className="w-3.5 h-3.5" /> },
               { id: 'events',  label: 'Weddings & Events', icon: <Users    className="w-3.5 h-3.5" /> },
               { id: 'leisure', label: 'Dining & Leisure',  icon: <Utensils className="w-3.5 h-3.5" /> }

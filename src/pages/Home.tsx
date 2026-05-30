@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { 
-  Compass, Tent, TreePine, Waves, Sparkles, 
+  Compass, TreePine, Waves, Sparkles, 
   Award, Shield, Smile, Star, ArrowRight, Phone, ChevronDown,
   Users, Hotel, Utensils, Activity, Cake, Briefcase, MapPin
 } from 'lucide-react';
@@ -61,7 +61,7 @@ export const Home: React.FC = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const testimonials = [
     {
-      quote: "Our stay at Jawai Rock Resort was magical. The luxury tents blend perfectly with the rugged wild hills. We spotted a leopard on our very first evening safari! The hospitality was exceptional.",
+      quote: "Our stay at Jawai Rock Resort was magical. The luxury cottages blend perfectly with the rugged wild hills. We spotted a leopard on our very first evening safari! The hospitality was exceptional.",
       author: "Aarav Sharma",
       role: "Wildlife Enthusiast"
     },
@@ -172,14 +172,6 @@ export const Home: React.FC = () => {
       image: "/images/recreation.jpg",
       category: 'activities',
       themeClass: 'card-theme-green'
-    },
-    { 
-      title: "Premium Tent House", 
-      desc: "Experience high-end glamping inside luxury safari tents equipped with air conditioning and private decks.", 
-      icon: <Tent className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "/images/jawai_dam.jpg",
-      category: 'stays',
-      themeClass: 'card-theme-peach'
     },
     { 
       title: "Birthday Party & Celebrations", 
