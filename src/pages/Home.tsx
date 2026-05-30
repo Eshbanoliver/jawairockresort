@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { motion, AnimatePresence, useInView } from 'framer-motion';
 import { 
-  Compass, TreePine, Waves, Sparkles, 
+  Compass, TreePine, Sparkles, 
   Award, Shield, Smile, Star, ArrowRight, Phone, ChevronDown,
   Users, Hotel, Utensils, Activity, Cake, Briefcase, MapPin
 } from 'lucide-react';
