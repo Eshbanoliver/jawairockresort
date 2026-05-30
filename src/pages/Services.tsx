@@ -6,7 +6,7 @@ import { SectionDivider } from '../components/SectionDivider';
 import {
   Sparkles, Compass, Users,
   Phone, MessageSquare, BookOpen, Clock, ArrowRight,
-  Hotel, Utensils, TreePine, Waves, Activity, Cake, Briefcase
+  Hotel, Utensils, TreePine, Activity, Cake, Briefcase
 } from 'lucide-react';
 
 export const Services: React.FC = () => {
@@ -79,7 +79,7 @@ export const Services: React.FC = () => {
       badge: "Private Villa",
       features: [
         "Spacious multi-room villas",
-        "Private terraces & pools",
+        "Private terraces & sit-outs",
         "Personal butler service",
         "Premium bedding & linens",
         "Scenic landscape backdrops"
@@ -88,25 +88,6 @@ export const Services: React.FC = () => {
       color: "#e07a5f",
       accentClass: "from-[#e07a5f]",
       themeClass: "card-theme-gold"
-    },
-    {
-      id: 'leisure',
-      title: "Scenic Swimming Pool",
-      tagline: "Relax among giant boulders",
-      desc: "Unwind at our outdoor infinity swimming pool surrounded by massive, spectacular granite boulders.",
-      img: "/images/swimming_pool.jpg",
-      badge: "Pool & Relax",
-      features: [
-        "Infinity pool design",
-        "Surrounded by granite boulders",
-        "Poolside sun loungers",
-        "Towels & drinks provided",
-        "Child-safe shallow area"
-      ],
-      icon: <Waves className="w-4 h-4" />,
-      color: "#5a8ca0",
-      accentClass: "from-[#5a8ca0]",
-      themeClass: "card-theme-blue"
     },
     {
       id: 'leisure',

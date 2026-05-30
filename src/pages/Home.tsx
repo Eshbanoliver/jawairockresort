@@ -47,7 +47,7 @@ export const Home: React.FC = () => {
   const heroImages = [
     "/images/leopard_safari.jpg", // Leopard and jungle safari walk
     "/images/luxury_villa.jpg", // Luxury villa retreat
-    "/images/swimming_pool.jpg", // Premium infinity pool
+    "/images/luxury_cottage.jpg", // Premium eco cottage stay
   ];
 
   useEffect(() => {
@@ -105,7 +105,7 @@ export const Home: React.FC = () => {
     },
     {
       q: "What facilities are included in the luxury villa and farm style stays?",
-      a: "Our villas and farm style stays offer premium comforts including spacious air-conditioned rooms, private sit-out decks facing the hills, modern en-suite bathrooms, access to the swimming pool, and organic farm-to-table dining."
+      a: "Our villas and farm style stays offer premium comforts including spacious air-conditioned rooms, private sit-out decks facing the hills, modern en-suite bathrooms, and organic farm-to-table dining."
     },
     {
       q: "How far is Jawai Rock Resort from the nearest railway station?",
@@ -156,14 +156,6 @@ export const Home: React.FC = () => {
       image: "/images/2025-11-06 (2).jpg",
       category: 'stays',
       themeClass: 'card-theme-gold'
-    },
-    { 
-      title: "Scenic Swimming Pool", 
-      desc: "Unwind at our outdoor infinity swimming pool surrounded by massive, spectacular granite boulders.", 
-      icon: <Waves className="w-6 h-6 text-[#e07a5f]" />, 
-      image: "/images/swimming_pool.jpg",
-      category: 'dining',
-      themeClass: 'card-theme-blue'
     },
     { 
       title: "Recreation & Sports", 
@@ -814,7 +806,7 @@ export const Home: React.FC = () => {
             {[
               { title: "Scenic Jawai Location", desc: "Perfectly positioned alongside the stunning granite monoliths, offering immediate scenic sunset viewpoints directly from our decks.", img: "/images/sunset_view.jpg", icon: <MapPin className="w-6 h-6" />, theme: "gold" },
               { title: "Peaceful Jungle Atmosphere", desc: "A truly quiet habitat where birds call, leopards roam the ridges, and city noise fades completely under starry Rajasthan skies.", img: "/images/campfires.jpg", icon: <TreePine className="w-6 h-6" />, theme: "green" },
-              { title: "Budget Friendly Luxury", desc: "Unmatched value combining premium resort amenities, swimming pool, and organic dining without heavy, overpriced bills.", img: "/images/luxury_cottage.jpg", icon: <Shield className="w-6 h-6" />, theme: "blue" },
+              { title: "Budget Friendly Luxury", desc: "Unmatched value combining premium resort amenities, recreation areas, and organic dining without heavy, overpriced bills.", img: "/images/luxury_cottage.jpg", icon: <Shield className="w-6 h-6" />, theme: "blue" },
               { title: "Resort Near Safari Area", desc: "Located within short driving distance from the key leopard-sighting rocky areas, giving you priority access to early trackers.", img: "/images/unnamed (2).jpg", icon: <Compass className="w-6 h-6" />, theme: "purple" },
               { title: "Family Friendly Stay", desc: "Spacious multi-bedroom villas, outdoor lawn play zones, and child-safe bonfire events that cater to families of all sizes.", img: "/images/jawai_dam.jpg", icon: <Users className="w-6 h-6" />, theme: "pink" },
               { title: "Premium Hospitality", desc: "Experienced local guides, culinary chefs who customize spices, and resort staff trained to satisfy every bespoke boarding request.", img: "/images/leopard_wild.jpg", icon: <Sparkles className="w-6 h-6" />, theme: "teal" },

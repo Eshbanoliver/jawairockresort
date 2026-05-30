@@ -76,7 +76,7 @@ export const Testimonials: React.FC = () => {
       badgeColor: "#e07a5f"
     },
     {
-      quote: "The multi-bedroom villa was perfect for our extended family of 8. The kids loved the pool, while we enjoyed peaceful tea sessions looking at the granite hills. Excellent hospitality.",
+      quote: "The multi-bedroom villa was perfect for our extended family of 8. The kids loved the open lawns, while we enjoyed peaceful tea sessions looking at the granite hills. Excellent hospitality.",
       author: "Rajesh & Sunita Sen",
       role: "Family Vacationers",
       category: 'stay',
